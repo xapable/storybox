@@ -73,10 +73,13 @@ export interface Category {
 }
 
 // UI State
+export type Theme = 'dark' | 'light';
+
 export interface UIState {
   activeTab: TabType;
   isCardOpen: boolean;
   activeCardId: string | null;
+  theme: Theme;
   // Player state
   playingAppId: string | null;
   playingAppType: 'story' | 't2q_quiz' | null;

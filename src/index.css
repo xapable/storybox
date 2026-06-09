@@ -1,31 +1,52 @@
 /* ========================================
-   StoryBox 知識盒子 Design System — Dark
+   StoryBox 知識盒子 Design System
    ======================================== */
 
-:root {
-  /* Accent */
+/* ── Dark theme (default) ── */
+:root,
+[data-theme="dark"] {
   --play-blue: #01875f;
   --play-green: #01875f;
   --play-accent: #4fc3f7;
   --play-yellow: #ffb300;
+  --play-red: #ff6b6b;
 
-  /* Text */
   --text-primary: #e8eaed;
   --text-secondary: #9aa0a6;
   --text-tertiary: #5f6368;
 
-  /* Backgrounds */
   --bg-primary: #202124;
   --bg-secondary: #303134;
   --bg-tertiary: #3c4043;
 
-  /* Borders & overlays */
   --separator: #3c4043;
   --bar-bg: rgba(32, 33, 36, 0.96);
+}
 
-  /* Typography */
-  --font-family: 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+/* ── Light theme ── */
+[data-theme="light"] {
+  --play-blue: #01875f;
+  --play-green: #01875f;
+  --play-accent: #0288d1;
+  --play-yellow: #f9a825;
+  --play-red: #d32f2f;
+
+  --text-primary: #202124;
+  --text-secondary: #5f6368;
+  --text-tertiary: #9aa0a6;
+
+  --bg-primary: #ffffff;
+  --bg-secondary: #f1f3f4;
+  --bg-tertiary: #e8eaed;
+
+  --separator: #dadce0;
+  --bar-bg: rgba(255, 255, 255, 0.96);
+
+}
+
+/* ── Shared typography ── */
+:root {
+  --font-family: 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 
   font-family: var(--font-family);
   font-size: 16px;

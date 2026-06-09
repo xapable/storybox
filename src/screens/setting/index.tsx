@@ -49,7 +49,7 @@ function SeedButton() {
 
 export default function SettingScreen() {
   const { lang, setLang } = useLanguage();
-  const { toggleCreator, previewApp, state } = useUIStore();
+  const { toggleCreator, previewApp, setTheme, state } = useUIStore();
   const [user, setUser] = useState<User | null>(getCurrentUser());
   const [myApps, setMyApps] = useState<AppDocument[]>([]);
   const [showFavorites, setShowFavorites] = useState(false);
@@ -175,15 +175,15 @@ export default function SettingScreen() {
             ))}
           </div>
 
-          <button type="button" className="setting-item">
-            <span>{tKey('setting_notif', lang)}</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)" strokeWidth="2">
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </button>
-          <button type="button" className="setting-item">
+          <button
+            type="button"
+            className="setting-item"
+            onClick={() => setTheme(state.theme === 'dark' ? 'light' : 'dark')}
+          >
             <span>{tKey('setting_appearance', lang)}</span>
-            <span className="setting-item__value">Dark</span>
+            <span className="setting-item__value">
+              {state.theme === 'dark' ? '🌙 Dark' : '☀️ Light'}
+            </span>
           </button>
         </div>
 

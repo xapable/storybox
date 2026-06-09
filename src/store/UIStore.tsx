@@ -1,5 +1,5 @@
-import { createContext, useContext, useReducer, type ReactNode } from 'react';
-import type { UIState, TabType, UserApp } from '../types';
+import { createContext, useContext, useReducer, useEffect, type ReactNode } from 'react';
+import type { UIState, TabType, UserApp, Theme } from '../types';
 
 // Actions
 type UIAction =
@@ -11,13 +11,21 @@ type UIAction =
   | { type: 'SET_APP_FILTER'; payload: string | null }
   | { type: 'SET_MY_APPS'; payload: UserApp[] }
   | { type: 'CREATE_APP'; payload: UserApp }
-  | { type: 'TOGGLE_FAVORITE'; payload: string };
+  | { type: 'TOGGLE_FAVORITE'; payload: string }
+  | { type: 'SET_THEME'; payload: Theme };
+
+function getInitialTheme(): Theme {
+  const saved = localStorage.getItem('storybox-theme');
+  if (saved === 'light' || saved === 'dark') return saved;
+  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+}
 
 // Initial state
 const initialState: UIState = {
   activeTab: 'home',
   isCardOpen: false,
   activeCardId: null,
+  theme: getInitialTheme(),
   playingAppId: null,
   playingAppType: null,
   previewAppId: null,
@@ -69,6 +77,8 @@ function uiReducer(state: UIState, action: UIAction): UIState {
         favorites: has ? state.favorites.filter((fid) => fid !== id) : [...state.favorites, id],
       };
     }
+    case 'SET_THEME':
+      return { ...state, theme: action.payload };
     default:
       return state;
   }
@@ -87,6 +97,7 @@ interface UIStoreContextValue {
   setMyApps: (apps: UserApp[]) => void;
   createApp: (app: UserApp) => void;
   toggleFavorite: (id: string) => void;
+  setTheme: (theme: Theme) => void;
 }
 
 const UIStoreContext = createContext<UIStoreContextValue | null>(null);
@@ -114,9 +125,17 @@ export function UIStoreProvider({ children }: { children: ReactNode }) {
     dispatch({ type: 'CREATE_APP', payload: app });
   const toggleFavorite = (id: string) =>
     dispatch({ type: 'TOGGLE_FAVORITE', payload: id });
+  const setTheme = (theme: Theme) =>
+    dispatch({ type: 'SET_THEME', payload: theme });
+
+  // Sync theme to <html> data-theme attribute
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', state.theme);
+    localStorage.setItem('storybox-theme', state.theme);
+  }, [state.theme]);
 
   return (
-    <UIStoreContext.Provider value={{ state, setTab, setCardOpen, playApp, previewApp, closePreview, toggleCreator, setAppFilter, setMyApps, createApp, toggleFavorite }}>
+    <UIStoreContext.Provider value={{ state, setTab, setCardOpen, playApp, previewApp, closePreview, toggleCreator, setAppFilter, setMyApps, createApp, toggleFavorite, setTheme }}>
       {children}
     </UIStoreContext.Provider>
   );
