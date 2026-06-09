@@ -1,8 +1,9 @@
 import { useState, useMemo, useEffect, useCallback } from 'react';
 import { useUIStore } from '../../store';
 import { useLanguage, tKey } from '../../i18n';
-import { stories } from '../../data/content';
 import { playableApps } from '../../data/playableApps';
+import { fetchStories } from '../../firebase/apps';
+import type { Story } from '../../types';
 
 function HeroStory({ story }: { story: typeof stories[number] & { appId?: string; appType?: 'story' | 't2q_quiz' } }) {
   const { previewApp } = useUIStore();
@@ -77,10 +78,16 @@ function PlayableRow({ title, subtitle, apps, filter }: { title: string; subtitl
 
 export default function HomeScreen() {
   const [heroIdx, setHeroIdx] = useState(0);
+  const [stories, setStories] = useState<Story[]>([]);
   const { lang } = useLanguage();
   const { setTab } = useUIStore();
-  const heroStories = stories.filter((s) => s.hero);
-  const circleStories = stories.filter((s) => !s.hero);
+
+  useEffect(() => {
+    fetchStories().then(setStories).catch(() => {});
+  }, []);
+
+  const heroStories = useMemo(() => stories.filter((s) => s.hero), [stories]);
+  const circleStories = useMemo(() => stories.filter((s) => !s.hero), [stories]);
 
   // Auto-play hero carousel
   const nextHero = useCallback(() => {

@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { useLanguage, tKey } from '../../i18n';
 import { useUIStore } from '../../store';
+import { getCurrentUser, signInWithGoogle } from '../../firebase/auth';
 import type { UserApp } from '../../types';
 
 function icon(name: string): string {
@@ -115,7 +116,21 @@ export default function MyAppsScreen() {
         </button>
         <h1 className="screen-header__title">{tKey('setting_my_apps', lang)}</h1>
         {!showForm && (
-          <button type="button" className="screen-header__add-btn" onClick={() => setShowForm(true)}>
+          <button
+            type="button"
+            className="screen-header__add-btn"
+            onClick={async () => {
+              const user = getCurrentUser();
+              if (!user) {
+                try {
+                  await signInWithGoogle();
+                } catch {
+                  return; // sign-in failed or cancelled
+                }
+              }
+              setShowForm(true);
+            }}
+          >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--play-blue)" strokeWidth="2.5" strokeLinecap="round">
               <path d="M12 5v14M5 12h14" />
             </svg>

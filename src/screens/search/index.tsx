@@ -1,23 +1,37 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useLanguage, tKey, tReplace } from '../../i18n';
 import { movies, books } from '../../data/content';
-import type { Content } from '../../types';
+import type { Content, AppDocument } from '../../types/t2q';
 import { playableApps } from '../../data/playableApps';
+import { fetchPublicApps } from '../../firebase/apps';
 import { useUIStore } from '../../store';
-
-// Convert playable apps to searchable format
-const searchableApps = playableApps.map((a) => ({
-  id: a.id,
-  title: a.title,
-  subtitle: a.description,
-  category: a.category,
-  appType: a.appType,
-}));
 
 export default function SearchScreen() {
   const [query, setQuery] = useState('');
+  const [allApps, setAllApps] = useState<AppDocument[]>(playableApps);
   const { lang } = useLanguage();
   const { previewApp } = useUIStore();
+
+  useEffect(() => {
+    fetchPublicApps().then((fetched) => {
+      if (fetched.length > 0) {
+        const firebaseIds = new Set(fetched.map((a) => a.id));
+        const merged = [...fetched, ...playableApps.filter((a) => !firebaseIds.has(a.id))];
+        setAllApps(merged);
+      }
+    }).catch(() => {});
+  }, []);
+
+  // Convert playable apps to searchable format
+  const searchableApps = useMemo(() =>
+    allApps.map((a) => ({
+      id: a.id,
+      title: a.title,
+      subtitle: a.description,
+      category: a.category ?? '',
+      appType: a.appType,
+    })),
+  [allApps]);
 
   const results = useMemo((): { apps: typeof searchableApps; media: Content[] } => {
     if (!query.trim()) return { apps: [], media: [] };
@@ -31,7 +45,7 @@ export default function SearchScreen() {
       (item) => item.title.toLowerCase().includes(q) || item.subtitle.toLowerCase().includes(q) || item.category?.toLowerCase().includes(q),
     );
     return { apps: appResults, media: mediaResults };
-  }, [query]);
+  }, [query, searchableApps]);
 
   return (
     <div className="screen screen--search">

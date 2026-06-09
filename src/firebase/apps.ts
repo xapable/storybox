@@ -15,10 +15,13 @@ import {
   type QueryDocumentSnapshot,
 } from 'firebase/firestore';
 import { db } from './config';
-import { playableApps } from '../data/playableApps';
+import { playableApps, stories as localStories, collections as localCollections } from '../data/playableApps';
 import type { AppDocument } from '../types/t2q';
+import type { Collection, Story } from '../types';
 
 const APPS_COLLECTION = 'apps';
+const STORIES_COLLECTION = 'stories';
+const COLLECTIONS_COLLECTION = 'collections';
 
 /** Local mock app lookup for offline/demo mode */
 const mockAppMap = new Map(playableApps.map((a) => [a.id, a]));
@@ -36,6 +39,14 @@ function docToApp(docSnap: QueryDocumentSnapshot<DocumentData>): AppDocument {
     createdAt: data.createdAt?.toDate() ?? new Date(),
     createdBy: data.createdBy ?? '',
     isPublic: data.isPublic ?? false,
+    rating: data.rating,
+    ratingCount: data.ratingCount,
+    version: data.version,
+    size: data.size,
+    downloads: data.downloads,
+    contentRating: data.contentRating,
+    category: data.category,
+    reviews: data.reviews,
   };
 }
 
@@ -74,6 +85,36 @@ export async function fetchAppById(id: string): Promise<AppDocument | null> {
     // Firestore unavailable — fall through to mock
   }
   return mockAppMap.get(id) ?? null;
+}
+
+/** Fetch all stories (hero banners & circles) from Firestore, fallback to local */
+export async function fetchStories(): Promise<Story[]> {
+  try {
+    if (db) {
+      const snapshot = await getDocs(collection(db, STORIES_COLLECTION));
+      if (!snapshot.empty) {
+        return snapshot.docs.map((d) => ({ id: d.id, ...d.data() } as Story));
+      }
+    }
+  } catch {
+    // Firestore unavailable
+  }
+  return localStories;
+}
+
+/** Fetch all collections from Firestore, fallback to local */
+export async function fetchCollections(): Promise<Collection[]> {
+  try {
+    if (db) {
+      const snapshot = await getDocs(collection(db, COLLECTIONS_COLLECTION));
+      if (!snapshot.empty) {
+        return snapshot.docs.map((d) => ({ id: d.id, ...d.data() } as unknown as Collection));
+      }
+    }
+  } catch {
+    // Firestore unavailable
+  }
+  return localCollections;
 }
 
 /** Save a new app to Firestore */

@@ -1,7 +1,9 @@
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { useLanguage, tKey } from '../../i18n';
 import { useUIStore } from '../../store';
 import { playableApps } from '../../data/playableApps';
+import { fetchPublicApps } from '../../firebase/apps';
+import type { AppDocument } from '../../types/t2q';
 
 // ── helpers ──
 function Star(size: number) {
@@ -62,15 +64,26 @@ function AppGrid({ apps }: { apps: typeof playableApps }) {
 // ── screen ──
 export default function ExploreScreen() {
   const { lang } = useLanguage();
+  const [allApps, setAllApps] = useState<AppDocument[]>(playableApps);
+
+  useEffect(() => {
+    fetchPublicApps().then((fetched) => {
+      if (fetched.length > 0) {
+        const firebaseIds = new Set(fetched.map((a) => a.id));
+        const merged = [...fetched, ...playableApps.filter((a) => !firebaseIds.has(a.id))];
+        setAllApps(merged);
+      }
+    }).catch(() => {});
+  }, []);
 
   const sorted = useMemo(() =>
-    [...playableApps].sort((a, b) => (b.ratingCount ?? 0) - (a.ratingCount ?? 0)),
-  []);
+    [...allApps].sort((a, b) => (b.ratingCount ?? 0) - (a.ratingCount ?? 0)),
+  [allApps]);
 
   const hotApps = sorted.slice(0, 6);
-  const climateApps = useMemo(() => playableApps.filter((a) => a.category === '環保' || a.category === '自然' || a.category === '生態' || a.category === '能源' || a.category === '氣候'), []);
-  const techApps = useMemo(() => playableApps.filter((a) => a.category === '科技' || a.category === '醫療' || a.category === '創意' || a.category === '遊戲' || a.category === '語言'), []);
-  const lifeApps = useMemo(() => playableApps.filter((a) => a.category === '生活' || a.category === '入門' || a.category === '安全' || a.category === '媒體' || a.category === '閱讀' || a.category === '家庭' || a.category === '感官' || a.category === '科學' || a.category === '生態'), []);
+  const climateApps = useMemo(() => allApps.filter((a) => a.category === '環保' || a.category === '自然' || a.category === '生態' || a.category === '能源' || a.category === '氣候' || a.category === 'Climate & Environment'), [allApps]);
+  const techApps = useMemo(() => allApps.filter((a) => a.category === '科技' || a.category === '醫療' || a.category === '創意' || a.category === '遊戲' || a.category === '語言' || a.category === 'AI & Technology'), [allApps]);
+  const lifeApps = useMemo(() => allApps.filter((a) => a.category === '生活' || a.category === '入門' || a.category === '安全' || a.category === '媒體' || a.category === '閱讀' || a.category === '家庭' || a.category === '感官' || a.category === '科學' || a.category === '生態' || a.category === 'Knowledge & Life'), [allApps]);
 
   return (
     <div className="screen screen--explore">
