@@ -120,11 +120,6 @@ export default function StoryPlayer({ appId, previewContent }: StoryPlayerProps)
 
         {/* Inline review form */}
         <div className="story-review">
-          <div className="review-form__header">
-            <span className="review-form__header-icon">✍️</span>
-            <span className="review-form__header-title">{tKey('review_title', lang)}</span>
-          </div>
-
           {reviewMsg && <p className="review-form__msg">{reviewMsg}</p>}
 
           {!user ? (
@@ -136,7 +131,6 @@ export default function StoryPlayer({ appId, previewContent }: StoryPlayerProps)
             /* Step 1: Rate with stars */
             <div className="review-form__step">
               <div className="review-form__rating-area">
-                <span className="review-form__rate-question">{tKey('review_rate', lang)}</span>
                 <div className="review-form__stars">
                   {[1,2,3,4,5].map((s) => (
                     <span key={s}
@@ -217,7 +211,7 @@ export default function StoryPlayer({ appId, previewContent }: StoryPlayerProps)
                   <input className="review-form__input" type="text"
                     placeholder={tKey('review_placeholder_title', lang)}
                     value={reviewTitle}
-                    onChange={(e) => setReviewTitle(e.target.value)} required />
+                    onChange={(e) => setReviewTitle(e.target.value)} />
                   <textarea className="review-form__textarea"
                     placeholder={tKey('review_placeholder_body', lang)}
                     value={reviewBody}
