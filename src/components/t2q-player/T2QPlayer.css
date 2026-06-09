@@ -1,0 +1,334 @@
+/* ========================================
+   T2Q Player — Touch-optimized game player
+   ======================================== */
+
+.t2q-player {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.t2q-player__loading,
+.t2q-player__error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  color: var(--text-secondary);
+  font-size: 18px;
+  padding: 24px;
+  text-align: center;
+}
+
+/* ---- Header ---- */
+.t2q-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--separator);
+  min-height: 48px;
+}
+
+.t2q-header__back {
+  background: none;
+  border: none;
+  color: var(--play-green);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 4px;
+  min-width: 44px;
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+.t2q-header__progress {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.t2q-header__score {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--play-green);
+}
+
+/* ---- Scene area ---- */
+.t2q-scene {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* ---- Conversation ---- */
+.t2q-conversation {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+  gap: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  color: var(--text-primary);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.t2q-conversation__speaker {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--play-green);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.t2q-conversation__text {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0;
+}
+
+.t2q-conversation__hint {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin-top: 8px;
+}
+
+.t2q-conversation__progress {
+  display: flex;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+/* ---- Dots ---- */
+.t2q-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  transition: background 0.2s;
+}
+
+.t2q-dot--active {
+  background: var(--play-green);
+  transform: scale(1.3);
+}
+
+.t2q-dot--done {
+  background: var(--text-tertiary);
+}
+
+/* ---- Quiz ---- */
+.t2q-quiz {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px;
+  gap: 20px;
+}
+
+.t2q-quiz__question {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  margin: 0;
+  padding: 8px 0;
+  line-height: 1.4;
+}
+
+.t2q-quiz__options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ---- Option buttons ---- */
+.t2q-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--separator);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  min-height: 56px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  color: var(--text-primary);
+  font-size: 17px;
+  text-align: left;
+  width: 100%;
+}
+
+.t2q-option:active {
+  background: var(--bg-tertiary);
+  border-color: var(--play-green);
+}
+
+.t2q-option--correct {
+  border-color: #4caf50;
+  background: rgba(76, 175, 80, 0.12);
+}
+
+.t2q-option--wrong {
+  border-color: #f44336;
+  background: rgba(244, 67, 54, 0.08);
+}
+
+.t2q-option__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.t2q-option__text {
+  flex: 1;
+  line-height: 1.4;
+}
+
+/* ---- Feedback overlay ---- */
+.t2q-feedback-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.t2q-feedback {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+}
+
+.t2q-feedback__icon {
+  font-size: 40px;
+}
+
+.t2q-feedback__text {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ---- Finish screen ---- */
+.t2q-player--finished {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.t2q-finish-card {
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+}
+
+.t2q-finish__emoji {
+  font-size: 56px;
+}
+
+.t2q-finish__title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.t2q-finish__score {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin: 0 0 8px;
+}
+
+.t2q-finish__score strong {
+  color: var(--play-green);
+}
+
+.t2q-finish__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* ---- Shared buttons ---- */
+.t2q-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  min-height: 48px;
+  min-width: 44px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.15s;
+}
+
+.t2q-btn:active {
+  opacity: 0.8;
+}
+
+.t2q-btn--primary {
+  background: var(--play-green);
+  color: #fff;
+  width: 100%;
+}
+
+.t2q-btn--back {
+  background: transparent;
+  color: var(--text-secondary);
+}

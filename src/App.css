@@ -1067,6 +1067,31 @@
   background: var(--bg-tertiary);
 }
 
+/* ---- Detail: Placeholder icon ---- */
+.detail__icon--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border-radius: 16px;
+  font-size: 36px;
+  width: 72px;
+  height: 72px;
+}
+
+/* ---- Detail: Screenshot placeholder ---- */
+.detail__screenshot--placeholder {
+  width: 180px;
+  height: 120px;
+  border-radius: 10px;
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
 /* ========================================
    SETTING SCREEN
    ======================================== */
@@ -1185,4 +1210,153 @@
   .detail__meta-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ========================================
+   APPS SCREEN — Create button & badge
+   ======================================== */
+.apps-create-btn {
+  background: var(--play-green);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-family);
+  min-height: 36px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.15s;
+}
+
+.apps-create-btn:active {
+  opacity: 0.8;
+}
+
+.content-card__badge {
+  display: inline-block;
+  background: rgba(79, 195, 247, 0.12);
+  color: var(--play-accent);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+/* ---- Setting: My Apps ---- */
+.setting-myapps-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.setting-item--app {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.setting-myapps__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.setting-myapps__icon--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  font-size: 20px;
+}
+
+.setting-myapps__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.setting-myapps__name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.setting-myapps__type {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.setting-myapps__empty {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin: 0 0 12px 4px;
+}
+
+.setting-create-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  margin-top: 4px;
+  background: var(--bg-secondary);
+  border: 1px dashed var(--separator);
+  border-radius: 10px;
+  color: var(--play-green);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-family);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.setting-create-btn:active {
+  background: var(--bg-tertiary);
+  border-color: var(--play-green);
+}
+
+/* ---- Content card: placeholder icon ---- */
+.content-card__icon--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  font-size: 32px;
+}
+
+/* ---- Content card: small placeholder for grid ---- */
+.content-card__icon--placeholder-sm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  font-size: 24px;
+  width: 64px;
+  height: 64px;
+}
+
+/* ---- Content card: home screen badge ---- */
+.content-card__badge-home {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: rgba(79, 195, 247, 0.12);
+  color: var(--play-accent);
+  margin-top: 2px;
 }

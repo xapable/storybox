@@ -77,6 +77,26 @@ export interface UIState {
   activeTab: TabType;
   isCardOpen: boolean;
   activeCardId: string | null;
+  // Player state
+  playingAppId: string | null;
+  playingAppType: 'story' | 't2q_quiz' | null;
+  // Detail screen before playing
+  previewAppId: string | null;
+  previewAppType: 'story' | 't2q_quiz' | null;
+  showCreator: boolean;
+  appFilter: string | null; // category filter for Apps tab
 }
 
 export type TabType = 'home' | 'search' | 'explore' | 'apps' | 'setting';
+
+// Re-export T2Q types
+export type {
+  AppDocument,
+  GameObject,
+  Scene,
+  ConversationScene,
+  ConversationLine,
+  QuizScene,
+  ParseError,
+  ParseResult,
+} from './t2q';

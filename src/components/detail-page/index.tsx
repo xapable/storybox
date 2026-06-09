@@ -83,7 +83,7 @@ export default function DetailPage() {
   // Compute star distribution
   const starDist = [5, 4, 3, 2, 1].map((star) => ({
     star,
-    count: reviews.filter((r) => r.rating >= star && r.rating < star + 1).length,
+    count: reviews.filter((r: Review) => r.rating >= star && r.rating < star + 1).length,
   }));
   const totalReviews = reviews.length;
 
@@ -132,7 +132,7 @@ export default function DetailPage() {
         {/* === GENRES === */}
         {item.genre && item.genre.length > 0 && (
           <div className="detail__genres">
-            {item.genre.map((g) => (
+            {item.genre.map((g: string) => (
               <span key={g} className="detail__chip">{g}</span>
             ))}
             {item.category && <span className="detail__chip detail__chip--accent">{item.category}</span>}
@@ -162,7 +162,7 @@ export default function DetailPage() {
           <div className="detail__section">
             <h3 className="detail__section-title">{tKey('detail_whats_new', lang)}</h3>
             <div className="detail__whatsnew">
-              {item.whatsNew.split('\n').map((line, i) => (
+              {item.whatsNew.split('\n').map((line: string, i: number) => (
                 <p key={i} className="detail__text">{line}</p>
               ))}
             </div>
@@ -175,7 +175,7 @@ export default function DetailPage() {
             <h3 className="detail__section-title">
               {tKey('detail_about', lang)}
             </h3>
-            {item.description.split('\n\n').map((para, i) => (
+            {item.description.split('\n\n').map((para: string, i: number) => (
               <p key={i} className="detail__text">{para}</p>
             ))}
           </div>
@@ -278,7 +278,7 @@ export default function DetailPage() {
 
             {/* Review cards */}
             <div className="detail__reviews">
-              {visibleReviews.map((review) => (
+              {visibleReviews.map((review: Review) => (
                 <ReviewCard key={review.id} review={review} />
               ))}
             </div>

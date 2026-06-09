@@ -1,0 +1,358 @@
+import type { AppDocument } from '../types/t2q';
+
+/**
+ * Playable story/quiz apps that mirror the existing static content.
+ * Each app has real playable content (story or T2Q quiz).
+ */
+export const playableApps: AppDocument[] = [
+  // ===== STORIES =====
+  {
+    id: 'play-c1',
+    title: '地球小幫手',
+    description: '學習隨手關燈、節約用水，用簡單行動保護地球',
+    thumbnail: '',
+    appType: 'story',
+    rating: 4.8,
+    ratingCount: 15200,
+    version: '2.1.0',
+    size: '32 MB',
+    downloads: '15.2K+',
+    contentRating: '全年齡',
+    category: '環保',
+    reviews: [
+      { id: 'r1', author: '小明的媽媽', rating: 5, title: '孩子學會主動關燈了！', content: '自從用了這個app，孩子每天睡前都會檢查有沒有關燈，還會提醒我們要省水，真的很棒！', date: '2024-11-20' },
+      { id: 'r2', author: '王老師', rating: 5, title: '課堂上很好用', content: '我用在國小三年級的環保課，學生們都很喜歡互動遊戲的部分，學習效果很好。', date: '2024-10-15' },
+    ],
+    storyContent: `大家好，我是地球小幫手！\n今天我們要學習怎麼愛護地球。\n你知道嗎？隨手關燈可以省下很多電喔！\n離開房間的時候，記得把燈關掉。\n洗手的時候，水不要開太大。\n搓肥皂的時候，先把水龍頭關起來。\n垃圾要記得分類。\n寶特瓶和紙張可以回收再利用。\n廚餘可以做成堆肥，讓植物長得更好。\n少用塑膠袋，帶自己的購物袋出門。\n每一個小小的行動，都能讓地球更健康！\n你也是地球小幫手喔！`,
+    createdAt: new Date('2024-11-01'),
+    createdBy: 'system',
+    isPublic: true,
+  },
+  {
+    id: 'play-c2',
+    title: '北極熊的家',
+    description: '認識全球暖化對北極和北極熊的影響',
+    thumbnail: '',
+    appType: 'story',
+    rating: 4.9,
+    ratingCount: 8900,
+    version: '1.8.0',
+    size: '45 MB',
+    downloads: '8.9K+',
+    contentRating: '全年齡',
+    category: '自然',
+    reviews: [
+      { id: 'r3', author: '阿嬤學員', rating: 5, title: '畫面很美，故事感人', content: '跟孫子一起看，看到北極熊沒有家可以住的時候，孫子都哭了。很好的教育app。', date: '2024-09-30' },
+      { id: 'r4', author: '林爸爸', rating: 4, title: '內容很棒但稍短', content: '動畫品質很高，孩子很喜歡，但希望可以有更多章節。', date: '2024-08-22' },
+    ],
+    storyContent: `在遙遠的北極，住著北極熊小白和牠的家人。\n北極好冷好冷，到處都是白色的冰雪。\n小白最喜歡在冰上玩耍了。\n但是最近，小白發現一件奇怪的事。\n冰塊變得越來越薄了！\n有些地方的冰甚至不見了，變成了海水。\n媽媽說，因為地球越來越熱，冰才會融化。\n小白好擔心：沒有冰，我們要住在哪裡呢？\n北極熊需要冰才能抓海豹吃。\n沒有冰，就沒有食物了。\n小朋友，我們可以幫忙小白！\n隨手關燈、少開冷氣、多種樹木。\n讓我們一起保護北極熊的家！`,
+    createdAt: new Date('2024-10-15'),
+    createdBy: 'system',
+    isPublic: true,
+  },
+  {
+    id: 'play-c6',
+    title: '小蜜蜂工作囉',
+    description: '為什麼蜜蜂很重要？認識花朵與食物的關係',
+    thumbnail: '',
+    appType: 'story',
+    rating: 4.8,
+    ratingCount: 11800,
+    version: '1.5.0',
+    size: '42 MB',
+    downloads: '11.8K+',
+    contentRating: '全年齡',
+    category: '生態',
+    reviews: [
+      { id: 'r5', author: '花園小園丁', rating: 5, title: '蜜蜂真的好重要', content: '原來我們吃的食物都要感謝蜜蜂！學到好多。', date: '2024-11-30' },
+    ],
+    storyContent: `嗡嗡嗡～我是小蜜蜂，今天好忙喔！\n我要去拜訪好多花朵朋友。\n首先飛到紅色的玫瑰花那裡。\n玫瑰姐姐好香喔，我幫她傳花粉！\n然後飛到黃色的向日葵那裡。\n向日葵長得好高，像太陽一樣。\n你知道嗎？蜜蜂幫忙傳花粉，植物才能結果實。\n我們吃的蘋果、草莓、番茄，都要謝謝蜜蜂！\n如果沒有蜜蜂，很多水果和蔬菜就長不出來了。\n所以蜜蜂真的很重要喔！\n可是現在蜜蜂越來越少了。\n農藥會傷害蜜蜂，花朵也變少了。\n我們可以在陽台種一些小花。\n不使用農藥，給蜜蜂一個安全的家。\n嗡嗡嗡～謝謝你愛護蜜蜂！`,
+    createdAt: new Date('2024-12-01'),
+    createdBy: 'system',
+    isPublic: true,
+  },
+
+  // ===== T2Q QUIZZES =====
+  {
+    id: 'play-c3',
+    title: '垃圾分類小教室',
+    description: '透過簡單遊戲，學習丟垃圾、回收和堆肥',
+    thumbnail: '',
+    appType: 't2q_quiz',
+    rating: 4.7,
+    ratingCount: 21300,
+    version: '3.0.1',
+    size: '28 MB',
+    downloads: '21.3K+',
+    contentRating: '全年齡',
+    category: '環保',
+    reviews: [
+      { id: 'r6', author: '張媽媽', rating: 5, title: '現在分類都不會錯了', content: '以前常常搞不清楚什麼該回收，玩了這個app之後，連小孩都會教我了！', date: '2024-12-01' },
+    ],
+    t2qContent: `> 老師: 同學們，今天我們來學習垃圾分類！\n> 老師: 你知道垃圾可以分成幾類嗎？\n\n? 垃圾主要可以分成幾大類？\n1) 2 類\n2) 3 類\n3) 4 類\n4) 5 類\n= 3\n\n> 老師: 沒錯！一般垃圾、資源回收、廚餘堆肥。\n> 老師: 我們來看看各種垃圾怎麼分類。\n\n? 寶特瓶應該丟到哪一類？\n1) 一般垃圾\n2) 資源回收\n3) 廚餘堆肥\n= 2\n\n> 老師: 很好！寶特瓶可以回收做成新瓶子。\n\n? 吃剩的蘋果核應該丟到哪一類？\n1) 一般垃圾\n2) 資源回收\n3) 廚餘堆肥\n= 3\n\n> 老師: 對！廚餘可以變成肥料。\n\n? 用過的衛生紙應該丟到哪一類？\n1) 一般垃圾\n2) 資源回收\n3) 廚餘堆肥\n= 1\n\n> 老師: 衛生紙不能回收喔！\n> 老師: 大家都學會了嗎？一起愛護地球吧！`,
+    createdAt: new Date('2024-11-20'),
+    createdBy: 'system',
+    isPublic: true,
+  },
+  {
+    id: 'play-c4',
+    title: '水滴的旅行',
+    description: '跟著小水滴認識水循環，學會珍惜每一滴水',
+    thumbnail: '',
+    appType: 't2q_quiz',
+    rating: 4.6, ratingCount: 6700, version: '1.5.0', size: '38 MB', downloads: '6.7K+', contentRating: '全年齡', category: '科學',
+    reviews: [
+      { id: 'rc4', author: '科學小老師', rating: 5, title: '自然課的好幫手', content: '搭配國小自然課使用，學生對水循環的理解更深刻了。動畫做得很生動。', date: '2024-10-08' },
+    ],
+    t2qContent: `> 水滴: 大家好！我是一顆小水滴。\n> 水滴: 想跟我一起去旅行嗎？\n\n? 水變成水蒸氣升到天空的過程叫做什麼？\n1) 凝結\n2) 蒸發\n3) 降水\n= 2\n\n> 水滴: 太陽照在我身上，我就變成水蒸氣飛上天了！\n\n? 天上的水蒸氣變成雲的過程叫做什麼？\n1) 蒸發\n2) 凝結\n3) 融化\n= 2\n\n> 水滴: 我們好多小水滴聚在一起就變成雲了。\n\n? 雲裡的水滴變成雨落下來的過程叫做什麼？\n1) 降水\n2) 蒸發\n3) 凝結\n= 1\n\n> 水滴: 然後我又回到地面，開始新的旅行！\n\n? 我們應該如何珍惜水資源？\n1) 洗手時水開很大\n2) 刷牙時讓水一直流\n3) 洗澡用蓮蓬頭不要泡澡\n= 3\n\n> 水滴: 謝謝你珍惜我，我們下次見！`,
+    createdAt: new Date('2024-10-08'),
+    createdBy: 'system',
+    isPublic: true,
+  },
+  {
+    id: 'play-ai1',
+    title: 'AI 是什麼？',
+    description: '用最簡單的方式認識人工智慧',
+    thumbnail: '',
+    appType: 't2q_quiz',
+    rating: 4.8, ratingCount: 16200, version: '2.2.0', size: '42 MB', downloads: '16.2K+', contentRating: '全年齡', category: '科技',
+    reviews: [
+      { id: 'rai1', author: 'AI小達人', rating: 5, title: '原來AI不難', content: '用最簡單的方式解釋AI，連我都懂了！', date: '2025-01-15' },
+    ],
+    t2qContent: `> 機器人: 大家好！我是 AI 助教！\n> 機器人: 你聽過人工智慧嗎？\n\n? AI 是什麼的縮寫？\n1) Automatic Intelligence\n2) Artificial Intelligence\n3) Advanced Internet\n= 2\n\n> 機器人: 沒錯！AI 就是 Artificial Intelligence。\n\n? AI 可以做以下哪些事情？\n1) 認出照片裡的貓\n2) 跟人下圍棋\n3) 幫忙翻譯語言\n4) 以上皆是\n= 4\n\n> 機器人: AI 超厲害的！它需要學習才會變聰明。\n\n? AI 是怎麼學習的？\n1) 從大量資料中找規律\n2) 天生就會\n3) 有人直接告訴它所有答案\n= 1\n\n> 機器人: AI 看過很多張貓的照片，就知道貓長什麼樣子。\n\n? AI 可以做什麼幫助人類？\n1) 幫忙診斷疾病\n2) 自動駕駛汽車\n3) 寫功課\n4) 1 和 2\n= 4\n\n> 機器人: AI 是很棒的工具，但也要好好使用喔！`,
+    createdAt: new Date('2025-01-15'),
+    createdBy: 'system',
+    isPublic: true,
+  },
+  {
+    id: 'play-c5',
+    title: '風車與太陽',
+    description: '認識風力發電與太陽能，了解乾淨的能源',
+    thumbnail: '',
+    appType: 't2q_quiz',
+    rating: 4.5, ratingCount: 5400, version: '2.0.0', size: '35 MB', downloads: '5.4K+', contentRating: '全年齡', category: '能源',
+    reviews: [
+      { id: 'rc5', author: '能源小博士', rating: 4, title: '概念清楚易懂', content: '對小朋友來說，能源是很抽象的概念，但這個app用很簡單的方式解釋清楚了。', date: '2024-09-12' },
+    ],
+    t2qContent: `> 能源博士: 小朋友，你知道電從哪裡來嗎？\n\n? 傳統的發電方式主要燒什麼來發電？\n1) 木頭\n2) 煤炭\n3) 水\n= 2\n\n> 能源博士: 燒煤炭會排放二氧化碳，讓地球變熱。\n\n? 以下哪一種是乾淨的再生能源？\n1) 風力發電\n2) 太陽能發電\n3) 以上皆是\n= 3\n\n> 能源博士: 風可以把大風車吹動來發電！\n\n? 太陽能板可以將太陽光轉換成什麼？\n1) 熱水\n2) 電力\n3) 風力\n= 2\n\n> 能源博士: 再生能源用完還會再生，不會傷害地球。\n\n? 為什麼要多用再生能源？\n1) 減少空氣污染\n2) 減緩全球暖化\n3) 保護地球\n4) 以上皆是\n= 4\n\n> 能源博士: 地球的未來就靠我們了！`,
+    createdAt: new Date('2024-09-12'),
+    createdBy: 'system',
+    isPublic: true,
+  },
+  {
+    id: 'play-auto',
+    title: '自動駕駛小車',
+    description: '認識AI如何讓車子自動駕駛',
+    thumbnail: '',
+    appType: 't2q_quiz',
+    rating: 4.6, ratingCount: 9200, version: '2.2.0', size: '52 MB', downloads: '9.2K+', contentRating: '全年齡', category: '科技',
+    reviews: [
+      { id: 'rauto', author: '未來工程師', rating: 5, title: '超酷的科技', content: '原來自動駕駛需要這麼多感應器和AI！', date: '2025-02-20' },
+    ],
+    t2qContent: `> 工程師: 你有想過車子可以自己開嗎？\n\n? 自動駕駛汽車用什麼來「看」路？\n1) 攝影機和感應器\n2) 望遠鏡\n3) 放大鏡\n= 1\n\n> 工程師: 車上有好多攝影機，像眼睛一樣！\n\n? 自動駕駛需要用到什麼技術？\n1) 人工智慧\n2) GPS 定位\n3) 感應器\n4) 以上皆是\n= 4\n\n> 工程師: AI 會判斷紅綠燈、行人和其他車子。\n\n? 自動駕駛最重要的目標是什麼？\n1) 開得最快\n2) 安全第一\n3) 省油\n= 2\n\n> 工程師: 安全永遠是最重要的！\n\n? 目前大部分自動駕駛車可以做到什麼？\n1) 完全不用人\n2) 輔助駕駛\n3) 飛上天\n= 2\n\n> 工程師: 未來也許真的可以完全自動駕駛喔！`,
+    createdAt: new Date('2025-02-20'),
+    createdBy: 'system',
+    isPublic: true,
+  },
+
+  // ===== MORE CLIMATE APPS (c7-c10) =====
+  {
+    id: 'play-c7', title: '減塑生活好簡單', description: '學習少用塑膠袋、自備水壺，讓海洋更乾淨',
+    thumbnail: '', appType: 't2q_quiz', rating: 4.7, ratingCount: 9800, version: '2.0.0', size: '25 MB', downloads: '9.8K+', contentRating: '全年齡', category: '環保',
+    reviews: [{ id: 'r7', author: '海洋守護者', rating: 5, title: '孩子不再用塑膠袋', content: '現在去超市都會提醒我要帶購物袋！', date: '2024-11-10' }],
+    t2qContent: `> 海龜: 大家好，我是一隻海龜！\n> 海龜: 你知道嗎？海洋裡有好多塑膠垃圾。\n\n? 為什麼塑膠對海洋生物很危險？\n1) 動物會誤食\n2) 動物會被纏住\n3) 以上皆是\n= 3\n\n> 海龜: 我差點把塑膠袋當成水母吃下去！\n\n? 我們可以做什麼來減少塑膠？\n1) 自備購物袋\n2) 帶自己的水壺\n3) 不用塑膠吸管\n4) 以上皆是\n= 4\n\n> 海龜: 小小的改變，大大的幫助！\n\n? 一個塑膠袋在海洋裡多久才會分解？\n1) 1 年\n2) 10 年\n3) 超過 100 年\n= 3\n\n> 海龜: 讓我們一起保護海洋吧！`,
+    createdAt: new Date('2024-11-10'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-c8', title: '樹爺爺的呼吸', description: '認識森林如何製造新鮮空氣',
+    thumbnail: '', appType: 'story', rating: 4.6, ratingCount: 7200, version: '1.3.0', size: '48 MB', downloads: '7.2K+', contentRating: '全年齡', category: '自然',
+    reviews: [{ id: 'r8', author: '森林系女孩', rating: 5, title: '好感動的內容', content: '樹木默默做了這麼多事情，我們真的要好好保護森林。孩子看完說要種一棵樹！', date: '2024-08-30' }],
+    storyContent: `大家好，我是一棵老樹，大家都叫我樹爺爺。\n我住在森林裡已經一百年了。\n你們知道嗎？我每天都在幫忙製造新鮮的空氣喔！\n我吸收二氧化碳，吐出氧氣。\n人類和動物都需要氧氣才能呼吸。\n沒有樹木，空氣會變得很糟糕。\n我還可以讓天氣變涼爽。\n樹蔭下的溫度比馬路上低好幾度呢！\n下雨的時候，我的根會抓住泥土。\n這樣才不會有土石流。\n很多小動物也住在森林裡。\n小鳥在樹上築巢，松鼠在樹洞裡睡覺。\n但是現在森林越來越少了。\n人們砍掉樹木，蓋房子和馬路。\n請你們多多種樹，保護森林！\n讓我們一起讓地球更美麗。`,
+    createdAt: new Date('2024-08-30'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-c9', title: '熱熱的地球', description: '認識溫室效應，就像地球穿了一件太厚的衣服',
+    thumbnail: '', appType: 'story', rating: 4.4, ratingCount: 6100, version: '1.2.0', size: '30 MB', downloads: '6.1K+', contentRating: '全年齡', category: '氣候',
+    reviews: [{ id: 'r9', author: '地球小尖兵', rating: 4, title: '比喻很生動', content: '用穿衣服來解釋溫室效應，孩子一下就懂了。', date: '2024-07-15' }],
+    storyContent: `小朋友，你有沒有覺得夏天越來越熱了？\n不只是台灣變熱，整個地球都在發燒！\n為什麼呢？因為溫室效應變嚴重了。\n想像地球穿了一件外套。\n這件外套叫做大氣層。\n大氣層裡的溫室氣體像外套一樣。\n幫地球保暖，讓地球不會太冷。\n可是人類燃燒太多煤炭和石油。\n排放太多二氧化碳到空氣中。\n就像讓地球穿了太多件外套！\n地球太熱了，就開始發燒。\n北極的冰塊融化，海平面上升。\n天氣也變得很奇怪。\n有時候大旱災，有時候大洪水。\n我們可以怎麼幫忙呢？\n多走路、騎腳踏車，少開車。\n節約用電，隨手關燈。\n多吃蔬菜，少吃肉。\n讓我們一起幫地球退燒吧！`,
+    createdAt: new Date('2024-07-15'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-c10', title: '小小農夫', description: '認識食物從哪裡來，鼓勵多吃蔬菜、減少浪費',
+    thumbnail: '', appType: 't2q_quiz', rating: 4.9, ratingCount: 13500, version: '2.5.0', size: '55 MB', downloads: '13.5K+', contentRating: '全年齡', category: '生活',
+    reviews: [{ id: 'r10', author: '開心農場', rating: 5, title: '孩子開始吃青菜了', content: '認識食物來源後，孩子對蔬菜更有興趣了！', date: '2024-11-25' }],
+    t2qContent: `> 農夫: 歡迎來到我的菜園！\n> 農夫: 你知道你吃的食物從哪裡來嗎？\n\n? 番茄是長在樹上還是地上？\n1) 樹上\n2) 藤蔓上\n3) 地下\n= 2\n\n> 農夫: 番茄是爬藤植物，需要架子支撐！\n\n? 紅蘿蔔吃的部分是什麼？\n1) 葉子\n2) 根\n3) 果實\n= 2\n\n> 農夫: 對！我們吃的是紅蘿蔔的根。\n\n? 為什麼不要浪費食物？\n1) 種食物很辛苦\n2) 浪費會產生垃圾\n3) 很多人沒有足夠食物\n4) 以上皆是\n= 4\n\n> 農夫: 珍惜食物就是珍惜地球！`,
+    createdAt: new Date('2024-11-25'), createdBy: 'system', isPublic: true,
+  },
+
+  // ===== TECH APPS (t1-t6, t8-t10) =====
+  {
+    id: 'play-t1', title: 'AI 好朋友', description: '什麼是 AI？把它當成一個會學習的好幫手',
+    thumbnail: '', appType: 'story', rating: 4.7, ratingCount: 10200, version: '2.0.0', size: '40 MB', downloads: '10.2K+', contentRating: '全年齡', category: '科技',
+    reviews: [{ id: 'rt1', author: '科技小達人', rating: 5, title: 'AI原來這麼簡單', content: '用故事的方式介紹AI，連我阿嬤都聽懂了。', date: '2025-01-10' }],
+    storyContent: `嗨！你有沒有用過手機的語音助理？\n你說「嘿 Siri」或「OK Google」，它就會回答你。\n這就是 AI 的一種喔！\nAI 是人工智慧的意思。\n它像是一個很聰明的小朋友。\n但是 AI 不是天生就聰明的。\n它需要學習很多很多資料。\n比如說，要看過十萬張貓咪的照片。\nAI 才知道貓咪長什麼樣子。\nAI 可以幫忙做很多事情。\n它可以幫忙翻譯不同國家的語言。\n可以認出照片裡的人是誰。\n還可以幫醫生看 X 光片。\n但是 AI 也有很多不會的事情。\n它不會像人類一樣有感情。\n也不會自己思考新點子。\nAI 是我們的好幫手。\n但最重要的還是我們自己的頭腦！`,
+    createdAt: new Date('2025-01-10'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-t2', title: '小幫手語音助理', description: '認識手機裡的語音助理怎麼聽懂我們說的話',
+    thumbnail: '', appType: 'story', rating: 4.5, ratingCount: 7800, version: '1.6.0', size: '28 MB', downloads: '7.8K+', contentRating: '全年齡', category: '科技',
+    reviews: [{ id: 'rt2', author: '好奇寶寶', rating: 5, title: '原來是這樣！', content: '終於知道為什麼手機聽得懂我說話了。', date: '2025-02-14' }],
+    storyContent: `「嘿！今天天氣怎麼樣？」\n你對著手機這樣問。\n手機馬上告訴你會不會下雨。\n好神奇！手機怎麼聽懂你說的話呢？\n其實背後有很多步驟喔。\n首先，手機的麥克風收到你的聲音。\n把聲音變成一串數字。\n然後 AI 開始分析這些數字。\n找出你說了哪些字。\n就像拼圖一樣，把聲音拼成文字。\n接著 AI 要理解你的意思。\n你是想知道天氣嗎？還是想聽音樂？\n最後 AI 找到答案，用聲音回答你。\n這些步驟都在幾秒鐘內完成。\n是不是很厲害？\n下次跟語音助理說話的時候。\n記得背後有很多 AI 在努力工作喔！`,
+    createdAt: new Date('2025-02-14'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-t3', title: '照片裡的人是誰', description: 'AI 怎麼認出人臉？認識圖像辨識',
+    thumbnail: '', appType: 't2q_quiz', rating: 4.6, ratingCount: 6500, version: '1.4.0', size: '35 MB', downloads: '6.5K+', contentRating: '全年齡', category: '科技',
+    reviews: [{ id: 'rt3', author: '小小攝影師', rating: 5, title: '人臉辨識好酷', content: '原來手機解鎖是這樣認出我的！', date: '2025-03-01' }],
+    t2qContent: `> AI教授: 今天來聊聊手機怎麼認出你的臉！\n\n? 手機用什麼來「看」你的臉？\n1) 鏡子\n2) 相機鏡頭\n3) 望遠鏡\n= 2\n\n> AI教授: 相機拍下你的臉，AI再來分析。\n\n? AI 認臉會看哪些特徵？\n1) 眼睛之間的距離\n2) 鼻子的形狀\n3) 下巴的輪廓\n4) 以上皆是\n= 4\n\n> AI教授: 每個人的臉都是獨一無二的！\n\n? 雙胞胎可以用人臉辨識區分嗎？\n1) 完全不行\n2) 可以，但比較難\n3) 一定可以\n= 2\n\n> AI教授: AI 需要更仔細看才能區分雙胞胎。`,
+    createdAt: new Date('2025-03-01'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-t4', title: '會推薦書的電腦', description: '為什麼電腦知道你喜歡什麼？認識推薦系統',
+    thumbnail: '', appType: 'story', rating: 4.3, ratingCount: 4900, version: '1.1.0', size: '22 MB', downloads: '4.9K+', contentRating: '全年齡', category: '科技',
+    reviews: [{ id: 'rt4', author: '小書蟲', rating: 4, title: '推薦真的很準', content: '難怪每次打開影片網站都會看到我想看的！', date: '2025-04-05' }],
+    storyContent: `打開 YouTube，它推薦了好多影片給你。\n有些你真的好想看！\n為什麼它知道你喜歡什麼呢？\n這就是推薦系統的魔法！\n推薦系統像是一個很用心的店員。\n它會偷偷觀察你喜歡什麼。\n你看了哪種類型的影片？\n你給哪些影片按了讚？\n你在哪個影片停留最久？\n推薦系統把這些都記下來。\n然後它會想：「這個人可能也會喜歡這個！」\n不只是影片，很多地方都有推薦系統。\n購物網站推薦你可能會買的東西。\n音樂App推薦你可能喜歡的歌。\n但是要小心喔！\n推薦系統有時候會讓我們只看同一類東西。\n所以偶爾也要自己去探索新的領域！`,
+    createdAt: new Date('2025-04-05'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-t5', title: '機器人學畫畫', description: 'AI 也可以畫圖，但你才是真正的藝術家',
+    thumbnail: '', appType: 'story', rating: 4.8, ratingCount: 11200, version: '2.2.0', size: '50 MB', downloads: '11.2K+', contentRating: '全年齡', category: '創意',
+    reviews: [{ id: 'rt5', author: '小畫家', rating: 5, title: 'AI畫得好漂亮', content: '但是我自己畫的更有成就感！', date: '2025-05-20' }],
+    storyContent: `你有聽過 AI 會畫畫嗎？\n真的！AI 現在可以畫出很漂亮的圖。\n你只要打字告訴它：「畫一隻在太空的貓咪」。\nAI 就會變出一張圖給你。\n好神奇！AI 怎麼會畫畫呢？\nAI 看過幾百萬張圖片。\n它學習了什麼是貓咪、什麼是太空。\n然後它把這些元素組合起來。\n就像一個很會拼圖的高手。\n但是 AI 不是真正的藝術家喔。\nAI 沒有感受過快樂或悲傷。\n它不能像你一樣表達自己的心情。\n你的畫也許線條不完美。\n但那是獨一無二的、有心意的作品。\n所以 AI 可以是畫畫的好幫手。\n但最棒的藝術家，還是你自己！`,
+    createdAt: new Date('2025-05-20'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-t6', title: '聰明打字機', description: '打字時電腦怎麼幫你選下一個字？認識預測輸入',
+    thumbnail: '', appType: 'story', rating: 4.4, ratingCount: 5500, version: '1.0.0', size: '18 MB', downloads: '5.5K+', contentRating: '全年齡', category: '科技',
+    reviews: [{ id: 'rt6', author: '打字高手', rating: 4, title: '好用但有時候很搞笑', content: 'AI預測的字有時候跟我想的完全不一樣，很好笑！', date: '2025-06-01' }],
+    storyContent: `你有沒有發現一個有趣的現象？\n在手機上打字的時候。\n鍵盤上方會出現三個字讓你選。\n你打「我」，它可能會出現「想」「要」「是」。\n這就是預測輸入！\nAI 在猜你接下來想打什麼字。\n它怎麼猜的呢？\nAI 讀過很多很多句子。\n它知道「我」的後面通常接什麼字。\n也知道「今天天」後面通常是「氣」。\n所以你不用打完全部，AI 就幫你補上。\n是不是很方便？\n但有時候 AI 也會猜錯。\n因為每個人說話的方式不一樣。\n所以如果 AI 猜錯了。\n就自己打字，不用理它！\nAI 只是輔助，你才是主人喔。`,
+    createdAt: new Date('2025-06-01'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-t8', title: 'AI 醫生助手', description: 'AI 怎麼幫助醫生看X光片？認識醫療科技',
+    thumbnail: '', appType: 't2q_quiz', rating: 4.7, ratingCount: 8100, version: '2.1.0', size: '38 MB', downloads: '8.1K+', contentRating: '全年齡', category: '醫療',
+    reviews: [{ id: 'rt8', author: '小醫生', rating: 5, title: 'AI可以救人', content: '原來AI可以幫忙找出X光片裡的問題，真的很重要！', date: '2025-06-10' }],
+    t2qContent: `> 醫生: 今天帶你認識AI怎麼幫忙看醫生！\n\n? AI在醫院裡可以做什麼？\n1) 幫忙看X光片\n2) 提醒醫生注意異常\n3) 分析大量病歷\n4) 以上皆是\n= 4\n\n> 醫生: AI不會累，可以看很多很多張片子。\n\n? 為什麼AI看X光片比人快？\n1) AI可以同時看很多張\n2) AI不會眨眼\n3) AI一秒鐘可以分析幾百張\n4) 1和3\n= 4\n\n> 醫生: 但最後還是要醫生來判斷喔！\n\n? AI可以取代醫生嗎？\n1) 完全可以\n2) 完全不行\n3) 只能當助手\n= 3\n\n> 醫生: AI是很好的助手，但醫生的經驗和關心更重要。`,
+    createdAt: new Date('2025-06-10'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-t9', title: '機器人下棋', description: '認識電腦怎麼學會下棋，但你還是可以贏它',
+    thumbnail: '', appType: 'story', rating: 4.6, ratingCount: 7200, version: '1.5.0', size: '32 MB', downloads: '7.2K+', contentRating: '全年齡', category: '遊戲',
+    reviews: [{ id: 'rt9', author: '小棋王', rating: 5, title: 'AI下棋超強', content: '跟AI下了十盤，只贏了一盤！但很好玩。', date: '2025-06-20' }],
+    storyContent: `你有玩過下棋的手機遊戲嗎？\n你有沒有想過，電腦怎麼這麼會下棋？\n其實電腦不是天生就會下棋的。\nAI 需要學習很多很多棋局。\n它看過幾百萬盤高手下的棋。\n從中學到什麼是好的走法。\n什麼是會輸的走法。\n當你下一步棋的時候。\nAI 會在腦中模擬接下來可能的發展。\n「如果我走這裡，對方可能會走那裡...」\n它會算到好幾步之後。\n比人類算得還要遠。\n所以 AI 下棋很厲害！\n但是不要灰心喔。\n輸給 AI 沒關係。\n你可以從 AI 身上學到新的策略。\n慢慢你就會越來越厲害。\n誰知道呢？也許有一天你會發明比 AI 更強的走法！`,
+    createdAt: new Date('2025-06-20'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-t10', title: '說話翻譯機', description: '為什麼手機可以把中文變成英文？認識機器翻譯',
+    thumbnail: '', appType: 't2q_quiz', rating: 4.5, ratingCount: 6800, version: '2.0.0', size: '26 MB', downloads: '6.8K+', contentRating: '全年齡', category: '語言',
+    reviews: [{ id: 'rt10', author: '小小翻譯家', rating: 5, title: '出國超好用', content: '跟外國朋友溝通變簡單了！', date: '2025-07-01' }],
+    t2qContent: `> 翻譯家: 你有用過翻譯App嗎？\n> 翻譯家: 你知道它是怎麼運作的嗎？\n\n? 早期的翻譯系統用什麼方法？\n1) 逐字翻譯\n2) 理解整句話再翻譯\n3) 魔法\n= 1\n\n> 翻譯家: 但逐字翻譯常常翻得很奇怪。\n\n? 現代的AI翻譯用什麼方法？\n1) 只看單字\n2) 理解整句的意思再翻譯\n3) 隨機猜測\n= 2\n\n> 翻譯家: AI會先理解中文意思，再用英文表達。\n\n? 翻譯App最適合翻譯什麼？\n1) 詩歌\n2) 日常對話\n3) 笑話\n= 2\n\n> 翻譯家: 日常對話最適合！詩歌和笑話還是很難。`,
+    createdAt: new Date('2025-07-01'), createdBy: 'system', isPublic: true,
+  },
+
+  // ===== LIFE APPS (l1-l10) =====
+  {
+    id: 'play-l1', title: '手指點一點', description: '學習怎麼用手指滑平板、點按鈕',
+    thumbnail: '', appType: 'story', rating: 4.9, ratingCount: 18500, version: '3.0.0', size: '20 MB', downloads: '18.5K+', contentRating: '全年齡', category: '入門',
+    reviews: [{ id: 'rl1', author: '阿公學員', rating: 5, title: '終於學會滑手機了', content: '孩子很有耐心地教我，這個app設計得真的很簡單。', date: '2025-01-05' }],
+    storyContent: `第一次用平板電腦，是不是覺得有點緊張？\n別擔心！讓我來教你。\n首先，輕輕用手指點一下螢幕上的圖案。\n就像用手指戳一下桌面那樣。\n看到那個彩色按鈕了嗎？點下去！\n很棒！你剛剛完成了一個點擊。\n接下來，試試看滑動。\n把手指放在螢幕上，輕輕往旁邊移動。\n就像在桌上推一張紙。\n畫面就跟著動了！\n這就是滑動。\n還有捏合的手勢喔。\n用兩根手指放在螢幕上。\n兩根手指靠近，畫面就變小了。\n兩根手指分開，畫面就變大了。\n多練習幾次，很快就會習慣。\n沒有人第一次就很厲害的。\n慢慢來，你一定可以的！`,
+    createdAt: new Date('2025-01-05'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-l2', title: '網路禮貌小學堂', description: '在網路上保持禮貌與安全',
+    thumbnail: '', appType: 'story', rating: 4.5, ratingCount: 6200, version: '1.2.0', size: '24 MB', downloads: '6.2K+', contentRating: '全年齡', category: '安全',
+    reviews: [{ id: 'rl2', author: '網路安全老師', rating: 5, title: '每個小孩都該學', content: '網路禮貌跟真實世界的禮貌一樣重要！', date: '2025-02-10' }],
+    storyContent: `網路世界就像一個很大的遊樂場。\n裡面有好多好玩的事情。\n但是也要記得保持禮貌喔。\n在網路上跟別人說話的時候。\n要像面對面一樣有禮貌。\n不要說不好聽的話。\n因為螢幕對面也是一個真實的人。\n他有感覺，會難過，會開心。\n還有，不要隨便分享自己的秘密。\n你的名字、你家地址、你的電話。\n這些都是很私人的事情。\n如果有人在網路上對你說奇怪的話。\n要趕快告訴爸爸媽媽或老師。\n也不要隨便點奇怪的連結。\n有時候看起來像糖果，其實是陷阱。\n網路很好玩，但安全最重要！`,
+    createdAt: new Date('2025-02-10'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-l3', title: '真假消息辨識器', description: '判斷網路上哪些是真的、哪些是騙人的',
+    thumbnail: '', appType: 't2q_quiz', rating: 4.8, ratingCount: 9400, version: '2.3.0', size: '30 MB', downloads: '9.4K+', contentRating: '全年齡', category: '媒體',
+    reviews: [{ id: 'rl3', author: '求真達人', rating: 5, title: '假消息退散', content: '現在看到可疑的消息，孩子會自己查證了！', date: '2025-03-15' }],
+    t2qContent: `> 記者: 網路上很多消息，你分得清真假嗎？\n\n? 看到驚人的消息時，第一件事應該做什麼？\n1) 馬上分享給朋友\n2) 先查證來源\n3) 直接相信\n= 2\n\n> 記者: 對！先看看是誰發布的。\n\n? 以下哪個比較可能是假消息？\n1) 有明確來源和日期的報導\n2) 標題很誇張但沒有來源\n3) 多位專家都確認的消息\n= 2\n\n> 記者: 標題越誇張，越要小心！\n\n? 如何確認消息真假？\n1) 看其他網站有沒有報導\n2) 檢查日期是不是很久以前\n3) 以上皆是\n= 3\n\n> 記者: 做個聰明的網路使用者！`,
+    createdAt: new Date('2025-03-15'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-l4', title: '我的第一本電子書', description: '學會打開、翻頁、放大文字看書',
+    thumbnail: '', appType: 'story', rating: 4.3, ratingCount: 4100, version: '1.0.0', size: '15 MB', downloads: '4.1K+', contentRating: '全年齡', category: '閱讀',
+    reviews: [{ id: 'rl4', author: '愛讀書的阿公', rating: 4, title: '字可以放大真好', content: '老花眼看小字很吃力，放大功能太棒了。', date: '2025-04-01' }],
+    storyContent: `你有沒有在手機或平板上看過書呢？\n這就是電子書！\n電子書就像一本放在螢幕裡的書。\n你用手指在螢幕上滑一下。\n書的頁面就會翻過去。\n跟翻真正的書本有點像，但更輕鬆。\n如果字太小看不清楚怎麼辦？\n沒關係！電子書可以把字放大。\n用兩根手指往外拉。\n字就會變大，看得更清楚。\n你還可以點一下螢幕中間。\n會出現很多選項。\n可以加書籤，下次從這裡繼續看。\n可以查不懂的字是什麼意思。\n有的電子書還會有聲音。\n會唸故事給你聽喔！\n電子書很方便，隨時隨地都可以看書。`,
+    createdAt: new Date('2025-04-01'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-l5', title: '祖孫一起學', description: '兒童和長者可以一起玩的知識小測驗',
+    thumbnail: '', appType: 't2q_quiz', rating: 4.9, ratingCount: 22100, version: '3.2.0', size: '45 MB', downloads: '22.1K+', contentRating: '全年齡', category: '家庭',
+    reviews: [{ id: 'rl5', author: '三代同堂', rating: 5, title: '全家一起玩超開心', content: '阿公阿嬤跟孫子一起回答問題，笑聲不斷！', date: '2025-05-10' }],
+    t2qContent: `> 主持人: 歡迎來到祖孫一起學！\n> 主持人: 準備好了嗎？\n\n? 台灣最高的山是哪一座？\n1) 阿里山\n2) 玉山\n3) 雪山\n= 2\n\n> 主持人: 玉山有 3,952 公尺高喔！\n\n? 端午節我們會做什麼？\n1) 吃月餅\n2) 划龍舟\n3) 發紅包\n= 2\n\n> 主持人: 划龍舟、吃粽子，紀念屈原！\n\n? 人體最大的器官是什麼？\n1) 心臟\n2) 皮膚\n3) 肝臟\n= 2\n\n> 主持人: 皮膚是身體的保護罩！\n\n? 蜜蜂採花蜜是為了做什麼？\n1) 做蜂蜜\n2) 做果醬\n3) 玩遊戲\n= 1\n\n> 主持人: 大家都很棒！下次再一起玩！`,
+    createdAt: new Date('2025-05-10'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-l6', title: '氣象小學堂', description: '認識晴天、雨天、颱風以及氣候變化',
+    thumbnail: '', appType: 't2q_quiz', rating: 4.6, ratingCount: 8500, version: '2.0.0', size: '35 MB', downloads: '8.5K+', contentRating: '全年齡', category: '自然',
+    reviews: [{ id: 'rl6', author: '小小氣象員', rating: 5, title: '知道為什麼會下雨了', content: '原來雲有不同種類！', date: '2025-06-01' }],
+    t2qContent: `> 氣象主播: 歡迎收看氣象小學堂！\n\n? 雲是由什麼組成的？\n1) 棉花\n2) 小水滴和冰晶\n3) 灰塵\n= 2\n\n> 氣象主播: 雲是很多小水滴聚在一起形成的。\n\n? 台灣最常發生的天然災害是什麼？\n1) 地震和颱風\n2) 龍捲風\n3) 沙塵暴\n= 1\n\n> 氣象主播: 台灣位於地震帶和颱風路徑上。\n\n? 颱風來臨前應該做什麼？\n1) 去海邊看浪\n2) 準備手電筒和食物\n3) 出門逛街\n= 2\n\n> 氣象主播: 安全第一！做好防颱準備。`,
+    createdAt: new Date('2025-06-01'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-l7', title: '動物好朋友', description: '認識瀕危動物，知道為什麼要保護牠們',
+    thumbnail: '', appType: 'story', rating: 4.8, ratingCount: 12700, version: '2.4.0', size: '52 MB', downloads: '12.7K+', contentRating: '全年齡', category: '生態',
+    reviews: [{ id: 'rl7', author: '動物小天使', rating: 5, title: '好感動', content: '看到台灣黑熊的影片，孩子說要當動物醫生。', date: '2025-07-01' }],
+    storyContent: `地球上有很多美麗的動物。\n台灣黑熊、石虎、綠蠵龜、櫻花鉤吻鮭。\n但是，有些動物的數量越來越少了。\n為什麼呢？\n因為人類砍掉森林，動物沒有家住。\n因為人類亂丟垃圾，動物誤食死掉。\n因為氣候變遷，動物的食物不見了。\n這些動物叫做瀕危動物。\n瀕危就是快要消失的意思。\n如果我們不保護牠們。\n以後的小朋友可能就看不到牠們了。\n但是，我們可以做很多事情來幫忙！\n不要買用動物做的東西。\n去動物園或大自然時不要亂丟垃圾。\n多認識這些動物，告訴更多人保護牠們。\n每一種動物都是地球的寶貝。\n讓我們一起守護牠們！`,
+    createdAt: new Date('2025-07-01'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-l8', title: '樹木的年齡', description: '怎麼看樹的年輪？認識自然時間的概念',
+    thumbnail: '', appType: 'story', rating: 4.4, ratingCount: 3900, version: '1.1.0', size: '28 MB', downloads: '3.9K+', contentRating: '全年齡', category: '自然',
+    reviews: [{ id: 'rl8', author: '自然觀察家', rating: 4, title: '年輪好有趣', content: '原來每一圈代表一年，樹木也會寫日記！', date: '2025-08-01' }],
+    storyContent: `你有沒有看過樹木被切開的樣子？\n上面有一個一個的圓圈。\n那就是年輪！\n年輪像是樹木的日記本。\n每一年，樹木都會長大一輪。\n春天和夏天，樹木長得比較快。\n所以那一圈顏色比較淺。\n秋天和冬天，樹木長得比較慢。\n那一圈顏色就比較深。\n一淺一深，合起來就是一年。\n所以只要數一數有幾圈。\n就知道這棵樹幾歲了！\n年輪還可以告訴我們很多事。\n如果某一年的年輪特別窄。\n代表那年可能是乾旱，樹木長得不好。\n如果年輪特別寬。\n代表那年雨水充足，樹木很開心。\n樹木雖然不會說話。\n但年輪幫它記錄了所有的故事。`,
+    createdAt: new Date('2025-08-01'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-l9', title: '聲音博物館', description: '認識不同的聲音：鳥叫、風、雨、機器聲',
+    thumbnail: '', appType: 'story', rating: 4.5, ratingCount: 5600, version: '1.3.0', size: '36 MB', downloads: '5.6K+', contentRating: '全年齡', category: '感官',
+    reviews: [{ id: 'rl9', author: '聽覺敏銳', rating: 5, title: '用耳朵重新認識世界', content: '閉上眼睛聽聲音，發現了好多平常沒注意到的細節。', date: '2025-09-01' }],
+    storyContent: `閉上你的眼睛，仔細聽。\n你聽到什麼聲音？\n窗外有小鳥在唱歌。\n啾啾啾，吱吱吱。\n風吹過樹葉，發出沙沙沙的聲音。\n下雨了，滴滴答答打在屋頂上。\n冰箱在嗡嗡嗡地運轉。\n你的呼吸聲，好輕好輕。\n世界上有好多好多聲音。\n有些聲音很自然，像風、雨、鳥叫。\n有些聲音是人類製造的，像車子、機器。\n你有沒有試過認真聽一種聲音？\n閉上眼睛，只專心聽那一種聲音。\n你會發現很多平常沒注意到的細節。\n聲音可以讓我們放鬆。\n也可以讓我們提高警覺。\n下次試試看，用耳朵去旅行吧！`,
+    createdAt: new Date('2025-09-01'), createdBy: 'system', isPublic: true,
+  },
+  {
+    id: 'play-l10', title: '快樂記憶卡', description: '用翻牌配對遊戲複習氣候與AI小知識',
+    thumbnail: '', appType: 't2q_quiz', rating: 4.7, ratingCount: 10100, version: '2.0.0', size: '32 MB', downloads: '10.1K+', contentRating: '全年齡', category: '遊戲',
+    reviews: [{ id: 'rl10', author: '記憶王', rating: 5, title: '邊玩邊學', content: '翻牌遊戲加上知識問答，不知不覺學了好多！', date: '2025-10-01' }],
+    t2qContent: `> 主持人: 歡迎來到快樂記憶卡！複習一下學到的知識。\n\n? 地球發燒的主要原因？\n1) 太陽變大了\n2) 溫室效應\n3) 地球靠近太陽\n= 2\n\n> 主持人: 溫室氣體太多，讓地球越來越熱。\n\n? 以下哪種是再生能源？\n1) 太陽能\n2) 石油\n3) 天然氣\n= 1\n\n> 主持人: 太陽能取之不盡，用之不竭！\n\n? AI 的全名是什麼？\n1) Artificial Intelligence\n2) Automatic Internet\n3) Advanced Innovation\n= 1\n\n> 主持人: 學得好！地球和科技的知識都掌握了。\n\n? 台灣的保育類動物有？\n1) 台灣黑熊\n2) 恐龍\n3) 北極熊\n= 1\n\n> 主持人: 太棒了！你是知識小達人！`,
+    createdAt: new Date('2025-10-01'), createdBy: 'system', isPublic: true,
+  },
+];
+
+// ===== Movies & Books (placeholder) =====
+export const movies: any[] = [];
+export const books: any[] = [];
+
+// ===== Collections (derived from playable apps) =====
+const climateApps = playableApps.filter((a) => a.id.startsWith('play-c'));
+const techApps = playableApps.filter((a) => a.id.startsWith('play-t'));
+const lifeApps = playableApps.filter((a) => a.id.startsWith('play-l') || a.id === 'play-ai1' || a.id === 'play-auto');
+
+export const collections = [
+  { id: 'col-1', title: '氣候變遷與環保', subtitle: '學習保護地球的十堂課', type: 'APP' as const, items: climateApps.slice(0, 5) },
+  { id: 'col-2', title: '人工智慧與科技', subtitle: '認識AI和未來科技', type: 'APP' as const, items: techApps.slice(0, 5) },
+  { id: 'col-3', title: '綜合知識與生活', subtitle: '生活必備的小知識', type: 'APP' as const, items: lifeApps.slice(0, 5) },
+];
+
+// ===== Hero stories (point to playable apps) =====
+export const stories = [
+  { id: 'story-1', title: '認識氣候變遷', subtitle: '十個好玩又重要的環保知識', legend: '熱門主題',
+    imageUrl: 'https://placehold.co/600x300/4CAF50/white?text=🌍+氣候變遷',
+    backgroundColor: '#4CAF50', hero: true, date: '2024-12-01', appId: 'play-c1', appType: 'story' as const },
+  { id: 'story-2', title: 'AI 是什麼？', subtitle: '用最簡單的方式認識人工智慧', legend: '科技入門',
+    imageUrl: 'https://placehold.co/600x300/7C4DFF/white?text=🤖+AI+入門',
+    backgroundColor: '#7C4DFF', hero: true, date: '2024-12-03', appId: 'play-ai1', appType: 't2q_quiz' as const },
+  { id: 'story-3', title: '祖孫共學最好玩', subtitle: '跨世代一起學習的新方式', legend: '家庭推薦',
+    imageUrl: 'https://placehold.co/600x300/E91E63/white?text=👨‍👩‍👧‍👦+祖孫共學',
+    backgroundColor: '#E91E63', hero: true, date: '2024-12-05', appId: 'play-l5', appType: 't2q_quiz' as const },
+  { id: 'story-4', title: '小蜜蜂工作囉', subtitle: '蜜蜂對地球有多重要？',
+    imageUrl: 'https://placehold.co/128x128/FFEB3B/white?text=🐝', backgroundColor: '#FFEB3B', date: '2024-12-02', appId: 'play-c6', appType: 'story' as const },
+  { id: 'story-5', title: '自動駕駛小車', subtitle: '未來交通大解密',
+    imageUrl: 'https://placehold.co/128x128/1E88E5/white?text=🚗', backgroundColor: '#1E88E5', date: '2024-12-04', appId: 'play-auto', appType: 't2q_quiz' as const },
+  { id: 'story-6', title: '手指點一點', subtitle: '長輩平板入門課',
+    imageUrl: 'https://placehold.co/128x128/FF5722/white?text=👆', backgroundColor: '#FF5722', date: '2024-12-06', appId: 'play-l1', appType: 'story' as const },
+];
