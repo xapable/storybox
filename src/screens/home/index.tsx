@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useUIStore } from '../../store';
 import { useLanguage, tKey } from '../../i18n';
-import { useContent } from '../../data/useContent';
+import { stories, collections } from '../../data/content';
 import ContentCard from '../../components/content-card';
 import type { Story } from '../../types';
 
@@ -31,7 +31,7 @@ function StoryCircle({ story }: { story: Story }) {
   );
 }
 
-function CollectionRow({ collection }: { collection: ReturnType<typeof useContent>['collections'][number] }) {
+function CollectionRow({ collection }: { collection: typeof collections[number] }) {
   const { lang } = useLanguage();
   return (
     <section className="collection-row">
@@ -55,7 +55,6 @@ function CollectionRow({ collection }: { collection: ReturnType<typeof useConten
 export default function HomeScreen() {
   const [heroIdx, setHeroIdx] = useState(0);
   const { lang } = useLanguage();
-  const { stories, collections } = useContent();
   const heroStories = stories.filter((s) => s.hero);
   const circleStories = stories.filter((s) => !s.hero);
 

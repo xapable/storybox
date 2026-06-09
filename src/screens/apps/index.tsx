@@ -1,10 +1,9 @@
 import { useLanguage, tKey } from '../../i18n';
-import { useContent } from '../../data/useContent';
+import { apps } from '../../data/content';
 import ContentCard from '../../components/content-card';
 
 export default function AppsScreen() {
   const { lang } = useLanguage();
-  const { apps } = useContent();
 
   return (
     <div className="screen screen--apps">

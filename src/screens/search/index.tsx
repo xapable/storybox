@@ -1,12 +1,11 @@
 import { useState, useMemo } from 'react';
 import { useLanguage, tKey, tReplace } from '../../i18n';
-import { useContent } from '../../data/useContent';
+import { apps, movies, books } from '../../data/content';
 import ContentCard from '../../components/content-card';
 
 export default function SearchScreen() {
   const [query, setQuery] = useState('');
   const { lang } = useLanguage();
-  const { apps, movies, books } = useContent();
 
   const results = useMemo(() => {
     if (!query.trim()) return [];
