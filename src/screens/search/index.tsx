@@ -66,12 +66,12 @@ export default function SearchScreen() {
                 <span className="content-card__subtitle">{item.subtitle}</span>
                 <span className="content-card__meta">
                   <span className="content-card__badge">
-                    {item.appType === 't2q_quiz' ? 'T2Q Quiz' : 'Story'}
+                    {item.appType === 't2q_quiz' ? tKey('card_type_quiz', lang) : tKey('card_type_story', lang)}
                   </span>
                 </span>
               </div>
               <span className="content-card__action">
-                {item.appType === 't2q_quiz' ? 'Play' : 'Read'}
+                {item.appType === 't2q_quiz' ? tKey('card_play', lang) : tKey('card_read', lang)}
               </span>
             </button>
           ))}

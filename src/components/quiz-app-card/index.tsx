@@ -1,3 +1,4 @@
+import { useLanguage, tKey } from '../../i18n';
 import type { AppDocument } from '../../types/t2q';
 
 interface QuizAppCardProps {
@@ -6,8 +7,9 @@ interface QuizAppCardProps {
 }
 
 export default function QuizAppCard({ app, onPlay }: QuizAppCardProps) {
-  const badge = app.appType === 't2q_quiz' ? 'T2Q Quiz' : 'Story';
-  const actionLabel = app.appType === 't2q_quiz' ? 'Play' : 'Read';
+  const { lang } = useLanguage();
+  const badge = app.appType === 't2q_quiz' ? tKey('card_type_quiz', lang) : tKey('card_type_story', lang);
+  const actionLabel = app.appType === 't2q_quiz' ? tKey('card_play', lang) : tKey('card_read', lang);
 
   return (
     <button

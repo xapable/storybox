@@ -119,7 +119,7 @@ export default function SettingScreen() {
                   <div className="setting-myapps__info">
                     <span className="setting-myapps__name">{app.title}</span>
                     <span className="setting-myapps__type">
-                      {app.appType === 't2q_quiz' ? 'T2Q Quiz' : 'Story'}
+                      {app.appType === 't2q_quiz' ? tKey('card_type_quiz', lang) : tKey('card_type_story', lang)}
                     </span>
                   </div>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)" strokeWidth="2">
@@ -223,7 +223,7 @@ export default function SettingScreen() {
                     <div className="setting-myapps__info">
                       <span className="setting-myapps__name">{app.title}</span>
                       <span className="setting-myapps__type">
-                        {app.appType === 't2q_quiz' ? 'T2Q Quiz' : 'Story'}
+                        {app.appType === 't2q_quiz' ? tKey('card_type_quiz', lang) : tKey('card_type_story', lang)}
                       </span>
                     </div>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B6B" strokeWidth="2">

@@ -65,7 +65,7 @@ function PlayableRow({ title, subtitle, apps, filter }: { title: string; subtitl
               <span className="content-card__title">{app.title}</span>
               <span className="content-card__subtitle">{app.rating} ★</span>
               <span className="content-card__badge-home">
-                {app.appType === 't2q_quiz' ? 'Quiz' : 'Story'}
+                {app.appType === 't2q_quiz' ? tKey('card_quiz', lang) : tKey('card_story', lang)}
               </span>
             </div>
           </button>

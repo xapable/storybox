@@ -107,7 +107,7 @@ export default function AppDetail() {
         {/* === TAGS === */}
         <div className="detail__genres">
           <span className="detail__chip detail__chip--accent">
-            {isQuiz ? 'T2Q Quiz' : 'Story'}
+            {isQuiz ? tKey('card_type_quiz', lang) : tKey('card_type_story', lang)}
           </span>
           {app.category && <span className="detail__chip">{app.category}</span>}
           <span className="detail__chip">Education</span>
@@ -121,7 +121,7 @@ export default function AppDetail() {
             onClick={() => playApp(app.id, app.appType)}
             style={{ touchAction: 'manipulation' }}
           >
-            {isQuiz ? 'Play Quiz' : 'Read Story'}
+            {isQuiz ? tKey('detail_play_quiz', lang) : tKey('detail_read_story', lang)}
           </button>
           <button
             type="button"

@@ -14,6 +14,7 @@ function Star(size: number) {
 
 /** A single app card used in all sections */
 function AppCard({ app, compact }: { app: typeof playableApps[number]; compact?: boolean }) {
+  const { lang } = useLanguage();
   const { previewApp } = useUIStore();
   return (
     <button
@@ -30,7 +31,7 @@ function AppCard({ app, compact }: { app: typeof playableApps[number]; compact?:
         {app.rating}
         <span className="explore-card__count">({app.ratingCount?.toLocaleString()})</span>
       </span>
-      <span className="explore-card__type">{app.appType === 't2q_quiz' ? 'Quiz' : 'Story'}</span>
+      <span className="explore-card__type">{app.appType === 't2q_quiz' ? tKey('card_quiz', lang) : tKey('card_story', lang)}</span>
     </button>
   );
 }

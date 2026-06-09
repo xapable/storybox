@@ -55,6 +55,15 @@ const t: TranslationMap = {
   // Content card
   card_free:    { 'zh-Hant': '查看', 'zh-Hans': '查看', en: 'View' },
   card_install: { 'zh-Hant': '查看', 'zh-Hans': '查看', en: 'View' },
+  card_play:    { 'zh-Hant': '玩', 'zh-Hans': '玩', en: 'Play' },
+  card_read:    { 'zh-Hant': '閱讀', 'zh-Hans': '阅读', en: 'Read' },
+  card_quiz:    { 'zh-Hant': '測驗', 'zh-Hans': '测验', en: 'Quiz' },
+  card_story:   { 'zh-Hant': '故事', 'zh-Hans': '故事', en: 'Story' },
+  card_type_quiz:  { 'zh-Hant': 'T2Q 測驗', 'zh-Hans': 'T2Q 测验', en: 'T2Q Quiz' },
+  card_type_story: { 'zh-Hant': '故事', 'zh-Hans': '故事', en: 'Story' },
+  // Detail
+  detail_play_quiz: { 'zh-Hant': '玩測驗', 'zh-Hans': '玩测验', en: 'Play Quiz' },
+  detail_read_story: { 'zh-Hant': '閱讀故事', 'zh-Hans': '阅读故事', en: 'Read Story' },
 
   // App
   app_name: { 'zh-Hant': 'StoryBox 知識盒子', 'zh-Hans': 'StoryBox 知识盒子', en: 'StoryBox Knowledge Box' },
