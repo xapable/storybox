@@ -284,54 +284,73 @@ export default function SettingScreen() {
         <div className="setting-group">
           <span className="setting-group__label">{tKey('setting_myapps', lang)}</span>
 
-          {myApps.length > 0 ? (
-            <div className="setting-myapps-list">
-              {myApps.map((app) => (
-                <button
-                  key={app.id}
-                  type="button"
-                  className="setting-item setting-item--app"
-                  onClick={() => previewApp(app.id, app.appType)}
-                >
-                  {app.thumbnail ? (
-                    <img
-                      src={app.thumbnail}
-                      alt=""
-                      className="setting-myapps__icon"
-                    />
-                  ) : (
-                    <span className="setting-myapps__icon setting-myapps__icon--placeholder">�</span>
-                  )}
-                  <div className="setting-myapps__info">
-                    <span className="setting-myapps__name">{app.title}</span>
-                    <span className="setting-myapps__type">
-                      {app.appType === 't2q_quiz' ? tKey('card_type_quiz', lang) : tKey('card_type_story', lang)}
-                    </span>
-                  </div>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)" strokeWidth="2">
-                    <path d="M9 18l6-6-6-6" />
-                  </svg>
-                </button>
-              ))}
+          {!user ? (
+            <div className="setting-myapps-empty-state">
+              <span className="setting-myapps-empty-state__icon">📱</span>
+              <p className="setting-myapps-empty-state__text">{tKey('setting_sign_in_to_create', lang)}</p>
+              <button
+                type="button"
+                className="setting-create-btn"
+                onClick={handleGoogleSignIn}
+                style={{ touchAction: 'manipulation' }}
+              >
+                {tKey('setting_sign_in', lang)}
+              </button>
+            </div>
+          ) : myApps.length === 0 ? (
+            <div className="setting-myapps-empty-state">
+              <span className="setting-myapps-empty-state__icon">✨</span>
+              <p className="setting-myapps-empty-state__text">{tKey('setting_no_apps', lang)}</p>
+              <button
+                type="button"
+                className="setting-create-btn"
+                onClick={() => toggleCreator(true)}
+                style={{ touchAction: 'manipulation' }}
+              >
+                {tKey('setting_create_app', lang)}
+              </button>
             </div>
           ) : (
-            <p className="setting-myapps__empty">{tKey('setting_no_apps', lang)}</p>
+            <>
+              <div className="setting-myapps-list">
+                {myApps.map((app) => (
+                  <button
+                    key={app.id}
+                    type="button"
+                    className="setting-item setting-item--app"
+                    onClick={() => previewApp(app.id, app.appType)}
+                  >
+                    {app.thumbnail ? (
+                      <img
+                        src={app.thumbnail}
+                        alt=""
+                        className="setting-myapps__icon"
+                      />
+                    ) : (
+                      <span className="setting-myapps__icon setting-myapps__icon--placeholder">📦</span>
+                    )}
+                    <div className="setting-myapps__info">
+                      <span className="setting-myapps__name">{app.title}</span>
+                      <span className="setting-myapps__type">
+                        {app.appType === 't2q_quiz' ? tKey('card_type_quiz', lang) : tKey('card_type_story', lang)}
+                      </span>
+                    </div>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)" strokeWidth="2">
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </button>
+                ))}
+              </div>
+              <button
+                type="button"
+                className="setting-create-btn"
+                onClick={() => toggleCreator(true)}
+                style={{ touchAction: 'manipulation' }}
+              >
+                {tKey('setting_create_app', lang)}
+              </button>
+            </>
           )}
-
-          <button
-            type="button"
-            className="setting-create-btn"
-            onClick={() => {
-              if (!user) {
-                handleGoogleSignIn();
-              } else {
-                toggleCreator(true);
-              }
-            }}
-            style={{ touchAction: 'manipulation' }}
-          >
-            {user ? tKey('setting_create_app', lang) : tKey('setting_sign_in_to_create', lang)}
-          </button>
         </div>
 
         <div className="setting-group">
