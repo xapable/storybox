@@ -28,10 +28,14 @@ const t: TranslationMap = {
   screen_explore: { 'zh-Hant': '探索', 'zh-Hans': '探索', en: 'Explore' },
   screen_apps:    { 'zh-Hant': '應用', 'zh-Hans': '应用', en: 'Apps' },
   screen_setting: { 'zh-Hant': '設定', 'zh-Hans': '设置', en: 'Setting' },
+  explore_popular: { 'zh-Hant': '熱門知識應用排行', 'zh-Hans': '热门知识应用排行', en: 'Popular knowledge apps' },
+  explore_hot:     { 'zh-Hant': '🔥 熱門', 'zh-Hans': '🔥 热门', en: '🔥 Hot' },
+  explore_all_apps: { 'zh-Hant': '所有應用', 'zh-Hans': '所有应用', en: 'All apps' },
 
   // Detail page
   detail_badge:         { 'zh-Hant': '知識', 'zh-Hans': '知识', en: 'Knowledge' },
   detail_wishlist:      { 'zh-Hant': '加入收藏', 'zh-Hans': '加入收藏', en: 'Add to favorites' },
+  detail_favorited:     { 'zh-Hant': '已收藏', 'zh-Hans': '已收藏', en: 'Favorited' },
   detail_whats_new:     { 'zh-Hant': '最新更新', 'zh-Hans': '最新更新', en: "What's new" },
   detail_about:         { 'zh-Hant': '關於這個知識內容', 'zh-Hans': '关于这个知识内容', en: 'About this knowledge' },
   detail_app_info:      { 'zh-Hant': '應用資訊', 'zh-Hans': '应用信息', en: 'App info' },
@@ -59,9 +63,14 @@ const t: TranslationMap = {
   setting_notif:       { 'zh-Hant': '通知', 'zh-Hans': '通知', en: 'Notifications' },
   setting_appearance:  { 'zh-Hant': '外觀', 'zh-Hans': '外观', en: 'Appearance' },
   setting_myapps:      { 'zh-Hant': '我的應用', 'zh-Hans': '我的应用', en: 'My Apps' },
+  setting_favorites:   { 'zh-Hant': '已收藏', 'zh-Hans': '已收藏', en: 'Favorites' },
+  setting_no_favorites: { 'zh-Hant': '還沒有收藏任何內容', 'zh-Hans': '还没有收藏任何内容', en: 'No favorites yet' },
   setting_create_app:  { 'zh-Hant': '+ 建立新應用', 'zh-Hans': '+ 创建新应用', en: '+ Create App' },
   setting_no_apps:     { 'zh-Hant': '還沒有應用，建立你的第一個吧！', 'zh-Hans': '还没有应用，创建你的第一个吧！', en: 'No apps yet. Create your first one!' },
-  setting_google_acct: { 'zh-Hant': 'Google 帳戶', 'zh-Hans': 'Google 账户', en: 'Google Account' },
+  setting_google_acct:     { 'zh-Hant': 'Google 帳戶', 'zh-Hans': 'Google 账户', en: 'Google Account' },
+  setting_sign_in:         { 'zh-Hant': '登入 Google', 'zh-Hans': '登录 Google', en: 'Sign in with Google' },
+  setting_sign_out:        { 'zh-Hant': '登出', 'zh-Hans': '登出', en: 'Sign out' },
+  setting_sign_in_to_create: { 'zh-Hant': '登入後即可建立應用', 'zh-Hans': '登录后即可创建应用', en: 'Sign in to create apps' },
 
   // Creator
   creator_title_new:   { 'zh-Hant': '建立新應用', 'zh-Hans': '创建新应用', en: 'Create New App' },

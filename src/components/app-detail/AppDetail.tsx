@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useUIStore } from '../../store';
+import { useLanguage, tKey } from '../../i18n';
 import { fetchAppById } from '../../firebase/apps';
 import type { AppDocument } from '../../types/t2q';
 
 export default function AppDetail() {
-  const { state, closePreview, playApp } = useUIStore();
+  const { lang } = useLanguage();
+  const { state, closePreview, playApp, toggleFavorite } = useUIStore();
   const [app, setApp] = useState<AppDocument | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -121,11 +123,16 @@ export default function AppDetail() {
           >
             {isQuiz ? 'Play Quiz' : 'Read Story'}
           </button>
-          <button type="button" className="detail__action-secondary" style={{ touchAction: 'manipulation' }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-              <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" fill="currentColor" />
+          <button
+            type="button"
+            className={`detail__action-secondary${state.favorites.includes(app.id) ? ' detail__action-secondary--active' : ''}`}
+            onClick={() => toggleFavorite(app.id)}
+            style={{ touchAction: 'manipulation' }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill={state.favorites.includes(app.id) ? 'currentColor' : 'none'}>
+              <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" stroke="currentColor" strokeWidth="1.5" fill={state.favorites.includes(app.id) ? 'currentColor' : 'none'} />
             </svg>
-            加入收藏
+            {state.favorites.includes(app.id) ? tKey('detail_favorited', lang) : tKey('detail_wishlist', lang)}
           </button>
         </div>
 
@@ -148,18 +155,6 @@ export default function AppDetail() {
         <div className="detail__section">
           <h3 className="detail__section-title">應用資訊</h3>
           <div className="detail__meta-grid">
-            {app.version && (
-              <div className="detail__meta-item">
-                <span className="detail__meta-label">版本</span>
-                <span className="detail__meta-value">{app.version}</span>
-              </div>
-            )}
-            {app.size && (
-              <div className="detail__meta-item">
-                <span className="detail__meta-label">大小</span>
-                <span className="detail__meta-value">{app.size}</span>
-              </div>
-            )}
             {app.downloads && (
               <div className="detail__meta-item">
                 <span className="detail__meta-label">下載次數</span>

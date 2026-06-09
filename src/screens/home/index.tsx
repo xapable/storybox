@@ -78,6 +78,7 @@ function PlayableRow({ title, subtitle, apps, filter }: { title: string; subtitl
 export default function HomeScreen() {
   const [heroIdx, setHeroIdx] = useState(0);
   const { lang } = useLanguage();
+  const { setTab } = useUIStore();
   const heroStories = stories.filter((s) => s.hero);
   const circleStories = stories.filter((s) => !s.hero);
 
@@ -91,7 +92,7 @@ export default function HomeScreen() {
         <span className="home-brand__icon">📦</span>
         <h1 className="home-brand__title">StoryBox <span className="home-brand__sub">知識盒子</span></h1>
       </header>
-      <div className="home-search">
+      <div className="home-search" onClick={() => setTab('search')} role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && setTab('search')}>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" strokeWidth="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
         <span className="home-search__text">{tKey('home_search_placeholder', lang)}</span>
       </div>
