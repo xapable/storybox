@@ -1,0 +1,18 @@
+.section-header {
+  margin-bottom: 12px;
+  padding-top: 8px;
+}
+
+.section-header__title {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: 0;
+  margin: 0 0 4px;
+}
+
+.section-header__label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  letter-spacing: 0.2px;
+}

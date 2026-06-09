@@ -1,0 +1,21 @@
+.home {
+  padding: 18px;
+  padding-bottom: 120px;
+}
+
+.home__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.home__card-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  letter-spacing: 0.1px;
+  margin-bottom: 20px;
+}
+
+.home__card-text:last-child {
+  margin-bottom: 0;
+}
