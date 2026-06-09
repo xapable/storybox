@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useUIStore } from '../../store';
+import { useLanguage, tKey } from '../../i18n';
 import { fetchAppById } from '../../firebase/apps';
 import './StoryPlayer.css';
 
@@ -9,6 +10,7 @@ interface StoryPlayerProps {
 }
 
 export default function StoryPlayer({ appId, previewContent }: StoryPlayerProps) {
+  const { lang } = useLanguage();
   const { playApp } = useUIStore();
   const [lines, setLines] = useState<string[]>([]);
   const [title, setTitle] = useState('');
@@ -71,7 +73,7 @@ export default function StoryPlayer({ appId, previewContent }: StoryPlayerProps)
   if (loading) {
     return (
       <div className="story-player">
-        <div className="story-player__loading">Loading story...</div>
+        <div className="story-player__loading">{tKey('player_loading', lang)}</div>
       </div>
     );
   }
@@ -140,7 +142,7 @@ export default function StoryPlayer({ appId, previewContent }: StoryPlayerProps)
       >
         <p className="story-line__text">{lines[lineIdx]}</p>
         <span className="story-line__hint">
-          {lineIdx + 1 < lines.length ? 'Tap to continue →' : 'Tap to finish'}
+          {lineIdx + 1 < lines.length ? tKey('player_tap_continue', lang) : tKey('player_tap_finish', lang)}
         </span>
       </button>
 

@@ -73,7 +73,9 @@ const t: TranslationMap = {
   player_score_short: { 'zh-Hant': '得分：', 'zh-Hans': '得分：', en: 'Score:' },
   player_finish_title: { 'zh-Hant': '測驗完成！', 'zh-Hans': '测验完成！', en: 'Quiz Complete!' },
   player_score:      { 'zh-Hant': '你答對了 {score} 題，共 {total} 題', 'zh-Hans': '你答对了 {score} 题，共 {total} 题', en: 'You got {score} out of {total} correct' },
-  player_tap_continue: { 'zh-Hant': '點擊繼續', 'zh-Hans': '点击继续', en: 'Tap to continue' },
+  player_loading:     { 'zh-Hant': '載入中⋯', 'zh-Hans': '加载中⋯', en: 'Loading...' },
+  player_tap_continue: { 'zh-Hant': '點擊繼續 →', 'zh-Hans': '点击继续 →', en: 'Tap to continue →' },
+  player_tap_finish:  { 'zh-Hant': '點擊完成', 'zh-Hans': '点击完成', en: 'Tap to finish' },
   player_play_again: { 'zh-Hant': '再玩一次', 'zh-Hans': '再玩一次', en: 'Play Again' },
   player_back:       { 'zh-Hant': '← 返回', 'zh-Hans': '← 返回', en: '← Back' },
 

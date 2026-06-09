@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { useLanguage, tKey, tReplace } from '../../i18n';
-import type { Lang } from '../../i18n';
+import { useLanguage, tKey, tReplace, type Lang } from '../../i18n';
 import { useUIStore } from '../../store';
 import { fetchAppById } from '../../firebase/apps';
 import { parseT2Q } from '../../lib/parseT2Q';
@@ -215,6 +214,7 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
             scene={currentScene}
             lineIdx={convLineIdx}
             onAdvance={advanceConversation}
+            lang={lang}
           />
         )}
         {currentScene.type === 'quiz' && (
@@ -237,10 +237,12 @@ function ConversationView({
   scene,
   lineIdx,
   onAdvance,
+  lang,
 }: {
   scene: ConversationScene;
   lineIdx: number;
   onAdvance: () => void;
+  lang: Lang;
 }) {
   const line = scene.lines[lineIdx];
   if (!line) return null;
@@ -255,7 +257,7 @@ function ConversationView({
       <div className="t2q-conversation__speaker">{line.speaker}</div>
       <p className="t2q-conversation__text">{line.text}</p>
       <span className="t2q-conversation__hint">
-        {lineIdx + 1 < scene.lines.length ? 'Tap to continue →' : 'Tap to continue'}
+        {tKey('player_tap_continue', lang)}
       </span>
       <div className="t2q-conversation__progress">
         {scene.lines.map((_, i) => (
