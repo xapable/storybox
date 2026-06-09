@@ -1,0 +1,24 @@
+// Import sample — use this template to bulk-import stories and quizzes
+[
+  {
+    "id": "import-story-sample",
+    "title": "太空探險",
+    "description": "一起探索太陽系的奧秘",
+    "category": "自然",
+    "appType": "story",
+    "storyContent": "在宇宙中，有一個美麗的太陽系。\n太陽系裡有八顆行星繞著太陽轉。\n離太陽最近的是水星。\n水星上面沒有水，白天非常熱。\n再來是金星，金星總是被雲包住。\n第三顆是我們的地球，藍藍的好漂亮。\n地球是唯一有生命和水的行星。\n火星是紅色的，科學家正在研究上面有沒有生命。\n最大的行星是木星，上面有一個大紅斑。\n土星有漂亮的環，像戴了帽子一樣。\n你想不想當太空人呢？",
+    "createdBy": "太空教室",
+    "creatorAvatar": "🚀",
+    "tags": ["太空", "太陽系", "行星"]
+  },
+  {
+    "id": "import-quiz-sample",
+    "title": "太空小測驗",
+    "description": "測試你對太陽系的了解",
+    "category": "自然",
+    "appType": "t2q_quiz",
+    "t2qContent": "> 太空人: 準備好挑戰了嗎？\n\n? 太陽系有幾顆行星？\n1) 7 顆\n2) 8 顆\n3) 9 顆\n= 2\n\n> 太空人: 沒錯！以前是九顆，但冥王星被歸類為矮行星了。\n\n? 哪顆行星離太陽最近？\n1) 金星\n2) 地球\n3) 水星\n= 3\n\n> 太空人: 水星離太陽最近，白天可以到 400°C 以上！\n\n? 地球是太陽系中第幾顆行星？\n1) 第二顆\n2) 第三顆\n3) 第四顆\n= 2\n\n> 太空人: 答對了！地球是第三顆行星。",
+    "createdBy": "太空教室",
+    "creatorAvatar": "🚀"
+  }
+]

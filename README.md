@@ -1,53 +1,60 @@
-# React + TypeScript + Vite
+# StoryBox 知識盒子
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interactive stories and quizzes for learning.
 
-Currently, two official plugins are available:
+## Import Apps
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Bulk-import stories and quizzes into Firestore using a JSON file.
 
-## React Compiler
+### Format
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+See `scripts/import-format.md` for the full format specification.
 
-## Expanding the ESLint configuration
+Sample file: `scripts/import-sample.json`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Usage
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Set your Google credentials (if not on Firebase environment)
+export GOOGLE_APPLICATION_CREDENTIALS="/path/to/service-account.json"
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Import from a JSON file
+npm run import scripts/import-sample.json
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Or directly with tsx
+npx tsx scripts/importFirestore.ts path/to/your-apps.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### JSON Format Example
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
+```json
+[
+  {
+    "id": "my-story",
+    "title": "我的故事",
+    "description": "故事簡介",
+    "category": "環保",
+    "appType": "story",
+    "storyContent": "每一行\n都是一頁",
+    "createdBy": "作者",
+    "creatorAvatar": "🦊"
+  },
+  {
+    "id": "my-quiz",
+    "title": "我的測驗",
+    "description": "測驗簡介",
+    "appType": "t2q_quiz",
+    "t2qContent": "> 老師: 對話\n\n? 題目\n1) A\n2) B\n= 2"
+  }
+]
+```
+
+## Dev
+
+```bash
+npm run dev     # Start dev server
+npm run build   # Build for production
+```
 import reactDom from 'eslint-plugin-react-dom'
 
 export default defineConfig([

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html><body>
+<h3>📦 StoryBox Import</h3>
+<pre id="log" style="white-space:pre-wrap;font-size:13px;">Starting...</pre>
+<script>
+const LOG = document.getElementById('log');
+function log(m) { LOG.textContent += m + '\n'; }
+
+(async () => {
+  log('Loading Firebase...');
+  const [{ initializeApp }, { getFirestore, doc, setDoc }] = await Promise.all([
+    import('https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js'),
+    import('https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js'),
+  ]);
+
+  const app = initializeApp({
+    apiKey: "AIzaSyA4umClbTE22yHIuRcQY43YE8dW5nDrSp4",
+    authDomain: "storybox-af3b7.firebaseapp.com",
+    projectId: "storybox-af3b7"
+  }, 'importer');
+  const db = getFirestore(app);
+  log('✅ Firebase ready');
+
+  log('Loading data...');
+  const resp = await fetch('/batch-500.json');
+  const data = await resp.json();
+  log(`✅ Data: ${data.length} groups (${data.length * 4} docs)`);
+
+  let total = 0, success = 0, fail = 0;
+  for (let i = 0; i < data.length; i++) {
+    const g = data[i];
+    if (g.story) {
+      try {
+        await setDoc(doc(db, 'apps', g.story.id), {
+          title: g.story.title, description: g.story.description,
+          category: g.story.category || '綜合', appType: 'story',
+          storyContent: g.story.storyContent,
+          createdBy: g.story.createdBy || '生活教育', creatorAvatar: g.story.creatorAvatar || '💰',
+          tags: g.story.tags || [], isPublic: true,
+          rating: 0, ratingCount: 0, views: '0', contentRating: '全年齡',
+          reviews: [], version: '1.0.0', size: '10 MB', createdAt: new Date()
+        });
+        total++; success++;
+      } catch(e) { log('❌ ' + g.story.id + ': ' + e.message); fail++; }
+    }
+    if (g.quizzes) {
+      for (const q of g.quizzes) {
+        try {
+          await setDoc(doc(db, 'apps', q.id), {
+            title: q.title, description: q.description,
+            category: q.category || '綜合', appType: 't2q_quiz', t2qContent: q.t2qContent,
+            createdBy: q.createdBy || '生活教育', creatorAvatar: q.creatorAvatar || '💰',
+            tags: [], isPublic: true,
+            rating: 0, ratingCount: 0, views: '0', contentRating: '全年齡',
+            reviews: [], version: '1.0.0', size: '10 MB', createdAt: new Date()
+          });
+          total++; success++;
+        } catch(e) { log('❌ ' + q.id + ': ' + e.message); fail++; }
+      }
+    }
+    if ((i + 1) % 100 === 0) log(`📊 ${i+1}/${data.length} (${success} ok, ${fail} fail)`);
+  }
+  log(`\n🎉 DONE! ${success} imported, ${fail} failed`);
+})().catch(e => log('💥 ' + e.message));
+</script>
+</body></html>
