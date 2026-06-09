@@ -137,7 +137,7 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
   if (loading) {
     return (
       <div className="t2q-player">
-        <div className="t2q-player__loading">Loading quiz...</div>
+        <div className="t2q-player__loading">{tKey('player_loading', lang)}</div>
       </div>
     );
   }
@@ -179,7 +179,7 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
   if (!currentScene) {
     return (
       <div className="t2q-player">
-        <div className="t2q-player__error">No content to display.</div>
+        <div className="t2q-player__error">{tKey('player_no_content', lang)}</div>
         <button type="button" className="t2q-btn t2q-btn--back" onClick={() => playApp(null)}>
           ← Back
         </button>
