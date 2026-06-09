@@ -50,7 +50,7 @@ function PlayableRow({ title, subtitle, apps, filter }: { title: string; subtitl
         </button>
       </div>
       <div className="collection-row__items collection-row__items--playable">
-        {apps.slice(0, 4).map((app) => (
+        {apps.slice(0, 10).map((app) => (
           <button
             key={app.id}
             type="button"

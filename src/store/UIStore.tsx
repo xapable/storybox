@@ -1,5 +1,5 @@
 import { createContext, useContext, useReducer, type ReactNode } from 'react';
-import type { UIState, TabType, UserApp } from '../types';
+import type { UIState, TabType } from '../types';
 
 // Actions
 type UIAction =
@@ -8,9 +8,7 @@ type UIAction =
   | { type: 'PLAY_APP'; payload: { appId: string; appType: 'story' | 't2q_quiz' } | null }
   | { type: 'PREVIEW_APP'; payload: { appId: string; appType: 'story' | 't2q_quiz' } | null }
   | { type: 'TOGGLE_CREATOR'; payload: boolean }
-  | { type: 'SET_APP_FILTER'; payload: string | null }
-  | { type: 'SET_MY_APPS'; payload: UserApp[] }
-  | { type: 'CREATE_APP'; payload: UserApp };
+  | { type: 'SET_APP_FILTER'; payload: string | null };
 
 // Initial state
 const initialState: UIState = {
@@ -23,7 +21,6 @@ const initialState: UIState = {
   previewAppType: null,
   showCreator: false,
   appFilter: null,
-  createdApps: [],
 };
 
 // Reducer
@@ -55,10 +52,6 @@ function uiReducer(state: UIState, action: UIAction): UIState {
       return { ...state, showCreator: action.payload };
     case 'SET_APP_FILTER':
       return { ...state, appFilter: action.payload };
-    case 'SET_MY_APPS':
-      return { ...state, createdApps: action.payload };
-    case 'CREATE_APP':
-      return { ...state, createdApps: [action.payload, ...state.createdApps] };
     default:
       return state;
   }
@@ -74,8 +67,6 @@ interface UIStoreContextValue {
   closePreview: () => void;
   toggleCreator: (show: boolean) => void;
   setAppFilter: (filter: string | null) => void;
-  setMyApps: (apps: UserApp[]) => void;
-  createApp: (app: UserApp) => void;
 }
 
 const UIStoreContext = createContext<UIStoreContextValue | null>(null);
@@ -97,13 +88,9 @@ export function UIStoreProvider({ children }: { children: ReactNode }) {
     dispatch({ type: 'TOGGLE_CREATOR', payload: show });
   const setAppFilter = (filter: string | null) =>
     dispatch({ type: 'SET_APP_FILTER', payload: filter });
-  const setMyApps = (apps: UserApp[]) =>
-    dispatch({ type: 'SET_MY_APPS', payload: apps });
-  const createApp = (app: UserApp) =>
-    dispatch({ type: 'CREATE_APP', payload: app });
 
   return (
-    <UIStoreContext.Provider value={{ state, setTab, setCardOpen, playApp, previewApp, closePreview, toggleCreator, setAppFilter, setMyApps, createApp }}>
+    <UIStoreContext.Provider value={{ state, setTab, setCardOpen, playApp, previewApp, closePreview, toggleCreator, setAppFilter }}>
       {children}
     </UIStoreContext.Provider>
   );
