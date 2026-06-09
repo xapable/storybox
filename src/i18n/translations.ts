@@ -69,6 +69,8 @@ const t: TranslationMap = {
   player_correct:    { 'zh-Hant': '答對了！', 'zh-Hans': '答对了！', en: 'Correct!' },
   player_wrong:      { 'zh-Hant': '答錯了！正確答案：', 'zh-Hans': '答错了！正确答案：', en: 'Wrong! Correct answer: ' },
   player_continue:   { 'zh-Hant': '繼續', 'zh-Hans': '继续', en: 'Continue' },
+  player_prev:       { 'zh-Hant': '上一頁', 'zh-Hans': '上一页', en: 'Prev' },
+  player_score_short: { 'zh-Hant': '得分：', 'zh-Hans': '得分：', en: 'Score:' },
   player_finish_title: { 'zh-Hant': '測驗完成！', 'zh-Hans': '测验完成！', en: 'Quiz Complete!' },
   player_score:      { 'zh-Hant': '你答對了 {score} 題，共 {total} 題', 'zh-Hans': '你答对了 {score} 题，共 {total} 题', en: 'You got {score} out of {total} correct' },
   player_tap_continue: { 'zh-Hant': '點擊繼續', 'zh-Hans': '点击继续', en: 'Tap to continue' },

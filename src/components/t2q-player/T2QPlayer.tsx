@@ -115,14 +115,17 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
     }
   }, [sceneIndex, game]);
 
-  // Auto-advance after feedback
-  useEffect(() => {
-    if (!feedback) return;
-    const timer = setTimeout(() => {
-      continueAfterFeedback();
-    }, 1200);
-    return () => clearTimeout(timer);
-  }, [feedback, continueAfterFeedback]);
+  const goToPreviousScene = useCallback(() => {
+    if (sceneIndex > 0) {
+      const prevScene = game?.scenes[sceneIndex - 1];
+      setFeedback(null);
+      if (prevScene?.type === 'conversation') {
+        // Go to beginning of previous conversation
+        setConvLineIdx(0);
+      }
+      setSceneIndex((i) => i - 1);
+    }
+  }, [sceneIndex, game]);
 
   const restart = useCallback(() => {
     setSceneIndex(0);
@@ -190,13 +193,18 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
       {/* Header bar */}
       <div className="t2q-header">
         <button type="button" className="t2q-header__back" onClick={() => playApp(null)}>
-          ← Back
+          ✕
         </button>
         <span className="t2q-header__progress">
-          Scene {sceneIndex + 1}/{game?.scenes.length ?? 0}
+          {sceneIndex + 1}/{game?.scenes.length ?? 0}
         </span>
+        {sceneIndex > 0 && (
+          <button type="button" className="t2q-header__prev" onClick={goToPreviousScene}>
+            ← {tKey('player_prev', lang)}
+          </button>
+        )}
         {totalQuiz > 0 && (
-          <span className="t2q-header__score">Score: {score}/{totalQuiz}</span>
+          <span className="t2q-header__score">{tKey('player_score_short', lang)} {score}/{totalQuiz}</span>
         )}
       </div>
 
@@ -214,6 +222,7 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
             scene={currentScene}
             feedback={feedback}
             onAnswer={handleAnswer}
+            onConfirm={continueAfterFeedback}
             lang={lang}
           />
         )}
@@ -264,11 +273,13 @@ function QuizView({
   scene,
   feedback,
   onAnswer,
+  onConfirm,
   lang,
 }: {
   scene: QuizScene;
   feedback: { correct: boolean; correctAnswer?: string } | null;
   onAnswer: (idx: number) => void;
+  onConfirm: () => void;
   lang: Lang;
 }) {
   return (
@@ -302,6 +313,18 @@ function QuizView({
               : `${tKey('player_wrong', lang)}${feedback.correctAnswer}`}
           </span>
         </div>
+      )}
+
+      {/* Confirm button — only shown after answering */}
+      {feedback && (
+        <button
+          type="button"
+          className="t2q-btn t2q-btn--primary t2q-quiz__confirm"
+          onClick={onConfirm}
+          style={{ touchAction: 'manipulation' }}
+        >
+          {tKey('player_continue', lang)}
+        </button>
       )}
     </div>
   );
