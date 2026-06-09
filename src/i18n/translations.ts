@@ -158,6 +158,9 @@ const t: TranslationMap = {
   review_submit:      { 'zh-Hant': '送出評論', 'zh-Hans': '送出评论', en: 'Submit Review' },
   review_sign_in:     { 'zh-Hant': '登入即可評論', 'zh-Hans': '登录即可评论', en: 'Sign in to review' },
   review_thanks:      { 'zh-Hant': '感謝你的評論！', 'zh-Hans': '感谢你的评论！', en: 'Thanks for your review!' },
+  review_write_title: { 'zh-Hant': '寫下你的評論', 'zh-Hans': '写下你的评论', en: 'Write Your Review' },
+  review_change:      { 'zh-Hant': '更改', 'zh-Hans': '更改', en: 'Change' },
+  review_next:        { 'zh-Hant': '下一步 →', 'zh-Hans': '下一步 →', en: 'Next →' },
 
   setting_payment:     { 'zh-Hant': '付款方式', 'zh-Hans': '付款方式', en: 'Payment methods' },
   setting_account:     { 'zh-Hant': '帳戶', 'zh-Hans': '账户', en: 'Account' },

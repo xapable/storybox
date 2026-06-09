@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useLanguage, tKey, tReplace, type Lang } from '../../i18n';
 import { useUIStore } from '../../store';
-import { fetchAppById, submitReview } from '../../firebase/apps';
+import { fetchAppById, submitReview, saveScoreSession } from '../../firebase/apps';
 import { getCurrentUser, signInWithGoogle } from '../../firebase/auth';
 import type { User } from 'firebase/auth';
 import { parseT2Q } from '../../lib/parseT2Q';
@@ -34,6 +34,7 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
   const [submitting, setSubmitting] = useState(false);
   const [reviewMsg, setReviewMsg] = useState('');
   const [reviewStep, setReviewStep] = useState<'rate' | 'write'>('rate');
+  const [scoreSaved, setScoreSaved] = useState(false);
   const user: User | null = getCurrentUser();
 
   // Load content
@@ -87,7 +88,23 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
     setFinished(false);
     setFeedback(null);
     setConvLineIdx(0);
+    setScoreSaved(false);
   }, [game]);
+
+  // Record quiz score when finished
+  useEffect(() => {
+    if (!finished || scoreSaved || previewContent) return;
+    const total = totalQuiz || (game?.scenes.filter((s): s is QuizScene => s.type === 'quiz').length ?? 0);
+    if (total === 0) return;
+    const currentUser = getCurrentUser();
+    saveScoreSession(appId, {
+      userId: currentUser?.uid ?? 'anonymous',
+      userName: currentUser?.displayName ?? currentUser?.email ?? 'Anonymous',
+      score,
+      total,
+      percentage: Math.round((score / total) * 100),
+    }).then(() => setScoreSaved(true)).catch(() => {});
+  }, [finished, scoreSaved, appId, game, totalQuiz, score, previewContent]);
 
   const currentScene: Scene | undefined = game?.scenes[sceneIndex];
 
@@ -143,6 +160,7 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
     setFinished(false);
     setFeedback(null);
     setConvLineIdx(0);
+    setScoreSaved(false);
   }, []);
 
   if (loading) {
@@ -167,6 +185,7 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
   if (finished) {
     const total = totalQuiz || (game?.scenes.filter((s): s is QuizScene => s.type === 'quiz').length ?? 0);
     return (
+      <>
       <div className="t2q-player t2q-player--finished">
         <div className="t2q-finish-card">
           <div className="t2q-finish__emoji">{score === total && total > 0 ? '🎉' : score >= total / 2 ? '👍' : '📚'}</div>
@@ -198,7 +217,7 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
               <span className="review-form__sign-in-icon">🔒</span>
               <p className="review-form__sign-in">{tKey('review_sign_in', lang)}</p>
             </button>
-          ) : reviewStep === 'rate' ? (
+          ) : (
             <div className="review-form__step">
               <div className="review-form__rating-area">
                 <span className="review-form__rate-question">{tKey('review_rate', lang)}</span>
@@ -223,19 +242,31 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
                 disabled={reviewRating === 0}
                 onClick={() => setReviewStep('write')}
               >
-                Next →
+                {tKey('review_next', lang)}
               </button>
             </div>
-          ) : (
-            <form className="review-form__step"
-              onSubmit={async (e) => {
+          )}
+        </div>
+      </div>
+
+        {/* Popup modal for write step */}
+        {reviewStep === 'write' && (
+          <div className="review-popup-overlay" onClick={() => setReviewStep('rate')}>
+            <div className="review-popup" onClick={(e) => e.stopPropagation()}>
+              <div className="review-popup__handle" />
+              <div className="review-popup__header">
+                <span className="review-popup__title">{tKey('review_write_title', lang)}</span>
+                <button type="button" className="review-popup__close" onClick={() => setReviewStep('rate')}>✕</button>
+              </div>
+
+              <form onSubmit={async (e) => {
                 e.preventDefault();
                 if (reviewRating === 0) return;
                 setSubmitting(true);
                 setReviewMsg('');
                 try {
                   await submitReview(appId, {
-                    author: user.displayName ?? user.email ?? 'Anonymous',
+                    author: user!.displayName ?? user!.email ?? 'Anonymous',
                     rating: reviewRating,
                     title: reviewTitle,
                     content: reviewBody,
@@ -250,44 +281,41 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
                 } finally {
                   setSubmitting(false);
                 }
-              }}
-            >
-              <div className="review-form__selected-rating">
-                <span className="review-form__selected-stars">
-                  {[1,2,3,4,5].map((s) => (
-                    <span key={s} className={s <= reviewRating ? 'review-form__star--fill' : 'review-form__star--empty'}>★</span>
-                  ))}
-                </span>
-                <span className="review-form__selected-label">
-                  {['', '😞 Terrible', '🙁 Bad', '🙂 Good', '😊 Great', '🤩 Excellent!'][reviewRating]}
-                </span>
-                <button type="button" className="review-form__change-rating" onClick={() => setReviewStep('rate')}>
-                  Change
-                </button>
-              </div>
+              }}>
+                {/* Selected rating */}
+                <div className="review-form__selected-rating">
+                  <span className="review-form__selected-stars">
+                    {[1,2,3,4,5].map((s) => (
+                      <span key={s} className={s <= reviewRating ? 'review-form__star--fill' : 'review-form__star--empty'}>★</span>
+                    ))}
+                  </span>
+                  <span className="review-form__selected-label">
+                    {['', '😞 Terrible', '🙁 Bad', '🙂 Good', '😊 Great', '🤩 Excellent!'][reviewRating]}
+                  </span>
+                  <button type="button" className="review-form__change-rating" onClick={() => setReviewStep('rate')}>
+                    {tKey('review_change', lang) || 'Change'}
+                  </button>
+                </div>
 
-              <div className="review-form__fields">
-                <input className="review-form__input" type="text"
-                  placeholder={tKey('review_placeholder_title', lang)}
-                  value={reviewTitle}
-                  onChange={(e) => setReviewTitle(e.target.value)} required />
-                <textarea className="review-form__textarea"
-                  placeholder={tKey('review_placeholder_body', lang)}
-                  value={reviewBody}
-                  onChange={(e) => setReviewBody(e.target.value)} rows={4} />
-              </div>
-              <div className="review-form__step-actions">
-                <button type="button" className="review-form__back-btn" onClick={() => setReviewStep('rate')}>
-                  ← Back
-                </button>
+                <div className="review-form__fields">
+                  <input className="review-form__input" type="text"
+                    placeholder={tKey('review_placeholder_title', lang)}
+                    value={reviewTitle}
+                    onChange={(e) => setReviewTitle(e.target.value)} required />
+                  <textarea className="review-form__textarea"
+                    placeholder={tKey('review_placeholder_body', lang)}
+                    value={reviewBody}
+                    onChange={(e) => setReviewBody(e.target.value)} rows={4} />
+                </div>
+
                 <button className="review-form__submit" type="submit" disabled={submitting}>
                   {submitting ? '⏳ Submitting…' : '📨 ' + tKey('review_submit', lang)}
                 </button>
-              </div>
-            </form>
-          )}
-        </div>
-      </div>
+              </form>
+            </div>
+          </div>
+        )}
+      </>
     );
   }
 

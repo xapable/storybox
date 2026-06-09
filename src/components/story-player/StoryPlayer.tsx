@@ -102,6 +102,7 @@ export default function StoryPlayer({ appId, previewContent }: StoryPlayerProps)
 
   if (finished) {
     return (
+      <>
       <div className="story-player story-player--finished">
         <div className="story-finish-card">
           <div className="story-finish__emoji">📖</div>
@@ -131,7 +132,7 @@ export default function StoryPlayer({ appId, previewContent }: StoryPlayerProps)
               <span className="review-form__sign-in-icon">🔒</span>
               <p className="review-form__sign-in">{tKey('review_sign_in', lang)}</p>
             </button>
-          ) : reviewStep === 'rate' ? (
+          ) : (
             /* Step 1: Rate with stars */
             <div className="review-form__step">
               <div className="review-form__rating-area">
@@ -157,20 +158,31 @@ export default function StoryPlayer({ appId, previewContent }: StoryPlayerProps)
                 disabled={reviewRating === 0}
                 onClick={() => setReviewStep('write')}
               >
-                Next →
+                {tKey('review_next', lang)}
               </button>
             </div>
-          ) : (
-            /* Step 2: Write review & confirm */
-            <form className="review-form__step"
-              onSubmit={async (e) => {
+          )}
+        </div>
+      </div>
+
+        {/* Popup modal for write step */}
+        {reviewStep === 'write' && (
+          <div className="review-popup-overlay" onClick={() => setReviewStep('rate')}>
+            <div className="review-popup" onClick={(e) => e.stopPropagation()}>
+              <div className="review-popup__handle" />
+              <div className="review-popup__header">
+                <span className="review-popup__title">{tKey('review_write_title', lang)}</span>
+                <button type="button" className="review-popup__close" onClick={() => setReviewStep('rate')}>✕</button>
+              </div>
+
+              <form onSubmit={async (e) => {
                 e.preventDefault();
                 if (reviewRating === 0) return;
                 setSubmitting(true);
                 setReviewMsg('');
                 try {
                   await submitReview(appId, {
-                    author: user.displayName ?? user.email ?? 'Anonymous',
+                    author: user!.displayName ?? user!.email ?? 'Anonymous',
                     rating: reviewRating,
                     title: reviewTitle,
                     content: reviewBody,
@@ -185,45 +197,41 @@ export default function StoryPlayer({ appId, previewContent }: StoryPlayerProps)
                 } finally {
                   setSubmitting(false);
                 }
-              }}
-            >
-              {/* Show selected rating at top */}
-              <div className="review-form__selected-rating">
-                <span className="review-form__selected-stars">
-                  {[1,2,3,4,5].map((s) => (
-                    <span key={s} className={s <= reviewRating ? 'review-form__star--fill' : 'review-form__star--empty'}>★</span>
-                  ))}
-                </span>
-                <span className="review-form__selected-label">
-                  {['', '😞 Terrible', '🙁 Bad', '🙂 Good', '😊 Great', '🤩 Excellent!'][reviewRating]}
-                </span>
-                <button type="button" className="review-form__change-rating" onClick={() => setReviewStep('rate')}>
-                  Change
-                </button>
-              </div>
+              }}>
+                {/* Selected rating */}
+                <div className="review-form__selected-rating">
+                  <span className="review-form__selected-stars">
+                    {[1,2,3,4,5].map((s) => (
+                      <span key={s} className={s <= reviewRating ? 'review-form__star--fill' : 'review-form__star--empty'}>★</span>
+                    ))}
+                  </span>
+                  <span className="review-form__selected-label">
+                    {['', '😞 Terrible', '🙁 Bad', '🙂 Good', '😊 Great', '🤩 Excellent!'][reviewRating]}
+                  </span>
+                  <button type="button" className="review-form__change-rating" onClick={() => setReviewStep('rate')}>
+                    {tKey('review_change', lang) || 'Change'}
+                  </button>
+                </div>
 
-              <div className="review-form__fields">
-                <input className="review-form__input" type="text"
-                  placeholder={tKey('review_placeholder_title', lang)}
-                  value={reviewTitle}
-                  onChange={(e) => setReviewTitle(e.target.value)} required />
-                <textarea className="review-form__textarea"
-                  placeholder={tKey('review_placeholder_body', lang)}
-                  value={reviewBody}
-                  onChange={(e) => setReviewBody(e.target.value)} rows={4} />
-              </div>
-              <div className="review-form__step-actions">
-                <button type="button" className="review-form__back-btn" onClick={() => setReviewStep('rate')}>
-                  ← Back
-                </button>
+                <div className="review-form__fields">
+                  <input className="review-form__input" type="text"
+                    placeholder={tKey('review_placeholder_title', lang)}
+                    value={reviewTitle}
+                    onChange={(e) => setReviewTitle(e.target.value)} required />
+                  <textarea className="review-form__textarea"
+                    placeholder={tKey('review_placeholder_body', lang)}
+                    value={reviewBody}
+                    onChange={(e) => setReviewBody(e.target.value)} rows={4} />
+                </div>
+
                 <button className="review-form__submit" type="submit" disabled={submitting}>
                   {submitting ? '⏳ Submitting…' : '📨 ' + tKey('review_submit', lang)}
                 </button>
-              </div>
-            </form>
-          )}
-        </div>
-      </div>
+              </form>
+            </div>
+          </div>
+        )}
+      </>
     );
   }
 

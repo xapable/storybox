@@ -109,26 +109,54 @@ export async function deleteApp(id: string): Promise<void> {
   await deleteDoc(docRef);
 }
 
-/** Submit a rating and review for an app — always shows 1 review with 3 stars */
+/** Submit a rating and review for an app — saves the user's actual rating and review */
 export async function submitReview(
-  _appId: string,
-  _review: { author: string; rating: number; title: string; content: string },
+  appId: string,
+  review: { author: string; rating: number; title: string; content: string },
 ): Promise<void> {
   if (!db) throw new Error('Firestore not initialized');
-  // Always reset to a single 3-star review regardless of what user submitted
-  const docRef = doc(db, APPS_COLLECTION, _appId);
+  const docRef = doc(db, APPS_COLLECTION, appId);
+  const now = new Date().toISOString();
+  const newReview = {
+    id: `r-${Date.now()}`,
+    author: review.author,
+    rating: review.rating,
+    title: review.title,
+    content: review.content,
+    date: now,
+  };
+
+  // Get current doc to compute new average rating
+  const docSnap = await getDoc(docRef);
+  const existingReviews = docSnap.exists() ? (docSnap.data().reviews ?? []) : [];
+  const allReviews = [...existingReviews, newReview];
+  const avgRating = allReviews.reduce((sum: number, r: { rating: number }) => sum + r.rating, 0) / allReviews.length;
+
   await updateDoc(docRef, {
-    reviews: [{
-      id: 'r-base',
-      author: 'StoryBox 小幫手',
-      rating: 3,
-      title: '還不錯的學習工具',
-      content: '內容豐富，但有些部分可以再加強。',
-      date: '2025-01-01',
-    }],
-    rating: 3.0,
-    ratingCount: 1,
+    reviews: allReviews,
+    rating: Math.round(avgRating * 10) / 10,
+    ratingCount: allReviews.length,
   });
+}
+
+/** Save a quiz score session */
+export async function saveScoreSession(
+  appId: string,
+  data: {
+    userId: string;
+    userName: string;
+    score: number;
+    total: number;
+    percentage: number;
+  },
+): Promise<string> {
+  if (!db) throw new Error('Firestore not initialized');
+  const docRef = await addDoc(collection(db, 'scoreSessions'), {
+    appId,
+    ...data,
+    createdAt: serverTimestamp(),
+  });
+  return docRef.id;
 }
 
 /** Fetch apps created by a specific user */
