@@ -11,7 +11,7 @@ interface StoryPlayerProps {
 
 export default function StoryPlayer({ appId, previewContent }: StoryPlayerProps) {
   const { lang } = useLanguage();
-  const { playApp } = useUIStore();
+  const { playApp, previewApp } = useUIStore();
   const [lines, setLines] = useState<string[]>([]);
   const [title, setTitle] = useState('');
   const [lineIdx, setLineIdx] = useState(0);
@@ -94,14 +94,21 @@ export default function StoryPlayer({ appId, previewContent }: StoryPlayerProps)
       <div className="story-player story-player--finished">
         <div className="story-finish-card">
           <div className="story-finish__emoji">📖</div>
-          <h2 className="story-finish__title">The End</h2>
+          <h2 className="story-finish__title">{tKey('player_finish_title', lang)}</h2>
           <p className="story-finish__subtitle">{title}</p>
           <div className="story-finish__actions">
             <button type="button" className="story-btn story-btn--primary" onClick={restart}>
-              Read Again
+              {tKey('player_read_again', lang)}
+            </button>
+            <button type="button" className="story-btn story-btn--rate" onClick={() => {
+              playApp(null);
+              // Re-open app detail page with review form
+              setTimeout(() => previewApp(appId, 'story'), 300);
+            }}>
+              ⭐ {tKey('player_rate', lang)}
             </button>
             <button type="button" className="story-btn story-btn--back" onClick={() => playApp(null)}>
-              ← Back
+              ← {tKey('player_back', lang)}
             </button>
           </div>
         </div>

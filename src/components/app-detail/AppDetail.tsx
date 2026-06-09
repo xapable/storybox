@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useUIStore } from '../../store';
 import { useLanguage, tKey } from '../../i18n';
 import { fetchAppById, submitReview } from '../../firebase/apps';
-import { getCurrentUser } from '../../firebase/auth';
+import { getCurrentUser, signInWithGoogle } from '../../firebase/auth';
 import './AppDetail.css';
 import type { AppDocument } from '../../types/t2q';
 
@@ -17,9 +17,25 @@ export default function AppDetail() {
   const [reviewBody, setReviewBody] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [reviewMsg, setReviewMsg] = useState('');
+  const [authPrompt, setAuthPrompt] = useState<string | null>(null);
 
   const { previewAppId, previewAppType } = state;
   const user = getCurrentUser();
+
+  const requireAuth = async (action: () => void) => {
+    if (user) {
+      action();
+      return;
+    }
+    setAuthPrompt(null);
+    try {
+      await signInWithGoogle();
+      action();
+    } catch {
+      setAuthPrompt(tKey('review_sign_in', lang));
+      setTimeout(() => setAuthPrompt(null), 3000);
+    }
+  };
 
   useEffect(() => {
     if (!previewAppId) return;
@@ -121,7 +137,7 @@ export default function AppDetail() {
             <button
               type="button"
               className={`detail__action-secondary${state.favorites.includes(app.id) ? ' detail__action-secondary--active' : ''}`}
-              onClick={() => toggleFavorite(app.id)}
+              onClick={() => requireAuth(() => toggleFavorite(app.id))}
               style={{ touchAction: 'manipulation' }}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill={state.favorites.includes(app.id) ? 'currentColor' : 'none'}>
@@ -133,14 +149,24 @@ export default function AppDetail() {
               type="button"
               className="detail__action-secondary detail__action-rate"
               onClick={() => {
-                const el = document.querySelector('.detail__review-form');
-                el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (user) {
+                  document.querySelector('.detail__review-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                  requireAuth(() => {
+                    document.querySelector('.detail__review-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  });
+                }
               }}
               style={{ touchAction: 'manipulation' }}
             >
               ⭐ {tKey('review_title', lang)}
             </button>
           </div>
+
+          {/* Auth prompt toast */}
+          {authPrompt && (
+            <div className="detail__auth-toast">{authPrompt}</div>
+          )}
         </div>
 
         {/* === ABOUT === */}

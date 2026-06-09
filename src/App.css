@@ -1159,6 +1159,29 @@
   background: rgba(245, 166, 35, 0.1) !important;
 }
 
+/* ---- Detail: Auth toast ---- */
+.detail__auth-toast {
+  margin: 8px 16px 0;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  border-radius: 12px;
+  color: #e65100;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  animation: toastSlide 0.3s ease;
+}
+
+[data-theme="dark"] .detail__auth-toast {
+  background: linear-gradient(135deg, #3e2723, #4e342e);
+  color: #ffcc80;
+}
+
+@keyframes toastSlide {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* ---- Detail: Rating card (combined with reviews) ---- */
 .detail__rating-card {
   margin: 0 16px 16px;

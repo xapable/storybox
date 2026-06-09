@@ -79,6 +79,8 @@ const t: TranslationMap = {
   player_tap_finish:  { 'zh-Hant': '點擊完成', 'zh-Hans': '点击完成', en: 'Tap to finish' },
   player_no_content: { 'zh-Hant': '沒有內容可顯示', 'zh-Hans': '没有内容可显示', en: 'No content to display' },
   player_play_again: { 'zh-Hant': '再玩一次', 'zh-Hans': '再玩一次', en: 'Play Again' },
+  player_read_again: { 'zh-Hant': '再讀一次', 'zh-Hans': '再读一次', en: 'Read Again' },
+  player_rate:       { 'zh-Hant': '評分', 'zh-Hans': '评分', en: 'Rate' },
   player_back:       { 'zh-Hant': '← 返回', 'zh-Hans': '← 返回', en: '← Back' },
 
   // App

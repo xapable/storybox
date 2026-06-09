@@ -14,7 +14,7 @@ interface T2QPlayerProps {
 
 export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
   const { lang } = useLanguage();
-  const { playApp } = useUIStore();
+  const { playApp, previewApp } = useUIStore();
   const [game, setGame] = useState<GameObject | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(!previewContent);
@@ -166,6 +166,12 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
           <div className="t2q-finish__actions">
             <button type="button" className="t2q-btn t2q-btn--primary" onClick={restart}>
               {tKey('player_play_again', lang)}
+            </button>
+            <button type="button" className="t2q-btn t2q-btn--rate" onClick={() => {
+              playApp(null);
+              setTimeout(() => previewApp(appId, 't2q_quiz'), 300);
+            }}>
+              ⭐ {tKey('player_rate', lang)}
             </button>
             <button type="button" className="t2q-btn t2q-btn--back" onClick={() => playApp(null)}>
               {tKey('player_back', lang)}

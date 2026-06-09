@@ -342,3 +342,9 @@
   background: transparent;
   color: var(--text-secondary);
 }
+
+.t2q-btn--rate {
+  background: linear-gradient(135deg, #f5a623, #f57c00);
+  color: #fff;
+  width: 100%;
+}
