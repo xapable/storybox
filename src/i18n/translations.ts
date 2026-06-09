@@ -28,6 +28,8 @@ const t: TranslationMap = {
   screen_explore: { 'zh-Hant': '探索', 'zh-Hans': '探索', en: 'Explore' },
   screen_apps:    { 'zh-Hant': '應用', 'zh-Hans': '应用', en: 'Apps' },
   screen_setting: { 'zh-Hant': '設定', 'zh-Hans': '设置', en: 'Setting' },
+  apps_search_placeholder: { 'zh-Hant': '搜尋應用⋯', 'zh-Hans': '搜索应用⋯', en: 'Search apps…' },
+  apps_search_no_results:  { 'zh-Hant': '找不到符合的應用', 'zh-Hans': '找不到符合的应用', en: 'No matching apps found' },
   explore_popular: { 'zh-Hant': '熱門知識應用排行', 'zh-Hans': '热门知识应用排行', en: 'Popular knowledge apps' },
   explore_hot:     { 'zh-Hant': '🔥 熱門', 'zh-Hans': '🔥 热门', en: '🔥 Hot' },
   explore_all_apps: { 'zh-Hant': '所有應用', 'zh-Hans': '所有应用', en: 'All apps' },

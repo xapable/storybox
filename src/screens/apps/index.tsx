@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useLanguage, tKey } from '../../i18n';
 import { useUIStore } from '../../store';
 import { playableApps } from '../../data/playableApps';
@@ -10,6 +10,7 @@ export default function AppsScreen() {
   const { lang } = useLanguage();
   const { previewApp, state, setAppFilter } = useUIStore();
   const [allApps, setAllApps] = useState<AppDocument[]>(playableApps);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     fetchPublicApps().then((fetched) => {
@@ -21,9 +22,23 @@ export default function AppsScreen() {
     }).catch(() => {});
   }, []);
 
-  const filteredApps = state.appFilter
-    ? allApps.filter((a) => a.id.startsWith(state.appFilter!) || (state.appFilter === 'play-l' && (a.id === 'play-ai1' || a.id === 'play-auto')))
-    : allApps;
+  const filteredApps = useMemo(() => {
+    let list = state.appFilter
+      ? allApps.filter((a) => a.id.startsWith(state.appFilter!) || (state.appFilter === 'play-l' && (a.id === 'play-ai1' || a.id === 'play-auto')))
+      : allApps;
+
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      list = list.filter(
+        (a) =>
+          a.title.toLowerCase().includes(q) ||
+          a.description.toLowerCase().includes(q) ||
+          a.category?.toLowerCase().includes(q),
+      );
+    }
+
+    return list;
+  }, [allApps, state.appFilter, searchQuery]);
 
   return (
     <div className="screen screen--apps">
@@ -39,10 +54,38 @@ export default function AppsScreen() {
           </button>
         )}
       </div>
+
+      {/* Search bar */}
+      <div className="apps-search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" strokeWidth="2">
+          <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input
+          className="apps-search__input"
+          type="search"
+          placeholder={tKey('apps_search_placeholder', lang)}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        {searchQuery && (
+          <button type="button" className="apps-search__clear" onClick={() => setSearchQuery('')}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)" strokeWidth="2">
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        )}
+      </div>
+
       <div className="content-list">
-        {filteredApps.map((app) => (
-          <QuizAppCard key={app.id} app={app} onPlay={() => previewApp(app.id, app.appType)} />
-        ))}
+        {filteredApps.length === 0 ? (
+          <div className="apps-empty">
+            <span className="apps-empty__text">{tKey('apps_search_no_results', lang)}</span>
+          </div>
+        ) : (
+          filteredApps.map((app) => (
+            <QuizAppCard key={app.id} app={app} onPlay={() => previewApp(app.id, app.appType)} />
+          ))
+        )}
       </div>
       <div className="screen-spacer" />
     </div>
