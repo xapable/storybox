@@ -79,57 +79,20 @@ export default function AppDetail() {
           {app.thumbnail ? (
             <img src={app.thumbnail} alt={app.title} className="detail__icon" />
           ) : (
-            <div className="detail__icon detail__icon--placeholder">�</div>
+            <div className="detail__icon detail__icon--placeholder">
+              {isQuiz ? '🎯' : '📖'}
+            </div>
           )}
           <div className="detail__names">
             <h1 className="detail__title">{app.title}</h1>
             <span className="detail__subtitle">{app.description}</span>
-          </div>
-        </div>
-
-        {/* === RATING ROW (App Store style) === */}
-        {app.rating != null && (
-          <div className="detail__rating-dist">
-            <div className="detail__rating-big">
-              <span className="detail__rating-big-num">{app.rating}</span>
-              <span className="detail__stars">
-                {[1,2,3,4,5].map((s) => (
-                  <span key={s} className={s <= Math.floor(app.rating!) ? 'detail__star--fill' : 'detail__star--empty'}>
-                    ★
-                  </span>
-                ))}
+            <div className="detail__identity-meta">
+              <span className="detail__chip detail__chip--sm">
+                {isQuiz ? tKey('card_type_quiz', lang) : tKey('card_type_story', lang)}
               </span>
-              {app.ratingCount != null && (
-                <span className="detail__rating-total">{app.ratingCount.toLocaleString()} 則評分</span>
-              )}
-            </div>
-            <div className="detail__rating-bars">
-              {[5,4,3,2,1].map((star) => {
-                const count = app.reviews?.filter((r) => Math.round(r.rating) === star).length ?? 0;
-                const total = app.reviews?.length ?? 0;
-                const pct = total > 0 ? (count / total) * 100 : 0;
-                return (
-                  <div key={star} className="rating-bar">
-                    <span className="rating-bar__label">{star}</span>
-                    <span className="rating-bar__icon">★</span>
-                    <div className="rating-bar__track">
-                      <div className="rating-bar__fill" style={{ width: `${pct}%` }} />
-                    </div>
-                    <span className="rating-bar__count">{count}</span>
-                  </div>
-                );
-              })}
+              {app.category && <span className="detail__chip detail__chip--sm">{app.category}</span>}
             </div>
           </div>
-        )}
-
-        {/* === TAGS === */}
-        <div className="detail__genres">
-          <span className="detail__chip detail__chip--accent">
-            {isQuiz ? tKey('card_type_quiz', lang) : tKey('card_type_story', lang)}
-          </span>
-          {app.category && <span className="detail__chip">{app.category}</span>}
-          <span className="detail__chip">Education</span>
         </div>
 
         {/* === ACTION BUTTONS === */}
@@ -140,55 +103,107 @@ export default function AppDetail() {
             onClick={() => playApp(app.id, app.appType, app.storyContent ?? app.t2qContent)}
             style={{ touchAction: 'manipulation' }}
           >
-            {isQuiz ? tKey('detail_play_quiz', lang) : tKey('detail_read_story', lang)}
+            {isQuiz ? '▶ ' + tKey('detail_play_quiz', lang) : '📖 ' + tKey('detail_read_story', lang)}
           </button>
-          <button
-            type="button"
-            className={`detail__action-secondary${state.favorites.includes(app.id) ? ' detail__action-secondary--active' : ''}`}
-            onClick={() => toggleFavorite(app.id)}
-            style={{ touchAction: 'manipulation' }}
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill={state.favorites.includes(app.id) ? 'currentColor' : 'none'}>
-              <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" stroke="currentColor" strokeWidth="1.5" fill={state.favorites.includes(app.id) ? 'currentColor' : 'none'} />
-            </svg>
-            {state.favorites.includes(app.id) ? tKey('detail_favorited', lang) : tKey('detail_wishlist', lang)}
-          </button>
-        </div>
-
-        {/* === RATE SHORTCUT === */}
-        <div className="detail__section">
-          <button
-            type="button"
-            className="detail__rate-btn"
-            onClick={() => {
-              const el = document.querySelector('.detail__review-form');
-              el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }}
-          >
-            <span className="detail__rate-btn-stars">⭐</span>
-            <span>{tKey('review_title', lang)}</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" fill="none" /></svg>
-          </button>
-        </div>
-
-        {/* === SCREENSHOTS === */}
-        <div className="detail__section">
-          <div className="detail__screenshots">
-            <div className="detail__screenshot detail__screenshot--placeholder">{isQuiz ? '❓' : '📖'}</div>
-            <div className="detail__screenshot detail__screenshot--placeholder">{isQuiz ? '🎯' : '📄'}</div>
-            <div className="detail__screenshot detail__screenshot--placeholder">{isQuiz ? '✅' : '🔤'}</div>
+          <div className="detail__actions-row">
+            <button
+              type="button"
+              className={`detail__action-secondary${state.favorites.includes(app.id) ? ' detail__action-secondary--active' : ''}`}
+              onClick={() => toggleFavorite(app.id)}
+              style={{ touchAction: 'manipulation' }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill={state.favorites.includes(app.id) ? 'currentColor' : 'none'}>
+                <path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z" stroke="currentColor" strokeWidth="1.5" fill={state.favorites.includes(app.id) ? 'currentColor' : 'none'} />
+              </svg>
+              {state.favorites.includes(app.id) ? tKey('detail_favorited', lang) : tKey('detail_wishlist', lang)}
+            </button>
+            <button
+              type="button"
+              className="detail__action-secondary detail__action-rate"
+              onClick={() => {
+                const el = document.querySelector('.detail__review-form');
+                el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+              style={{ touchAction: 'manipulation' }}
+            >
+              ⭐ {tKey('review_title', lang)}
+            </button>
           </div>
         </div>
 
         {/* === ABOUT === */}
         <div className="detail__section">
-          <h3 className="detail__section-title">關於這個知識內容</h3>
           <p className="detail__text">{app.description}</p>
         </div>
 
+        {/* === RATING + REVIEWS SECTION (combined card) === */}
+        {app.rating != null && (
+          <div className="detail__rating-card">
+            <div className="detail__rating-card-header">
+              <h3 className="detail__section-title" style={{ margin: 0 }}>
+                ⭐ {tKey('detail_ratings', lang)}
+              </h3>
+              {app.ratingCount != null && (
+                <span className="detail__rating-card-count">{app.ratingCount.toLocaleString()}</span>
+              )}
+            </div>
+            <div className="detail__rating-dist">
+              <div className="detail__rating-big">
+                <span className="detail__rating-big-num">{app.rating}</span>
+                <span className="detail__stars">
+                  {[1,2,3,4,5].map((s) => (
+                    <span key={s} className={s <= Math.floor(app.rating!) ? 'detail__star--fill' : 'detail__star--empty'}>★</span>
+                  ))}
+                </span>
+              </div>
+              <div className="detail__rating-bars">
+                {[5,4,3,2,1].map((star) => {
+                  const count = app.reviews?.filter((r) => Math.round(r.rating) === star).length ?? 0;
+                  const total = app.reviews?.length ?? 0;
+                  const pct = total > 0 ? (count / total) * 100 : 0;
+                  return (
+                    <div key={star} className="rating-bar">
+                      <span className="rating-bar__label">{star}</span>
+                      <span className="rating-bar__icon">★</span>
+                      <div className="rating-bar__track">
+                        <div className="rating-bar__fill" style={{ width: `${pct}%` }} />
+                      </div>
+                      <span className="rating-bar__count">{count}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* === REVIEW CARDS === */}
+            {app.reviews && app.reviews.length > 0 && (
+              <div className="detail__reviews">
+                {app.reviews.slice(0, 5).map((review) => (
+                  <div key={review.id} className="review-card">
+                    <div className="review-card__header">
+                      <div className="review-card__avatar">{review.author.charAt(0).toUpperCase()}</div>
+                      <div className="review-card__author-info">
+                        <span className="review-card__author">{review.author}</span>
+                        <span className="review-card__date">{review.date}</span>
+                      </div>
+                      <span className="review-card__rating">
+                        {[1,2,3,4,5].map((s) => (
+                          <span key={s} className={s <= review.rating ? 'review-card__star--fill' : 'review-card__star--empty'}>★</span>
+                        ))}
+                      </span>
+                    </div>
+                    {review.title && <span className="review-card__title">{review.title}</span>}
+                    {review.content && <p className="review-card__content">{review.content}</p>}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
         {/* === APP INFO === */}
         <div className="detail__section">
-          <h3 className="detail__section-title">應用資訊</h3>
+          <h3 className="detail__section-title">📋 {tKey('detail_app_info', lang)}</h3>
           <div className="detail__meta-grid">
             {app.views && (
               <div className="detail__meta-item">
@@ -198,21 +213,24 @@ export default function AppDetail() {
             )}
             {app.contentRating && (
               <div className="detail__meta-item">
-                <span className="detail__meta-label">內容分級</span>
+                <span className="detail__meta-label">{tKey('detail_rating', lang)}</span>
                 <span className="detail__meta-value">{app.contentRating}</span>
               </div>
             )}
           </div>
         </div>
 
-        {/* Review Form — with enhanced UI */}
+        {/* Review Form */}
         <div className="detail__review-form">
-          <h3 className="detail__section-title" style={{ textAlign: 'center' }}>{tKey('review_title', lang)}</h3>
+          <h3 className="detail__section-title" style={{ textAlign: 'center', fontSize: 18, marginBottom: 16 }}>✍️ {tKey('review_title', lang)}</h3>
 
           {reviewMsg && <p className="review-form__msg">{reviewMsg}</p>}
 
           {!user ? (
-            <p className="review-form__sign-in">{tKey('review_sign_in', lang)}</p>
+            <div className="review-form__sign-in-box">
+              <span className="review-form__sign-in-icon">🔒</span>
+              <p className="review-form__sign-in">{tKey('review_sign_in', lang)}</p>
+            </div>
           ) : (
             <form
               onSubmit={async (e) => {
@@ -238,10 +256,9 @@ export default function AppDetail() {
                   setReviewMsg('Error submitting review');
                 } finally {
                   setSubmitting(false);
-                }
-              }}
+                }}
+              }
             >
-              {/* Star rating input */}
               <label className="review-form__label">{tKey('review_rate', lang)}</label>
               <div className="review-form__stars">
                 {[1,2,3,4,5].map((s) => (
@@ -251,12 +268,14 @@ export default function AppDetail() {
                     onClick={() => setReviewRating(s)}
                     onMouseEnter={() => setReviewHover(s)}
                     onMouseLeave={() => setReviewHover(0)}
-                  >
-                    ★
-                  </span>
+                  >★</span>
                 ))}
               </div>
-
+              {reviewRating > 0 && (
+                <div className="review-form__rating-label">
+                  {['', '😞 很差', '🙁 較差', '🙂 不錯', '😊 很好', '🤩 超讚!'][reviewRating]}
+                </div>
+              )}
               <input
                 className="review-form__input"
                 type="text"
@@ -277,7 +296,7 @@ export default function AppDetail() {
                 type="submit"
                 disabled={submitting || reviewRating === 0}
               >
-                {tKey('review_submit', lang)}
+                {submitting ? '⏳ 提交中…' : '📨 ' + tKey('review_submit', lang)}
               </button>
             </form>
           )}
