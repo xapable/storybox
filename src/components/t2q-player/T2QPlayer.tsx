@@ -115,6 +115,15 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
     }
   }, [sceneIndex, game]);
 
+  // Auto-advance after feedback
+  useEffect(() => {
+    if (!feedback) return;
+    const timer = setTimeout(() => {
+      continueAfterFeedback();
+    }, 1200);
+    return () => clearTimeout(timer);
+  }, [feedback, continueAfterFeedback]);
+
   const restart = useCallback(() => {
     setSceneIndex(0);
     setScore(0);
@@ -205,7 +214,6 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
             scene={currentScene}
             feedback={feedback}
             onAnswer={handleAnswer}
-            onContinue={continueAfterFeedback}
             lang={lang}
           />
         )}
@@ -256,13 +264,11 @@ function QuizView({
   scene,
   feedback,
   onAnswer,
-  onContinue,
   lang,
 }: {
   scene: QuizScene;
   feedback: { correct: boolean; correctAnswer?: string } | null;
   onAnswer: (idx: number) => void;
-  onContinue: () => void;
   lang: Lang;
 }) {
   return (
@@ -284,27 +290,17 @@ function QuizView({
         ))}
       </div>
 
-      {/* Feedback modal */}
+      {/* Feedback shown inline on options + status text */}
       {feedback && (
-        <div className="t2q-feedback-overlay" onClick={onContinue}>
-          <div className="t2q-feedback" onClick={(e) => e.stopPropagation()}>
-            <div className={`t2q-feedback__icon ${feedback.correct ? 't2q-feedback__icon--correct' : 't2q-feedback__icon--wrong'}`}>
-              {feedback.correct ? '✅' : '❌'}
-            </div>
-            <p className="t2q-feedback__text">
-              {feedback.correct
-                ? tKey('player_correct', lang)
-                : `${tKey('player_wrong', lang)}${feedback.correctAnswer}`}
-            </p>
-            <button
-              type="button"
-              className="t2q-btn t2q-btn--primary"
-              onClick={onContinue}
-              style={{ touchAction: 'manipulation' }}
-            >
-              {tKey('player_continue', lang)}
-            </button>
-          </div>
+        <div className="t2q-feedback-bar">
+          <span className={`t2q-feedback-bar__icon ${feedback.correct ? 't2q-feedback-bar__icon--correct' : 't2q-feedback-bar__icon--wrong'}`}>
+            {feedback.correct ? '✅' : '❌'}
+          </span>
+          <span className="t2q-feedback-bar__text">
+            {feedback.correct
+              ? tKey('player_correct', lang)
+              : `${tKey('player_wrong', lang)}${feedback.correctAnswer}`}
+          </span>
         </div>
       )}
     </div>
