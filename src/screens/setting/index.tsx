@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useLanguage, tKey, langLabels } from '../../i18n';
 import { useUIStore } from '../../store';
 import { getCurrentUser, signInWithGoogle, signOut as firebaseSignOut, onAuthChange } from '../../firebase/auth';
-import { fetchUserApps } from '../../firebase/apps';
+import { fetchUserApps, fetchPublicApps } from '../../firebase/apps';
 import { playableApps } from '../../data/playableApps';
 import type { Lang } from '../../i18n';
 import type { AppDocument } from '../../types/t2q';
@@ -228,12 +228,23 @@ export default function SettingScreen() {
   const [myApps, setMyApps] = useState<AppDocument[]>([]);
   const [showFavorites, setShowFavorites] = useState(false);
   const [infoSheet, setInfoSheet] = useState<InfoSheet>(null);
+  const [allApps, setAllApps] = useState<AppDocument[]>(playableApps);
+
+  useEffect(() => {
+    fetchPublicApps().then((fetched) => {
+      if (fetched.length > 0) {
+        const firebaseIds = new Set(fetched.map((a) => a.id));
+        const merged = [...fetched, ...playableApps.filter((a) => !firebaseIds.has(a.id))];
+        setAllApps(merged);
+      }
+    }).catch(() => {});
+  }, []);
 
   const favoriteApps = useMemo(() => {
     const favIds = state.favorites;
     if (favIds.length === 0) return [];
-    return playableApps.filter((app) => favIds.includes(app.id));
-  }, [state.favorites]);
+    return allApps.filter((app) => favIds.includes(app.id));
+  }, [state.favorites, allApps]);
 
   useEffect(() => {
     return onAuthChange((u) => {

@@ -2,8 +2,9 @@ import { useState, useMemo, useEffect, useCallback } from 'react';
 import { useUIStore } from '../../store';
 import { useLanguage, tKey } from '../../i18n';
 import { playableApps } from '../../data/playableApps';
-import { fetchStories } from '../../firebase/apps';
+import { fetchStories, fetchPublicApps } from '../../firebase/apps';
 import type { Story } from '../../types';
+import type { AppDocument } from '../../types/t2q';
 
 function HeroStory({ story }: { story: typeof stories[number] & { appId?: string; appType?: 'story' | 't2q_quiz' } }) {
   const { previewApp } = useUIStore();
@@ -79,11 +80,19 @@ function PlayableRow({ title, subtitle, apps, filter }: { title: string; subtitl
 export default function HomeScreen() {
   const [heroIdx, setHeroIdx] = useState(0);
   const [stories, setStories] = useState<Story[]>([]);
+  const [allApps, setAllApps] = useState<AppDocument[]>(playableApps);
   const { lang } = useLanguage();
   const { setTab } = useUIStore();
 
   useEffect(() => {
     fetchStories().then(setStories).catch(() => {});
+    fetchPublicApps().then((fetched) => {
+      if (fetched.length > 0) {
+        const firebaseIds = new Set(fetched.map((a) => a.id));
+        const merged = [...fetched, ...playableApps.filter((a) => !firebaseIds.has(a.id))];
+        setAllApps(merged);
+      }
+    }).catch(() => {});
   }, []);
 
   const heroStories = useMemo(() => stories.filter((s) => s.hero), [stories]);
@@ -100,9 +109,9 @@ export default function HomeScreen() {
     return () => clearInterval(timer);
   }, [heroStories.length, nextHero]);
 
-  const climateApps = useMemo(() => playableApps.filter((a) => a.id.startsWith('play-c')), []);
-  const techApps = useMemo(() => playableApps.filter((a) => a.id.startsWith('play-t')), []);
-  const lifeApps = useMemo(() => playableApps.filter((a) => a.id.startsWith('play-l') || a.id === 'play-ai1'), []);
+  const climateApps = useMemo(() => allApps.filter((a) => a.id.startsWith('play-c')), [allApps]);
+  const techApps = useMemo(() => allApps.filter((a) => a.id.startsWith('play-t')), [allApps]);
+  const lifeApps = useMemo(() => allApps.filter((a) => a.id.startsWith('play-l') || a.id === 'play-ai1'), [allApps]);
 
   return (
     <div className="screen screen--home">
