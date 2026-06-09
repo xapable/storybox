@@ -45,7 +45,7 @@ export default function SettingScreen() {
                       className="setting-myapps__icon"
                     />
                   ) : (
-                    <span className="setting-myapps__icon setting-myapps__icon--placeholder">📦</span>
+                    <span className="setting-myapps__icon setting-myapps__icon--placeholder">�</span>
                   )}
                   <div className="setting-myapps__info">
                     <span className="setting-myapps__name">{app.title}</span>
@@ -131,7 +131,7 @@ export default function SettingScreen() {
         <div className="setting-group">
           <span className="setting-group__label">{tKey('setting_about', lang)}</span>
           <div className="setting-app-brand">
-            <span className="setting-app-brand__icon">📦</span>
+            <span className="setting-app-brand__icon">�</span>
             <span className="setting-app-brand__name">StoryBox 知識盒子</span>
           </div>
           <button type="button" className="setting-item">

@@ -75,7 +75,7 @@ export default function AppDetail() {
           {app.thumbnail ? (
             <img src={app.thumbnail} alt={app.title} className="detail__icon" />
           ) : (
-            <div className="detail__icon detail__icon--placeholder">📦</div>
+            <div className="detail__icon detail__icon--placeholder">�</div>
           )}
           <div className="detail__names">
             <h1 className="detail__title">{app.title}</h1>

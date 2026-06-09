@@ -15,7 +15,7 @@ function HeroStory({ story }: { story: typeof stories[number] & { appId?: string
         <h2 className="hero-story__title">{story.title}</h2>
         <span className="hero-story__subtitle">{story.subtitle}</span>
       </div>
-      {story.imageUrl && <img src={story.imageUrl} alt="" className="hero-story__image" />}
+      <div className="hero-story__logo">📦</div>
     </button>
   );
 }
@@ -27,7 +27,7 @@ function StoryCircle({ story }: { story: typeof stories[number] & { appId?: stri
       if (story.appId) previewApp(story.appId, story.appType ?? 'story');
     }}>
       <div className="story-circle__ring" style={{ borderColor: story.backgroundColor ?? 'var(--play-blue)' }}>
-        <img src={story.imageUrl} alt={story.title} className="story-circle__img" />
+        <span className="story-circle__logo">📦</span>
       </div>
       <span className="story-circle__label">{story.title}</span>
     </button>
