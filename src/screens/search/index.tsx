@@ -1,7 +1,8 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useLanguage, tKey, tReplace } from '../../i18n';
 import { movies, books } from '../../data/content';
-import type { Content, AppDocument } from '../../types/t2q';
+import type { AppDocument } from '../../types/t2q';
+import type { Content } from '../../types';
 import { playableApps } from '../../data/playableApps';
 import { fetchPublicApps } from '../../firebase/apps';
 import { useUIStore } from '../../store';

@@ -6,7 +6,7 @@ import { fetchStories, fetchPublicApps } from '../../firebase/apps';
 import type { Story } from '../../types';
 import type { AppDocument } from '../../types/t2q';
 
-function HeroStory({ story }: { story: typeof stories[number] & { appId?: string; appType?: 'story' | 't2q_quiz' } }) {
+function HeroStory({ story }: { story: Story & { appId?: string; appType?: 'story' | 't2q_quiz' } }) {
   const { previewApp } = useUIStore();
   return (
     <button type="button" className="hero-story" onClick={() => {
@@ -22,7 +22,7 @@ function HeroStory({ story }: { story: typeof stories[number] & { appId?: string
   );
 }
 
-function StoryCircle({ story }: { story: typeof stories[number] & { appId?: string; appType?: 'story' | 't2q_quiz' } }) {
+function StoryCircle({ story }: { story: Story & { appId?: string; appType?: 'story' | 't2q_quiz' } }) {
   const { previewApp } = useUIStore();
   return (
     <button type="button" className="story-circle" onClick={() => {
@@ -36,7 +36,7 @@ function StoryCircle({ story }: { story: typeof stories[number] & { appId?: stri
   );
 }
 
-function PlayableRow({ title, subtitle, apps, filter }: { title: string; subtitle?: string; apps: typeof playableApps; filter: string }) {
+function PlayableRow({ title, subtitle, apps, filter }: { title: string; subtitle?: string; apps: AppDocument[]; filter: string }) {
   const { lang } = useLanguage();
   const { previewApp, setTab, setAppFilter } = useUIStore();
   return (

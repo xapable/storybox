@@ -6,12 +6,12 @@
  *          import('/src/scripts/seedFirestore.ts').then(m => m.seedFirestore())
  */
 
-import { doc, setDoc, writeBatch } from 'firebase/firestore';
+import { doc, setDoc } from 'firebase/firestore';
 import { db } from '../firebase/config';
 import { playableApps, stories, collections } from '../data/playableApps';
 import { appsEn } from '../data/content-en';
 import { appsZhHans } from '../data/content-zhHans';
-import { apps, movies, books } from '../data/content';
+import { apps } from '../data/content';
 
 /**
  * Seed all data into Firestore. Idempotent — safe to call repeatedly.
@@ -57,18 +57,17 @@ export async function seedFirestore(): Promise<string> {
 
   // ── 4. Firestore-localized content for multi-language ──
   // Write each locale's app list as a single document to keep reads simple
-  await setDoc(doc(db, 'content', 'apps_zhHant'), {
-    apps: apps.map((a) => ({
-      id: a.id, title: a.title, subtitle: a.subtitle, iconUrl: a.iconUrl,
-      category: a.category, contentType: a.contentType, genre: a.genre,
-      rating: a.rating, ratingCount: a.ratingCount, description: a.description,
-      version: a.version, size: a.size, reviews: a.reviews,
-    })),
-  });
+  const contentData = apps.map((a: any) => ({
+    id: a.id, title: a.title, subtitle: a.subtitle, iconUrl: a.iconUrl,
+    category: a.category, contentType: a.contentType, genre: a.genre,
+    rating: a.rating, ratingCount: a.ratingCount, description: a.description,
+    version: a.version, size: a.size, reviews: a.reviews,
+  }));
+  await setDoc(doc(db, 'content', 'apps_zhHant'), { apps: contentData });
   logs.push(`✅ content/apps_zhHant`);
 
   await setDoc(doc(db, 'content', 'apps_en'), {
-    apps: appsEn.map((a) => ({
+    apps: appsEn.map((a: any) => ({
       id: a.id, title: a.title, subtitle: a.subtitle, iconUrl: a.iconUrl,
       category: a.category, contentType: a.contentType, genre: a.genre,
       rating: a.rating, ratingCount: a.ratingCount, description: a.description,
@@ -78,7 +77,7 @@ export async function seedFirestore(): Promise<string> {
   logs.push(`✅ content/apps_en`);
 
   await setDoc(doc(db, 'content', 'apps_zhHans'), {
-    apps: appsZhHans.map((a) => ({
+    apps: appsZhHans.map((a: any) => ({
       id: a.id, title: a.title, subtitle: a.subtitle, iconUrl: a.iconUrl,
       category: a.category, contentType: a.contentType, genre: a.genre,
       rating: a.rating, ratingCount: a.ratingCount, description: a.description,
