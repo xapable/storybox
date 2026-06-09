@@ -498,8 +498,8 @@ export default function SettingScreen() {
           </button>
         </div>
 
-        {/* Dev: seed Firestore */}
-        {import.meta.env.DEV && (
+        {/* Seed Firestore (always visible when signed in) */}
+        {user && (
           <SeedButton />
         )}
       </div>
