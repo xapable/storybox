@@ -53,7 +53,6 @@ export async function fetchPublicApps(): Promise<AppDocument[]> {
   const q = query(
     collection(db, APPS_COLLECTION),
     where('isPublic', '==', true),
-    orderBy('createdAt', 'desc'),
     limit(50),
   );
   const snapshot = await getDocs(q);
