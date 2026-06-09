@@ -24,7 +24,13 @@ export default function AppsScreen() {
 
   const filteredApps = useMemo(() => {
     let list = state.appFilter
-      ? allApps.filter((a) => a.id.startsWith(state.appFilter!) || (state.appFilter === 'play-l' && (a.id === 'play-ai1' || a.id === 'play-auto')))
+      ? allApps.filter((a) =>
+          a.id.startsWith(state.appFilter!) ||
+          (state.appFilter === 'play-l' && (a.id === 'play-ai1' || a.id === 'play-auto')) ||
+          (state.appFilter === 'play-c' && a.category === '環保') ||
+          (state.appFilter === 'play-t' && a.category === '科技') ||
+          (state.appFilter === 'play-l' && a.category === '生活')
+        )
       : allApps;
 
     if (searchQuery.trim()) {

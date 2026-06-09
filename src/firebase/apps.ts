@@ -46,6 +46,7 @@ function docToApp(docSnap: QueryDocumentSnapshot<DocumentData>): AppDocument {
     downloads: data.downloads,
     contentRating: data.contentRating,
     category: data.category,
+    tags: data.tags,
     reviews: data.reviews,
   };
 }

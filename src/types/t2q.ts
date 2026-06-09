@@ -20,6 +20,7 @@ export interface AppDocument {
   downloads?: string;
   contentRating?: string;
   category?: string;
+  tags?: string[];
   reviews?: AppReview[];
 }
 

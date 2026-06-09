@@ -109,9 +109,9 @@ export default function HomeScreen() {
     return () => clearInterval(timer);
   }, [heroStories.length, nextHero]);
 
-  const climateApps = useMemo(() => allApps.filter((a) => a.id.startsWith('play-c')), [allApps]);
-  const techApps = useMemo(() => allApps.filter((a) => a.id.startsWith('play-t')), [allApps]);
-  const lifeApps = useMemo(() => allApps.filter((a) => a.id.startsWith('play-l') || a.id === 'play-ai1'), [allApps]);
+  const climateApps = useMemo(() => allApps.filter((a) => a.id.startsWith('play-c') || a.category === '環保'), [allApps]);
+  const techApps = useMemo(() => allApps.filter((a) => a.id.startsWith('play-t') || a.category === '科技'), [allApps]);
+  const lifeApps = useMemo(() => allApps.filter((a) => a.id.startsWith('play-l') || a.id === 'play-ai1' || a.category === '生活'), [allApps]);
 
   return (
     <div className="screen screen--home">

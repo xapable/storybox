@@ -130,7 +130,9 @@ const t: TranslationMap = {
   creator_ai_no_fn:     { 'zh-Hant': '❌ AI 功能尚未設定。', 'zh-Hans': '❌ AI 功能尚未设置。', en: '❌ Firebase Functions not available.' },
   creator_ai_failed:    { 'zh-Hant': '❌ 生成失敗：{msg}', 'zh-Hans': '❌ 生成失败：{msg}', en: '❌ Generation failed: {msg}' },
   creator_save_error:   { 'zh-Hant': '❌ 錯誤：{msg}', 'zh-Hans': '❌ 错误：{msg}', en: '❌ Error: {msg}' },
-  creator_field_category: { 'zh-Hant': '分類標籤', 'zh-Hans': '分类标签', en: 'Category' },
+  creator_field_category: { 'zh-Hant': '分類', 'zh-Hans': '分类', en: 'Category' },
+  creator_field_tags:    { 'zh-Hant': '標籤（選填）', 'zh-Hans': '标签（选填）', en: 'Tags (optional)' },
+  creator_placeholder_tags: { 'zh-Hant': '用逗號分隔，例如：環保、動物、氣候', 'zh-Hans': '用逗号分隔，例如：环保、动物、气候', en: 'Separate with commas, e.g. environment, animals, climate' },
 
   tag_environment:  { 'zh-Hant': '環保', 'zh-Hans': '环保', en: 'Environment' },
   tag_nature:       { 'zh-Hant': '自然', 'zh-Hans': '自然', en: 'Nature' },
