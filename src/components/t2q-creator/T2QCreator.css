@@ -149,6 +149,38 @@
   background: var(--bg-tertiary);
 }
 
+/* ---- Category grid ---- */
+.t2q-category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.t2q-category-btn {
+  padding: 8px 14px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--separator);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+}
+
+.t2q-category-btn--active {
+  background: var(--play-green);
+  color: #fff;
+  border-color: var(--play-green);
+  font-weight: 600;
+}
+
+.t2q-category-btn:not(.t2q-category-btn--active):active {
+  background: var(--bg-tertiary);
+}
+
 /* ---- Actions ---- */
 .t2q-creator__actions {
   display: flex;

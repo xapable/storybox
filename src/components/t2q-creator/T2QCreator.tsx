@@ -15,6 +15,7 @@ interface T2QCreatorProps {
     description: string;
     thumbnail: string;
     t2qContent: string;
+    category?: string;
   };
 }
 
@@ -28,6 +29,7 @@ export default function T2QCreator({ editId, initialData }: T2QCreatorProps) {
   const [thumbnailPreview, setThumbnailPreview] = useState(initialData?.thumbnail ?? '');
   const [t2qContent, setT2qContent] = useState(initialData?.t2qContent ?? '');
   const [appType, setAppType] = useState<'story' | 't2q_quiz'>('t2q_quiz');
+  const [category, setCategory] = useState(initialData?.category ?? '');
 
   const [errors, setErrors] = useState<ParseError[]>([]);
   const [showPreview, setShowPreview] = useState(false);
@@ -121,6 +123,8 @@ export default function T2QCreator({ editId, initialData }: T2QCreatorProps) {
         data.storyContent = t2qContent.trim();
       }
 
+      if (category) data.category = category;
+
       if (editId) {
         await updateApp(editId, data as any);
         setSaveMsg(tKey('creator_updated', lang));
@@ -135,7 +139,7 @@ export default function T2QCreator({ editId, initialData }: T2QCreatorProps) {
     } finally {
       setSaving(false);
     }
-  }, [t2qContent, title, description, thumbnail, appType, editId, toggleCreator, lang]);
+  }, [t2qContent, title, description, thumbnail, appType, category, editId, toggleCreator, lang]);
 
   const handleGenerate = useCallback(async () => {
     if (!genTopic.trim()) return;
@@ -267,6 +271,36 @@ Do not output any extra text, markdown, or explanations. Output only the T2Q con
           />
         </label>
 
+        {/* Category / Tags */}
+        <div className="t2q-field">
+          <span className="t2q-field__label">{tKey('creator_field_category', lang)}</span>
+          <div className="t2q-category-grid">
+            {[
+              { value: '環保', label: '🌱 ' + tKey('tag_environment', lang) },
+              { value: '自然', label: '🌿 ' + tKey('tag_nature', lang) },
+              { value: '科技', label: '🤖 ' + tKey('tag_tech', lang) },
+              { value: '科學', label: '🔬 ' + tKey('tag_science', lang) },
+              { value: '生活', label: '🏠 ' + tKey('tag_life', lang) },
+              { value: '家庭', label: '👨‍👩‍👧‍👦 ' + tKey('tag_family', lang) },
+              { value: '遊戲', label: '🎮 ' + tKey('tag_game', lang) },
+              { value: '閱讀', label: '📖 ' + tKey('tag_reading', lang) },
+              { value: '安全', label: '🛡️ ' + tKey('tag_safety', lang) },
+              { value: '創意', label: '🎨 ' + tKey('tag_creative', lang) },
+              { value: '入門', label: '🚀 ' + tKey('tag_basics', lang) },
+              { value: '其他', label: '📦 ' + tKey('tag_other', lang) },
+            ].map((cat) => (
+              <button
+                key={cat.value}
+                type="button"
+                className={`t2q-category-btn ${category === cat.value ? 't2q-category-btn--active' : ''}`}
+                onClick={() => setCategory(category === cat.value ? '' : cat.value)}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
         {/* Thumbnail upload (1:1 square) */}
         <label className="t2q-field">
           <span className="t2q-field__label">{tKey('creator_field_thumb', lang)}</span>
@@ -345,16 +379,6 @@ Do not output any extra text, markdown, or explanations. Output only the T2Q con
         <div className="t2q-creator__actions">
           {appType === 't2q_quiz' && (
             <>
-              <button type="button" className="t2q-btn t2q-btn--outline" onClick={handleValidate}>
-                {tKey('creator_btn_validate', lang)}
-              </button>
-              <button
-                type="button"
-                className="t2q-btn t2q-btn--outline"
-                onClick={() => setShowPreview(true)}
-              >
-                {tKey('creator_btn_preview', lang)}
-              </button>
               <button
                 type="button"
                 className="t2q-btn t2q-btn--outline"
