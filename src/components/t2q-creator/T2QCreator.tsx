@@ -76,16 +76,6 @@ export default function T2QCreator({ editId, initialData }: T2QCreatorProps) {
     setShowGenInput((v) => !v);
   }, [t2qContent, lang]);
 
-  const handleValidate = useCallback(() => {
-    const result = parseT2Q(t2qContent);
-    if (result.ok) {
-      setErrors([]);
-      alert(tReplace('creator_valid', lang, { count: result.game.scenes.length }));
-    } else {
-      setErrors(result.errors);
-    }
-  }, [t2qContent, lang]);
-
   const handleSave = useCallback(async () => {
     setSaveMsg('');
 

@@ -5,7 +5,7 @@ import type { UIState, TabType, UserApp, Theme } from '../types';
 type UIAction =
   | { type: 'SET_TAB'; payload: TabType }
   | { type: 'SET_CARD_OPEN'; payload: { cardId: string; isOpen: boolean } }
-  | { type: 'PLAY_APP'; payload: { appId: string; appType: 'story' | 't2q_quiz' } | null }
+  | { type: 'PLAY_APP'; payload: { appId: string; appType: 'story' | 't2q_quiz'; content?: string } | null }
   | { type: 'PREVIEW_APP'; payload: { appId: string; appType: 'story' | 't2q_quiz' } | null }
   | { type: 'TOGGLE_CREATOR'; payload: boolean }
   | { type: 'SET_APP_FILTER'; payload: string | null }
@@ -28,6 +28,7 @@ const initialState: UIState = {
   theme: getInitialTheme(),
   playingAppId: null,
   playingAppType: null,
+  playingAppContent: null,
   previewAppId: null,
   previewAppType: null,
   showCreator: false,
@@ -52,6 +53,7 @@ function uiReducer(state: UIState, action: UIAction): UIState {
         ...state,
         playingAppId: action.payload?.appId ?? null,
         playingAppType: action.payload?.appType ?? null,
+        playingAppContent: action.payload?.content ?? null,
         previewAppId: null,
         previewAppType: null,
       };
@@ -89,7 +91,7 @@ interface UIStoreContextValue {
   state: UIState;
   setTab: (tab: TabType) => void;
   setCardOpen: (cardId: string, isOpen: boolean) => void;
-  playApp: (appId: string | null, appType?: 'story' | 't2q_quiz') => void;
+  playApp: (appId: string | null, appType?: 'story' | 't2q_quiz', content?: string) => void;
   previewApp: (appId: string, appType: 'story' | 't2q_quiz') => void;
   closePreview: () => void;
   toggleCreator: (show: boolean) => void;
@@ -109,8 +111,8 @@ export function UIStoreProvider({ children }: { children: ReactNode }) {
   const setTab = (tab: TabType) => dispatch({ type: 'SET_TAB', payload: tab });
   const setCardOpen = (cardId: string, isOpen: boolean) =>
     dispatch({ type: 'SET_CARD_OPEN', payload: { cardId, isOpen } });
-  const playApp = (appId: string | null, appType?: 'story' | 't2q_quiz') =>
-    dispatch({ type: 'PLAY_APP', payload: appId ? { appId, appType: appType ?? 't2q_quiz' } : null });
+  const playApp = (appId: string | null, appType?: 'story' | 't2q_quiz', content?: string) =>
+    dispatch({ type: 'PLAY_APP', payload: appId ? { appId, appType: appType ?? 't2q_quiz', content } : null });
   const previewApp = (appId: string, appType: 'story' | 't2q_quiz') =>
     dispatch({ type: 'PREVIEW_APP', payload: { appId, appType } });
   const closePreview = () =>

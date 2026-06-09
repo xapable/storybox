@@ -57,12 +57,6 @@ export default function AppDetail() {
   }
 
   const isQuiz = app.appType === 't2q_quiz';
-  const reviews = app.reviews ?? [];
-  const starDist = [5, 4, 3, 2, 1].map((star) => ({
-    star,
-    count: reviews.filter((r) => Math.floor(r.rating) === star).length,
-  }));
-  const totalReviews = reviews.length;
 
   return (
     <div className="detail-overlay" onClick={handleClose}>
@@ -126,7 +120,7 @@ export default function AppDetail() {
           <button
             type="button"
             className="detail__action-primary"
-            onClick={() => playApp(app.id, app.appType)}
+            onClick={() => playApp(app.id, app.appType, app.storyContent ?? app.t2qContent)}
             style={{ touchAction: 'manipulation' }}
           >
             {isQuiz ? tKey('detail_play_quiz', lang) : tKey('detail_read_story', lang)}
@@ -155,7 +149,7 @@ export default function AppDetail() {
             }}
           >
             <span className="detail__rate-btn-stars">⭐</span>
-            <span>{tKey(lang, 'review_title')}</span>
+            <span>{tKey('review_title', lang)}</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" fill="none" /></svg>
           </button>
         </div>
@@ -196,12 +190,12 @@ export default function AppDetail() {
 
         {/* Review Form — moved up for visibility */}
         <div className="detail__section detail__review-form">
-          <h3 className="detail__section-title">{tKey(lang, 'review_title')}</h3>
+          <h3 className="detail__section-title">{tKey('review_title', lang)}</h3>
 
           {reviewMsg && <p className="review-form__msg">{reviewMsg}</p>}
 
           {!user ? (
-            <p className="review-form__sign-in">{tKey(lang, 'review_sign_in')}</p>
+            <p className="review-form__sign-in">{tKey('review_sign_in', lang)}</p>
           ) : (
             <form
               onSubmit={async (e) => {
@@ -216,7 +210,7 @@ export default function AppDetail() {
                     title: reviewTitle,
                     content: reviewBody,
                   });
-                  setReviewMsg(tKey(lang, 'review_thanks'));
+                  setReviewMsg(tKey('review_thanks', lang));
                   setReviewRating(0);
                   setReviewTitle('');
                   setReviewBody('');
@@ -231,7 +225,7 @@ export default function AppDetail() {
               }}
             >
               {/* Star rating input */}
-              <label className="review-form__label">{tKey(lang, 'review_rate')}</label>
+              <label className="review-form__label">{tKey('review_rate', lang)}</label>
               <div className="review-form__stars">
                 {[1,2,3,4,5].map((s) => (
                   <span
@@ -249,14 +243,14 @@ export default function AppDetail() {
               <input
                 className="review-form__input"
                 type="text"
-                placeholder={tKey(lang, 'review_placeholder_title')}
+                placeholder={tKey('review_placeholder_title', lang)}
                 value={reviewTitle}
                 onChange={(e) => setReviewTitle(e.target.value)}
                 required
               />
               <textarea
                 className="review-form__textarea"
-                placeholder={tKey(lang, 'review_placeholder_body')}
+                placeholder={tKey('review_placeholder_body', lang)}
                 value={reviewBody}
                 onChange={(e) => setReviewBody(e.target.value)}
                 rows={3}
@@ -266,7 +260,7 @@ export default function AppDetail() {
                 type="submit"
                 disabled={submitting || reviewRating === 0}
               >
-                {tKey(lang, 'review_submit')}
+                {tKey('review_submit', lang)}
               </button>
             </form>
           )}

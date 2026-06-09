@@ -83,6 +83,7 @@ export interface UIState {
   // Player state
   playingAppId: string | null;
   playingAppType: 'story' | 't2q_quiz' | null;
+  playingAppContent: string | null;
   // Detail screen before playing
   previewAppId: string | null;
   previewAppType: 'story' | 't2q_quiz' | null;
