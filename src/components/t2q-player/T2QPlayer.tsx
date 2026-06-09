@@ -33,6 +33,7 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
   const [reviewBody, setReviewBody] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [reviewMsg, setReviewMsg] = useState('');
+  const [reviewStep, setReviewStep] = useState<'rate' | 'write'>('rate');
   const user: User | null = getCurrentUser();
 
   // Load content
@@ -197,8 +198,36 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
               <span className="review-form__sign-in-icon">🔒</span>
               <p className="review-form__sign-in">{tKey('review_sign_in', lang)}</p>
             </button>
+          ) : reviewStep === 'rate' ? (
+            <div className="review-form__step">
+              <div className="review-form__rating-area">
+                <span className="review-form__rate-question">{tKey('review_rate', lang)}</span>
+                <div className="review-form__stars">
+                  {[1,2,3,4,5].map((s) => (
+                    <span key={s}
+                      className={`review-form__star ${s <= (reviewHover || reviewRating) ? 'review-form__star--fill' : 'review-form__star--empty'}`}
+                      onClick={() => { setReviewRating(s); setReviewHover(0); }}
+                      onMouseEnter={() => setReviewHover(s)}
+                      onMouseLeave={() => setReviewHover(0)}
+                    >★</span>
+                  ))}
+                </div>
+                {reviewRating > 0 && (
+                  <div className="review-form__rating-label">
+                    {['', '😞 Terrible', '🙁 Bad', '🙂 Good', '😊 Great', '🤩 Excellent!'][reviewRating]}
+                  </div>
+                )}
+              </div>
+              <button className="review-form__submit review-form__submit--next"
+                type="button"
+                disabled={reviewRating === 0}
+                onClick={() => setReviewStep('write')}
+              >
+                Next →
+              </button>
+            </div>
           ) : (
-            <form className="review-form__inner"
+            <form className="review-form__step"
               onSubmit={async (e) => {
                 e.preventDefault();
                 if (reviewRating === 0) return;
@@ -215,6 +244,7 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
                   setReviewRating(0);
                   setReviewTitle('');
                   setReviewBody('');
+                  setReviewStep('rate');
                 } catch {
                   setReviewMsg('Error submitting review');
                 } finally {
@@ -222,24 +252,20 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
                 }
               }}
             >
-              <div className="review-form__rating-area">
-                <span className="review-form__rate-question">{tKey('review_rate', lang)}</span>
-                <div className="review-form__stars">
+              <div className="review-form__selected-rating">
+                <span className="review-form__selected-stars">
                   {[1,2,3,4,5].map((s) => (
-                    <span key={s}
-                      className={`review-form__star ${s <= (reviewHover || reviewRating) ? 'review-form__star--fill' : 'review-form__star--empty'}`}
-                      onClick={() => setReviewRating(s)}
-                      onMouseEnter={() => setReviewHover(s)}
-                      onMouseLeave={() => setReviewHover(0)}
-                    >★</span>
+                    <span key={s} className={s <= reviewRating ? 'review-form__star--fill' : 'review-form__star--empty'}>★</span>
                   ))}
-                </div>
-                {reviewRating > 0 && (
-                  <div className="review-form__rating-label">
-                    {['', '😞 Terrible', '🙁 Bad', '🙂 Good', '😊 Great', '🤩 Excellent!'][reviewRating]}
-                  </div>
-                )}
+                </span>
+                <span className="review-form__selected-label">
+                  {['', '😞 Terrible', '🙁 Bad', '🙂 Good', '😊 Great', '🤩 Excellent!'][reviewRating]}
+                </span>
+                <button type="button" className="review-form__change-rating" onClick={() => setReviewStep('rate')}>
+                  Change
+                </button>
               </div>
+
               <div className="review-form__fields">
                 <input className="review-form__input" type="text"
                   placeholder={tKey('review_placeholder_title', lang)}
@@ -248,11 +274,16 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
                 <textarea className="review-form__textarea"
                   placeholder={tKey('review_placeholder_body', lang)}
                   value={reviewBody}
-                  onChange={(e) => setReviewBody(e.target.value)} rows={3} />
+                  onChange={(e) => setReviewBody(e.target.value)} rows={4} />
               </div>
-              <button className="review-form__submit" type="submit" disabled={submitting || reviewRating === 0}>
-                {submitting ? '⏳ Submitting…' : '📨 ' + tKey('review_submit', lang)}
-              </button>
+              <div className="review-form__step-actions">
+                <button type="button" className="review-form__back-btn" onClick={() => setReviewStep('rate')}>
+                  ← Back
+                </button>
+                <button className="review-form__submit" type="submit" disabled={submitting}>
+                  {submitting ? '⏳ Submitting…' : '📨 ' + tKey('review_submit', lang)}
+                </button>
+              </div>
             </form>
           )}
         </div>
