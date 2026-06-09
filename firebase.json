@@ -1,4 +1,14 @@
 {
+  "auth": {
+    "providers": {
+      "googleSignIn": {
+        "enabled": true,
+        "oAuthBrandDisplayName": "StoryBox 知識盒子",
+        "supportEmail": "xapableteam@gmail.com",
+        "authorizedRedirectUris": ["https://storybox-af3b7.web.app", "http://localhost"]
+      }
+    }
+  },
   "hosting": {
     "public": "dist",
     "ignore": [
@@ -18,5 +28,8 @@
     "location": "nam5",
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
+  },
+  "functions": {
+    "source": "functions"
   }
 }

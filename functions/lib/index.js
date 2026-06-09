@@ -55,10 +55,12 @@ exports.generateT2Q = (0, https_1.onCall)({ cors: true }, async (request) => {
     if (!topic) {
         throw new Error("Topic is required.");
     }
-    const apiKey = process.env.DEEPSEEK_API_KEY;
+    // In v2 Cloud Functions, functions.config() values are injected as env vars
+    // with the pattern: DEEPSEEK_KEY (uppercased, dot becomes underscore)
+    const apiKey = process.env.DEEPSEEK_KEY;
     if (!apiKey) {
-        logger.error("DEEPSEEK_API_KEY not configured");
-        throw new Error("AI generation is not configured. Set DEEPSEEK_API_KEY.");
+        logger.error("DEEPSEEK_KEY not configured");
+        throw new Error("AI generation is not configured. Set DEEPSEEK_KEY.");
     }
     logger.info(`Generating T2Q for topic: ${topic}`);
     const response = await fetch(DEEPSEEK_API_URL, {

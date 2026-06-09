@@ -5,8 +5,6 @@ import { createApp, updateApp } from '../../firebase/apps';
 import { getCurrentUser } from '../../firebase/auth';
 import { parseT2Q } from '../../lib/parseT2Q';
 import T2QPlayer from '../t2q-player/T2QPlayer';
-import { httpsCallable } from 'firebase/functions';
-import { functions } from '../../firebase/config';
 import type { ParseError } from '../../types/t2q';
 import './T2QCreator.css';
 
@@ -141,7 +139,9 @@ export default function T2QCreator({ editId, initialData }: T2QCreatorProps) {
 
   const handleGenerate = useCallback(async () => {
     if (!genTopic.trim()) return;
-    if (!functions) {
+
+    const apiKey = import.meta.env.VITE_DEEPSEEK_API_KEY;
+    if (!apiKey) {
       setSaveMsg(tKey('creator_ai_no_fn', lang));
       return;
     }
@@ -149,13 +149,49 @@ export default function T2QCreator({ editId, initialData }: T2QCreatorProps) {
     setGenerating(true);
     setSaveMsg('');
     try {
-      const generateT2Q = httpsCallable<{ topic: string }, { content: string }>(functions, 'generateT2Q');
-      const result = await generateT2Q({ topic: genTopic.trim() });
-      setT2qContent(result.data.content);
+      const response = await fetch('https://api.deepseek.com/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model: 'deepseek-chat',
+          messages: [
+            {
+              role: 'system',
+              content: `You are a T2Q story generator. Output only valid T2Q content using the format:
+- > Speaker: Text for conversation
+- ? Question text
+- Numbered options 1) ... 2) ...
+- = correct number (1-indexed)
+- Blank lines between scenes.
+Do not output any extra text, markdown, or explanations. Output only the T2Q content.`,
+            },
+            { role: 'user', content: `Topic: ${genTopic.trim()}` },
+          ],
+          temperature: 0.7,
+          max_tokens: 2000,
+        }),
+      });
+
+      if (!response.ok) {
+        const errText = await response.text();
+        throw new Error(errText || `HTTP ${response.status}`);
+      }
+
+      const data = await response.json();
+      const content = data.choices?.[0]?.message?.content?.trim();
+
+      if (!content) {
+        throw new Error('Empty response from AI');
+      }
+
+      setT2qContent(content);
       setShowGenInput(false);
       setErrors([]);
     } catch (e: any) {
-      setSaveMsg(tReplace('creator_ai_failed', lang, { msg: e.message }));
+      setSaveMsg(tReplace('creator_ai_failed', lang, { msg: e.message || 'unknown' }));
     } finally {
       setGenerating(false);
     }
