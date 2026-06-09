@@ -1,7 +1,6 @@
 import { useState, useMemo, useEffect, useCallback } from 'react';
 import { useUIStore } from '../../store';
 import { useLanguage, tKey } from '../../i18n';
-import { playableApps } from '../../data/playableApps';
 import { fetchStories, fetchPublicApps } from '../../firebase/apps';
 import type { Story } from '../../types';
 import type { AppDocument } from '../../types/t2q';
@@ -80,19 +79,13 @@ function PlayableRow({ title, subtitle, apps, filter }: { title: string; subtitl
 export default function HomeScreen() {
   const [heroIdx, setHeroIdx] = useState(0);
   const [stories, setStories] = useState<Story[]>([]);
-  const [allApps, setAllApps] = useState<AppDocument[]>(playableApps);
+  const [allApps, setAllApps] = useState<AppDocument[]>([]);
   const { lang } = useLanguage();
   const { setTab } = useUIStore();
 
   useEffect(() => {
     fetchStories().then(setStories).catch(() => {});
-    fetchPublicApps().then((fetched) => {
-      if (fetched.length > 0) {
-        const firebaseIds = new Set(fetched.map((a) => a.id));
-        const merged = [...fetched, ...playableApps.filter((a) => !firebaseIds.has(a.id))];
-        setAllApps(merged);
-      }
-    }).catch(() => {});
+    fetchPublicApps().then(setAllApps).catch(() => {});
   }, []);
 
   const heroStories = useMemo(() => stories.filter((s) => s.hero), [stories]);

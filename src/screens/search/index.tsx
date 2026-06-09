@@ -3,24 +3,17 @@ import { useLanguage, tKey, tReplace } from '../../i18n';
 import { movies, books } from '../../data/content';
 import type { AppDocument } from '../../types/t2q';
 import type { Content } from '../../types';
-import { playableApps } from '../../data/playableApps';
 import { fetchPublicApps } from '../../firebase/apps';
 import { useUIStore } from '../../store';
 
 export default function SearchScreen() {
   const [query, setQuery] = useState('');
-  const [allApps, setAllApps] = useState<AppDocument[]>(playableApps);
+  const [allApps, setAllApps] = useState<AppDocument[]>([]);
   const { lang } = useLanguage();
   const { previewApp } = useUIStore();
 
   useEffect(() => {
-    fetchPublicApps().then((fetched) => {
-      if (fetched.length > 0) {
-        const firebaseIds = new Set(fetched.map((a) => a.id));
-        const merged = [...fetched, ...playableApps.filter((a) => !firebaseIds.has(a.id))];
-        setAllApps(merged);
-      }
-    }).catch(() => {});
+    fetchPublicApps().then(setAllApps).catch(() => {});
   }, []);
 
   // Convert playable apps to searchable format

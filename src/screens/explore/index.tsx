@@ -1,7 +1,6 @@
 import { useMemo, useState, useEffect } from 'react';
 import { useLanguage, tKey } from '../../i18n';
 import { useUIStore } from '../../store';
-import { playableApps } from '../../data/playableApps';
 import { fetchPublicApps } from '../../firebase/apps';
 import type { AppDocument } from '../../types/t2q';
 
@@ -15,7 +14,7 @@ function Star(size: number) {
 }
 
 /** A single app card used in all sections */
-function AppCard({ app, compact }: { app: typeof playableApps[number]; compact?: boolean }) {
+function AppCard({ app, compact }: { app: AppDocument; compact?: boolean }) {
   const { lang } = useLanguage();
   const { previewApp } = useUIStore();
   return (
@@ -39,7 +38,7 @@ function AppCard({ app, compact }: { app: typeof playableApps[number]; compact?:
 }
 
 /** A horizontal row of app cards (scrollable) */
-function HotRow({ apps }: { apps: typeof playableApps }) {
+function HotRow({ apps }: { apps: AppDocument[] }) {
   return (
     <div className="explore-hot-scroll">
       {apps.map((app) => (
@@ -50,7 +49,7 @@ function HotRow({ apps }: { apps: typeof playableApps }) {
 }
 
 /** A grid section */
-function AppGrid({ apps }: { apps: typeof playableApps }) {
+function AppGrid({ apps }: { apps: AppDocument[] }) {
   if (apps.length === 0) return null;
   return (
     <div className="explore-grid">
@@ -64,16 +63,10 @@ function AppGrid({ apps }: { apps: typeof playableApps }) {
 // ── screen ──
 export default function ExploreScreen() {
   const { lang } = useLanguage();
-  const [allApps, setAllApps] = useState<AppDocument[]>(playableApps);
+  const [allApps, setAllApps] = useState<AppDocument[]>([]);
 
   useEffect(() => {
-    fetchPublicApps().then((fetched) => {
-      if (fetched.length > 0) {
-        const firebaseIds = new Set(fetched.map((a) => a.id));
-        const merged = [...fetched, ...playableApps.filter((a) => !firebaseIds.has(a.id))];
-        setAllApps(merged);
-      }
-    }).catch(() => {});
+    fetchPublicApps().then(setAllApps).catch(() => {});
   }, []);
 
   const sorted = useMemo(() =>

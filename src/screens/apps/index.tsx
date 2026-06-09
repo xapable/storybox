@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useLanguage, tKey } from '../../i18n';
 import { useUIStore } from '../../store';
-import { playableApps } from '../../data/playableApps';
 import { fetchPublicApps } from '../../firebase/apps';
 import QuizAppCard from '../../components/quiz-app-card';
 import type { AppDocument } from '../../types/t2q';
@@ -9,17 +8,11 @@ import type { AppDocument } from '../../types/t2q';
 export default function AppsScreen() {
   const { lang } = useLanguage();
   const { previewApp, state, setAppFilter } = useUIStore();
-  const [allApps, setAllApps] = useState<AppDocument[]>(playableApps);
+  const [allApps, setAllApps] = useState<AppDocument[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    fetchPublicApps().then((fetched) => {
-      if (fetched.length > 0) {
-        const firebaseIds = new Set(fetched.map((a) => a.id));
-        const merged = [...fetched, ...playableApps.filter((a) => !firebaseIds.has(a.id))];
-        setAllApps(merged);
-      }
-    }).catch(() => {});
+    fetchPublicApps().then(setAllApps).catch(() => {});
   }, []);
 
   const filteredApps = useMemo(() => {

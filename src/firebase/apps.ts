@@ -15,16 +15,12 @@ import {
   type QueryDocumentSnapshot,
 } from 'firebase/firestore';
 import { db } from './config';
-import { playableApps, stories as localStories, collections as localCollections } from '../data/playableApps';
 import type { AppDocument } from '../types/t2q';
 import type { Collection, Story } from '../types';
 
 const APPS_COLLECTION = 'apps';
 const STORIES_COLLECTION = 'stories';
 const COLLECTIONS_COLLECTION = 'collections';
-
-/** Local mock app lookup for offline/demo mode */
-const mockAppMap = new Map(playableApps.map((a) => [a.id, a]));
 
 function docToApp(docSnap: QueryDocumentSnapshot<DocumentData>): AppDocument {
   const data = docSnap.data();
@@ -51,71 +47,42 @@ function docToApp(docSnap: QueryDocumentSnapshot<DocumentData>): AppDocument {
   };
 }
 
-/** Fetch all public apps (with mock fallback) */
+/** Fetch all public apps from Firestore */
 export async function fetchPublicApps(): Promise<AppDocument[]> {
-  try {
-    if (db) {
-      const q = query(
-        collection(db, APPS_COLLECTION),
-        where('isPublic', '==', true),
-        orderBy('createdAt', 'desc'),
-        limit(50),
-      );
-      const snapshot = await getDocs(q);
-      if (!snapshot.empty) {
-        return snapshot.docs.map(docToApp);
-      }
-    }
-  } catch {
-    // Firestore unavailable — use mock data
-  }
-  return [];
+  if (!db) return [];
+  const q = query(
+    collection(db, APPS_COLLECTION),
+    where('isPublic', '==', true),
+    orderBy('createdAt', 'desc'),
+    limit(50),
+  );
+  const snapshot = await getDocs(q);
+  return snapshot.docs.map(docToApp);
 }
 
-/** Fetch a single app by ID (Firestore first, then mock fallback) */
+/** Fetch a single app by ID from Firestore */
 export async function fetchAppById(id: string): Promise<AppDocument | null> {
-  try {
-    if (db) {
-      const docRef = doc(db, APPS_COLLECTION, id);
-      const docSnap = await getDoc(docRef);
-      if (docSnap.exists()) {
-        return docToApp(docSnap as QueryDocumentSnapshot<DocumentData>);
-      }
-    }
-  } catch {
-    // Firestore unavailable — fall through to mock
+  if (!db) return null;
+  const docRef = doc(db, APPS_COLLECTION, id);
+  const docSnap = await getDoc(docRef);
+  if (docSnap.exists()) {
+    return docToApp(docSnap as QueryDocumentSnapshot<DocumentData>);
   }
-  return mockAppMap.get(id) ?? null;
+  return null;
 }
 
-/** Fetch all stories (hero banners & circles) from Firestore, fallback to local */
+/** Fetch all stories (hero banners & circles) from Firestore */
 export async function fetchStories(): Promise<Story[]> {
-  try {
-    if (db) {
-      const snapshot = await getDocs(collection(db, STORIES_COLLECTION));
-      if (!snapshot.empty) {
-        return snapshot.docs.map((d) => ({ id: d.id, ...d.data() } as Story));
-      }
-    }
-  } catch {
-    // Firestore unavailable
-  }
-  return localStories as unknown as Story[];
+  if (!db) return [];
+  const snapshot = await getDocs(collection(db, STORIES_COLLECTION));
+  return snapshot.docs.map((d) => ({ id: d.id, ...d.data() } as Story));
 }
 
-/** Fetch all collections from Firestore, fallback to local */
+/** Fetch all collections from Firestore */
 export async function fetchCollections(): Promise<Collection[]> {
-  try {
-    if (db) {
-      const snapshot = await getDocs(collection(db, COLLECTIONS_COLLECTION));
-      if (!snapshot.empty) {
-        return snapshot.docs.map((d) => ({ id: d.id, ...d.data() } as unknown as Collection));
-      }
-    }
-  } catch {
-    // Firestore unavailable
-  }
-  return localCollections as unknown as Collection[];
+  if (!db) return [];
+  const snapshot = await getDocs(collection(db, COLLECTIONS_COLLECTION));
+  return snapshot.docs.map((d) => ({ id: d.id, ...d.data() } as unknown as Collection));
 }
 
 /** Save a new app to Firestore */
