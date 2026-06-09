@@ -1,0 +1,119 @@
+[
+  {
+    "id": "stock-eng-001",
+    "language": "English",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-eng-001",
+      "title": "Lemonade Stand Stocks",
+      "description": "Learn how owning a piece of a company works",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "Emma's friend Leo started a lemonade stand. Emma gave him $5 to buy lemons and sugar. In return, Leo promised to share half of his profits. That's like owning a small piece of Leo's business. Emma learned that a stock is a tiny share of a company. If the company does well, the stock can grow in value. She decided to hold her share for a long time, not sell it quickly. Over a year, Leo's lemonade stand became popular, and Emma's $5 turned into $8. She learned that patience and research make stock investing rewarding.",
+      "createdBy": "MoneySmart",
+      "creatorAvatar": "📈",
+      "tags": ["stocks", "investing", "patience"]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-eng-001-1",
+        "title": "Stock Basics Quiz 1",
+        "description": "Test your stock knowledge 1",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Emma: What is a stock?\n\n? What did Emma receive when she gave Leo $5?\n1) A loan to be repaid next week\n2) A tiny share of Leo's business\n3) A free lemonade every day\n= 2\n\n> Emma: Correct! A stock is partial ownership.\n\n? How did Emma's $5 turn into $8?\n1) Leo gave her extra money as a gift\n2) The business grew and her share became more valuable\n3) She won a lottery\n= 2\n\n> Emma: Yes! When the company does well, your stock can increase in value.\n\n? What is a smart approach to stocks shown in the story?\n1) Sell immediately after buying\n2) Hold for a long time with patience\n3) Only buy stocks that cost less than $1\n= 2\n\n> Emma: Patience and research are key. Think long term!"
+      },
+      {
+        "id": "quiz-stock-eng-001-2",
+        "title": "Stock Basics Quiz 2",
+        "description": "Test your stock knowledge 2",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Emma: Test yourself again!\n\n? What does owning a stock mean?\n1) You own a small part of the company\n2) You have to work for the company\n3) The company owes you money back\n= 1\n\n> Emma: Yes, you become a partial owner.\n\n? What can happen if the company grows?\n1) Your stock value may increase\n2) You lose all your money guaranteed\n3) The company takes your stock back\n= 1\n\n> Emma: Growth can increase your stock's worth.\n\n? What helped Emma's stock grow?\n1) Leo's business became popular\n2) Emma sold her share on the first day\n3) Emma borrowed more money\n= 1\n\n> Emma: Business success helps stock value rise."
+      },
+      {
+        "id": "quiz-stock-eng-001-3",
+        "title": "Stock Basics Quiz 3",
+        "description": "Test your stock knowledge 3",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Emma: One more round!\n\n? Should you buy stocks without research?\n1) Yes, always buy what others buy\n2) No, research the company first\n3) Only buy if the price is very low\n= 2\n\n> Emma: Research helps you make informed decisions.\n\n? What is a good attitude toward stock investing?\n1) Get rich overnight\n2) Be patient and think long term\n3) Never invest in anything\n= 2\n\n> Emma: Patience and long-term thinking are best.\n\n? Emma's $5 grew to $8. What does this show?\n1) Stocks always double your money quickly\n2) Stocks can grow slowly over time with a good business\n3) You should only buy lemonade stands\n= 2\n\n> Emma: Slow, steady growth from a good business is realistic."
+      }
+    ]
+  },
+  {
+    "id": "stock-ind-001",
+    "language": "Indonesian",
+    "topic": "Saham",
+    "story": {
+      "id": "stock-ind-001",
+      "title": "Saham Kedai Jus Buah",
+      "description": "Belajar bagaimana memiliki sebagian kecil perusahaan",
+      "category": "Literasi Keuangan",
+      "appType": "story",
+      "storyContent": "Rina membantu temannya, Budi, membuka kedai jus buah. Rina memberikan Rp50.000 untuk membeli buah-buahan. Sebagai imbalan, Budi berjanji akan berbagi 20% keuntungannya. Itulah yang disebut saham – memiliki bagian kecil dari bisnis. Rina belajar bahwa jika kedai jus itu maju, nilai sahamnya bisa naik. Dia memutuskan untuk tidak menjual cepat-cepat. Setahun kemudian, kedai jus Budi terkenal, dan Rp50.000 Rina menjadi Rp75.000. Rina sadar bahwa kesabaran dan belajar tentang perusahaan membuat investasi saham menyenangkan dan positif.",
+      "createdBy": "CerdasUang",
+      "creatorAvatar": "📈",
+      "tags": ["saham", "investasi", "kesabaran"]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-ind-001-1",
+        "title": "Kuis Saham Dasar 1",
+        "description": "Uji pengetahuan saham 1",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Rina: Apa itu saham?\n\n? Apa yang Rina terima saat memberi Rp50.000 ke Budi?\n1) Hutang yang harus dibayar minggu depan\n2) Bagian kecil dari bisnis Budi\n3) Jus gratis setiap hari\n= 2\n\n> Rina: Benar! Saham adalah kepemilikan kecil perusahaan.\n\n? Mengapa Rp50.000 Rina menjadi Rp75.000?\n1) Budi memberi hadiah uang\n2) Bisnis berkembang dan nilai saham naik\n3) Rina menang undian\n= 2\n\n> Rina: Ya! Saat perusahaan maju, saham bisa naik nilainya.\n\n? Sikap cerdas terhadap saham menurut cerita?\n1) Jual segera setelah beli\n2) Simpan dengan sabar untuk jangka panjang\n3) Hanya beli saham murah\n= 2\n\n> Rina: Kesabaran dan riset penting. Pikir jangka panjang!"
+      },
+      {
+        "id": "quiz-stock-ind-001-2",
+        "title": "Kuis Saham Dasar 2",
+        "description": "Uji pengetahuan saham 2",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Rina: Uji dirimu lagi!\n\n? Memiliki saham artinya?\n1) Kamu punya sebagian kecil perusahaan\n2) Kamu harus bekerja di perusahaan itu\n3) Perusahaan berhutang padamu\n= 1\n\n> Rina: Betul, kamu jadi pemilik kecil.\n\n? Apa yang bisa terjadi jika perusahaan berkembang?\n1) Nilai sahammu bisa naik\n2) Kamu pasti rugi semua uang\n3) Perusahaan mengambil sahammu kembali\n= 1\n\n> Rina: Perkembangan perusahaan bisa menaikkan nilai saham.\n\n? Apa yang membuat saham Rina naik?\n1) Kedai jus Budi menjadi populer\n2) Rina menjual saham di hari pertama\n3) Rina meminjam uang lagi\n= 1\n\n> Rina: Kesuksesan bisnis membantu nilai saham naik."
+      },
+      {
+        "id": "quiz-stock-ind-001-3",
+        "title": "Kuis Saham Dasar 3",
+        "description": "Uji pengetahuan saham 3",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Rina: Satu putaran lagi!\n\n? Apakah sebaiknya beli saham tanpa riset?\n1) Ya, selalu beli yang dibeli orang lain\n2) Tidak, riset perusahaan dulu\n3) Hanya beli jika harga murah sekali\n= 2\n\n> Rina: Riset membantu keputusan bijak.\n\n? Sikap baik dalam investasi saham?\n1) Kaya dalam semalam\n2) Sabar dan pikir jangka panjang\n3) Tidak pernah investasi apapun\n= 2\n\n> Rina: Kesabaran dan jangka panjang adalah kunci.\n\n? Rp50.000 Rina menjadi Rp75.000. Ini menunjukkan?\n1) Saham selalu menggandakan uang dengan cepat\n2) Saham bisa tumbuh perlahan dengan bisnis yang bagus\n3) Kamu hanya boleh beli kedai jus\n= 2\n\n> Rina: Pertumbuhan lambat tapi pasti dari bisnis baik itu realistis."
+      }
+    ]
+  },
+  {
+    "id": "stock-cmn-001",
+    "language": "中文",
+    "topic": "股票",
+    "story": {
+      "id": "stock-cmn-001",
+      "title": "柠檬水摊位股票",
+      "description": "学习如何拥有一家公司的微小部分",
+      "category": "金融素养",
+      "appType": "story",
+      "storyContent": "小美的朋友小刚开了一个柠檬水摊。小美给了小刚50元买柠檬和糖。小刚答应分一半利润给她。这就是股票——拥有一家生意的一小部分。小美学到：如果公司做得好，股票价值就会增长。她决定长期持有，不急着卖。一年后，小刚的柠檬水摊很受欢迎，小美的50元变成了80元。她明白了：耐心和研究让股票投资变得有价值。",
+      "createdBy": "聪明理财",
+      "creatorAvatar": "📈",
+      "tags": ["股票", "投资", "耐心"]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-cmn-001-1",
+        "title": "股票基础知识测验1",
+        "description": "测试股票知识1",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小美：什么是股票？\n\n? 小美给了小刚50元，换来了什么？\n1) 下周要还的借款\n2) 小刚生意的一小部分\n3) 每天一杯免费柠檬水\n= 2\n\n> 小美：正确！股票就是部分所有权。\n\n? 小美的50元怎么变成了80元？\n1) 小刚额外给了她钱作为礼物\n2) 生意变好，她的那部分变得更值钱\n3) 她中了彩票\n= 2\n\n> 小美：对！公司发展好，股票价值就会上升。\n\n? 故事中展示的聪明的股票投资方法是什么？\n1) 买完立刻卖掉\n2) 耐心长期持有\n3) 只买低于1元的股票\n= 2\n\n> 小美：耐心和研究是关键。长期思考！"
+      },
+      {
+        "id": "quiz-stock-cmn-001-2",
+        "title": "股票基础知识测验2",
+        "description": "测试股票知识2",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小美：再测试一下自己！\n\n? 拥有一只股票意味着什么？\n1) 你拥有公司的一小部分\n2) 你必须为公司工作\n3) 公司欠你钱\n= 1\n\n> 小美：是的，你成为了小老板。\n\n? 如果公司发展得好，可能会发生什么？\n1) 你的股票价值可能上升\n2) 你一定会亏光所有钱\n3) 公司会把你的股票收回\n= 1\n\n> 小美：公司成长能让你的股票更值钱。\n\n? 是什么让小美的股票增长了？\n1) 小刚的柠檬水摊变得受欢迎\n2) 小美第一天就把股票卖了\n3) 小美借了更多钱\n= 1\n\n> 小美：生意成功帮助股票价值上升。"
+      },
+      {
+        "id": "quiz-stock-cmn-001-3",
+        "title": "股票基础知识测验3",
+        "description": "测试股票知识3",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小美：最后一轮！\n\n? 你该不该不做研究就买股票？\n1) 应该，别人买什么我就买什么\n2) 不应该，先研究公司\n3) 只在价格非常低的时候买\n= 2\n\n> 小美：研究帮助你做出明智的决定。\n\n? 对股票投资的好态度是什么？\n1) 一夜暴富\n2) 耐心和长期思考\n3) 永远不投资任何东西\n= 2\n\n> 小美：耐心和长期思考最棒。\n\n? 小美的50元变成80元，这说明了什么？\n1) 股票总是能快速翻倍\n2) 股票可以随着好生意慢慢增长\n3) 你只应该投资柠檬水摊\n= 2\n\n> 小美：好生意带来的缓慢稳定增长是现实的。"
+      }
+    ]
+  }
+]

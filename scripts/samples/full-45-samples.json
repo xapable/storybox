@@ -1,0 +1,2342 @@
+[
+  {
+    "id": "stock-english-001",
+    "language": "English",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-english-001",
+      "title": "Stock Story - Lily",
+      "description": "Learn about stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "Lily gave $500 to Max for a bakery. In return, Max shared 10% of profits. Lily learned that a stock means owning a small piece of a company. Over time, the bakery grew, and Lily's $500 became $550. Patience and research make investing rewarding.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-english-001-1",
+        "title": "Stock Quiz 1 - Lily",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Lily: Let's learn!\n\n? If the company does well, your stock value usually...\n1) Stays the same\n2) Goes up\n3) Goes down\n= 2\n\n> Lily: A successful company tends to increase your stock's worth.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-english-001-2",
+        "title": "Stock Quiz 2 - Lily",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Lily: Let's learn!\n\n? What helped Lily's investment grow?\n1) The business became more successful\n2) Luck alone\n3) Selling on the first day\n= 1\n\n> Lily: Business growth drives stock value.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-english-001-3",
+        "title": "Stock Quiz 3 - Lily",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Lily: Let's learn!\n\n? What is a wise approach to stock investing?\n1) Sell immediately after buying\n2) Hold for years with patience\n3) Only buy very cheap stocks\n= 2\n\n> Lily: Patience and long-term thinking are key.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "stock-english-002",
+    "language": "English",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-english-002",
+      "title": "Stock Story - Sam",
+      "description": "Learn about stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "Sam gave $50 to Tom for a lemonade stand. In return, Tom shared 50% of profits. Sam learned that a stock means owning a small piece of a company. Over time, the lemonade stand grew, and Sam's $50 became $75. Patience and research make investing rewarding.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-english-002-1",
+        "title": "Stock Quiz 1 - Sam",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Sam: Let's learn!\n\n? What is a wise approach to stock investing?\n1) Sell immediately after buying\n2) Hold for years with patience\n3) Only buy very cheap stocks\n= 2\n\n> Sam: Patience and long-term thinking are key.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-english-002-2",
+        "title": "Stock Quiz 2 - Sam",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Sam: Let's learn!\n\n? If the company does well, your stock value usually...\n1) Stays the same\n2) Goes up\n3) Goes down\n= 2\n\n> Sam: A successful company tends to increase your stock's worth.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-english-002-3",
+        "title": "Stock Quiz 3 - Sam",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Sam: Let's learn!\n\n? What does 'diversify' mean in stocks?\n1) Put all money in one stock\n2) Spread money across different companies\n3) Never buy stocks\n= 2\n\n> Sam: Diversification reduces risk.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "stock-english-003",
+    "language": "English",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-english-003",
+      "title": "Stock Story - Mia",
+      "description": "Learn about stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "Mia gave $50 to Sam for a craft store. In return, Sam shared 50% of profits. Mia learned that a stock means owning a small piece of a company. Over time, the craft store grew, and Mia's $50 became $75. Patience and research make investing rewarding.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-english-003-1",
+        "title": "Stock Quiz 1 - Mia",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? If the company does well, your stock value usually...\n1) Stays the same\n2) Goes up\n3) Goes down\n= 2\n\n> Mia: A successful company tends to increase your stock's worth.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-english-003-2",
+        "title": "Stock Quiz 2 - Mia",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? What does 'diversify' mean in stocks?\n1) Put all money in one stock\n2) Spread money across different companies\n3) Never buy stocks\n= 2\n\n> Mia: Diversification reduces risk.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-english-003-3",
+        "title": "Stock Quiz 3 - Mia",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? What does owning a stock mean?\n1) Owning a small part of a company\n2) Lending money to a company\n3) Getting free products\n= 1\n\n> Mia: Owning a stock makes you a partial owner.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "stock-english-004",
+    "language": "English",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-english-004",
+      "title": "Stock Story - Mia",
+      "description": "Learn about stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "Mia gave $50 to Zoe for a bakery. In return, Zoe shared 50% of profits. Mia learned that a stock means owning a small piece of a company. Over time, the bakery grew, and Mia's $50 became $75. Patience and research make investing rewarding.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-english-004-1",
+        "title": "Stock Quiz 1 - Mia",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? If the company does well, your stock value usually...\n1) Stays the same\n2) Goes up\n3) Goes down\n= 2\n\n> Mia: A successful company tends to increase your stock's worth.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-english-004-2",
+        "title": "Stock Quiz 2 - Mia",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? What does owning a stock mean?\n1) Owning a small part of a company\n2) Lending money to a company\n3) Getting free products\n= 1\n\n> Mia: Owning a stock makes you a partial owner.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-english-004-3",
+        "title": "Stock Quiz 3 - Mia",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? What helped Mia's investment grow?\n1) The business became more successful\n2) Luck alone\n3) Selling on the first day\n= 1\n\n> Mia: Business growth drives stock value.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "stock-english-005",
+    "language": "English",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-english-005",
+      "title": "Stock Story - Mia",
+      "description": "Learn about stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "Mia gave $100 to Lily for a craft store. In return, Lily shared 10% of profits. Mia learned that a stock means owning a small piece of a company. Over time, the craft store grew, and Mia's $100 became $110. Patience and research make investing rewarding.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-english-005-1",
+        "title": "Stock Quiz 1 - Mia",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? What is a wise approach to stock investing?\n1) Sell immediately after buying\n2) Hold for years with patience\n3) Only buy very cheap stocks\n= 2\n\n> Mia: Patience and long-term thinking are key.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-english-005-2",
+        "title": "Stock Quiz 2 - Mia",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? What does 'diversify' mean in stocks?\n1) Put all money in one stock\n2) Spread money across different companies\n3) Never buy stocks\n= 2\n\n> Mia: Diversification reduces risk.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-english-005-3",
+        "title": "Stock Quiz 3 - Mia",
+        "description": "Test your knowledge about stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? What does owning a stock mean?\n1) Owning a small part of a company\n2) Lending money to a company\n3) Getting free products\n= 1\n\n> Mia: Owning a stock makes you a partial owner.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "stock-indonesian-006",
+    "language": "Indonesian",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-indonesian-006",
+      "title": "Cerita Stock - Budi",
+      "description": "Belajar tentang stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "Budi memberikan Rp100 kepada Bayu untuk warung makan. Sebagai imbalan, Bayu berbagi 50% keuntungan. Budi belajar bahwa saham berarti memiliki sebagian kecil perusahaan. Seiring waktu, warung makan berkembang, dan Rp100 Budi menjadi Rp150. Kesabaran dan riset membuat investasi bermanfaat.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-indonesian-006-1",
+        "title": "Kuis Stock 1 - Budi",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Budi: Ayo belajar!\n\n? Pendekatan bijak untuk investasi saham?\n1) Jual segera setelah beli\n2) Tahan bertahun-tahun dengan sabar\n3) Hanya beli saham murah\n= 2\n\n> Budi: Kesabaran dan jangka panjang itu penting.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-indonesian-006-2",
+        "title": "Kuis Stock 2 - Budi",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Budi: Ayo belajar!\n\n? Apa itu 'diversifikasi' dalam saham?\n1) Semua uang di satu saham\n2) Sebar uang ke berbagai perusahaan\n3) Tidak pernah beli saham\n= 2\n\n> Budi: Diversifikasi mengurangi risiko.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-indonesian-006-3",
+        "title": "Kuis Stock 3 - Budi",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Budi: Ayo belajar!\n\n? Apa yang membuat investasi Budi tumbuh?\n1) Bisnis menjadi lebih sukses\n2) Keberuntungan saja\n3) Jual di hari pertama\n= 1\n\n> Budi: Pertumbuhan bisnis mendorong nilai saham.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "stock-indonesian-007",
+    "language": "Indonesian",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-indonesian-007",
+      "title": "Cerita Stock - Rina",
+      "description": "Belajar tentang stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "Rina memberikan Rp50 kepada Ahmad untuk toko kerajinan. Sebagai imbalan, Ahmad berbagi 30% keuntungan. Rina belajar bahwa saham berarti memiliki sebagian kecil perusahaan. Seiring waktu, toko kerajinan berkembang, dan Rp50 Rina menjadi Rp65. Kesabaran dan riset membuat investasi bermanfaat.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-indonesian-007-1",
+        "title": "Kuis Stock 1 - Rina",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Rina: Ayo belajar!\n\n? Apa itu 'diversifikasi' dalam saham?\n1) Semua uang di satu saham\n2) Sebar uang ke berbagai perusahaan\n3) Tidak pernah beli saham\n= 2\n\n> Rina: Diversifikasi mengurangi risiko.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-indonesian-007-2",
+        "title": "Kuis Stock 2 - Rina",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Rina: Ayo belajar!\n\n? Pendekatan bijak untuk investasi saham?\n1) Jual segera setelah beli\n2) Tahan bertahun-tahun dengan sabar\n3) Hanya beli saham murah\n= 2\n\n> Rina: Kesabaran dan jangka panjang itu penting.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-indonesian-007-3",
+        "title": "Kuis Stock 3 - Rina",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Rina: Ayo belajar!\n\n? Apa arti memiliki saham?\n1) Memiliki sebagian kecil perusahaan\n2) Meminjamkan uang ke perusahaan\n3) Mendapat produk gratis\n= 1\n\n> Rina: Saham membuatmu menjadi pemilik kecil.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "stock-indonesian-008",
+    "language": "Indonesian",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-indonesian-008",
+      "title": "Cerita Stock - Sari",
+      "description": "Belajar tentang stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "Sari memberikan Rp500 kepada Cinta untuk toko kerajinan. Sebagai imbalan, Cinta berbagi 50% keuntungan. Sari belajar bahwa saham berarti memiliki sebagian kecil perusahaan. Seiring waktu, toko kerajinan berkembang, dan Rp500 Sari menjadi Rp750. Kesabaran dan riset membuat investasi bermanfaat.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-indonesian-008-1",
+        "title": "Kuis Stock 1 - Sari",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Sari: Ayo belajar!\n\n? Jika perusahaan maju, nilai saham biasanya...\n1) Tetap sama\n2) Naik\n3) Turun\n= 2\n\n> Sari: Perusahaan sukses menaikkan nilai saham.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-indonesian-008-2",
+        "title": "Kuis Stock 2 - Sari",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Sari: Ayo belajar!\n\n? Apa arti memiliki saham?\n1) Memiliki sebagian kecil perusahaan\n2) Meminjamkan uang ke perusahaan\n3) Mendapat produk gratis\n= 1\n\n> Sari: Saham membuatmu menjadi pemilik kecil.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-indonesian-008-3",
+        "title": "Kuis Stock 3 - Sari",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Sari: Ayo belajar!\n\n? Pendekatan bijak untuk investasi saham?\n1) Jual segera setelah beli\n2) Tahan bertahun-tahun dengan sabar\n3) Hanya beli saham murah\n= 2\n\n> Sari: Kesabaran dan jangka panjang itu penting.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "stock-indonesian-009",
+    "language": "Indonesian",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-indonesian-009",
+      "title": "Cerita Stock - Ahmad",
+      "description": "Belajar tentang stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "Ahmad memberikan Rp500 kepada Budi untuk toko kerajinan. Sebagai imbalan, Budi berbagi 30% keuntungan. Ahmad belajar bahwa saham berarti memiliki sebagian kecil perusahaan. Seiring waktu, toko kerajinan berkembang, dan Rp500 Ahmad menjadi Rp650. Kesabaran dan riset membuat investasi bermanfaat.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-indonesian-009-1",
+        "title": "Kuis Stock 1 - Ahmad",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Ahmad: Ayo belajar!\n\n? Apa yang membuat investasi Ahmad tumbuh?\n1) Bisnis menjadi lebih sukses\n2) Keberuntungan saja\n3) Jual di hari pertama\n= 1\n\n> Ahmad: Pertumbuhan bisnis mendorong nilai saham.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-indonesian-009-2",
+        "title": "Kuis Stock 2 - Ahmad",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Ahmad: Ayo belajar!\n\n? Pendekatan bijak untuk investasi saham?\n1) Jual segera setelah beli\n2) Tahan bertahun-tahun dengan sabar\n3) Hanya beli saham murah\n= 2\n\n> Ahmad: Kesabaran dan jangka panjang itu penting.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-indonesian-009-3",
+        "title": "Kuis Stock 3 - Ahmad",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Ahmad: Ayo belajar!\n\n? Apa itu 'diversifikasi' dalam saham?\n1) Semua uang di satu saham\n2) Sebar uang ke berbagai perusahaan\n3) Tidak pernah beli saham\n= 2\n\n> Ahmad: Diversifikasi mengurangi risiko.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "stock-indonesian-010",
+    "language": "Indonesian",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-indonesian-010",
+      "title": "Cerita Stock - Eko",
+      "description": "Belajar tentang stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "Eko memberikan Rp100 kepada Ahmad untuk toko kue. Sebagai imbalan, Ahmad berbagi 10% keuntungan. Eko belajar bahwa saham berarti memiliki sebagian kecil perusahaan. Seiring waktu, toko kue berkembang, dan Rp100 Eko menjadi Rp110. Kesabaran dan riset membuat investasi bermanfaat.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-indonesian-010-1",
+        "title": "Kuis Stock 1 - Eko",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Eko: Ayo belajar!\n\n? Apa itu 'diversifikasi' dalam saham?\n1) Semua uang di satu saham\n2) Sebar uang ke berbagai perusahaan\n3) Tidak pernah beli saham\n= 2\n\n> Eko: Diversifikasi mengurangi risiko.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-indonesian-010-2",
+        "title": "Kuis Stock 2 - Eko",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Eko: Ayo belajar!\n\n? Jika perusahaan maju, nilai saham biasanya...\n1) Tetap sama\n2) Naik\n3) Turun\n= 2\n\n> Eko: Perusahaan sukses menaikkan nilai saham.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-indonesian-010-3",
+        "title": "Kuis Stock 3 - Eko",
+        "description": "Uji pengetahuan tentang stock",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Eko: Ayo belajar!\n\n? Pendekatan bijak untuk investasi saham?\n1) Jual segera setelah beli\n2) Tahan bertahun-tahun dengan sabar\n3) Hanya beli saham murah\n= 2\n\n> Eko: Kesabaran dan jangka panjang itu penting.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "stock-chinese-011",
+    "language": "Chinese",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-chinese-011",
+      "title": "Stock故事 - 小娜",
+      "description": "学习关于Stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "小娜给了小明100元做面包店生意。作为回报，小明分享30%的利润。小娜学到股票就是拥有公司的一小部分。随着时间的推移，面包店发展了，小娜的100元变成了130元。耐心和研究让投资有价值。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-chinese-011-1",
+        "title": "Stock测验1 - 小娜",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小娜: 一起学习吧！\n\n? 什么是股票投资的明智方法？\n1) 买完立刻卖出\n2) 耐心持有多年\n3) 只买非常便宜的股票\n= 2\n\n> 小娜: 耐心和长期思考是关键。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-chinese-011-2",
+        "title": "Stock测验2 - 小娜",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小娜: 一起学习吧！\n\n? 如果公司发展得好，你的股票价值通常会...\n1) 保持不变\n2) 上涨\n3) 下跌\n= 2\n\n> 小娜: 成功的公司会增加你的股票价值。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-chinese-011-3",
+        "title": "Stock测验3 - 小娜",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小娜: 一起学习吧！\n\n? 是什么让小娜的投资增长了？\n1) 生意变得更成功\n2) 只有运气\n3) 第一天就卖出\n= 1\n\n> 小娜: 生意增长推动股票价值。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "stock-chinese-012",
+    "language": "Chinese",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-chinese-012",
+      "title": "Stock故事 - 小强",
+      "description": "学习关于Stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "小强给了小美100元做柠檬水摊生意。作为回报，小美分享20%的利润。小强学到股票就是拥有公司的一小部分。随着时间的推移，柠檬水摊发展了，小强的100元变成了120元。耐心和研究让投资有价值。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-chinese-012-1",
+        "title": "Stock测验1 - 小强",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小强: 一起学习吧！\n\n? 股票中的'分散投资'是什么意思？\n1) 把所有钱投在一只股票上\n2) 把钱分散到不同公司\n3) 从不买股票\n= 2\n\n> 小强: 分散投资降低风险。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-chinese-012-2",
+        "title": "Stock测验2 - 小强",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小强: 一起学习吧！\n\n? 是什么让小强的投资增长了？\n1) 生意变得更成功\n2) 只有运气\n3) 第一天就卖出\n= 1\n\n> 小强: 生意增长推动股票价值。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-chinese-012-3",
+        "title": "Stock测验3 - 小强",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小强: 一起学习吧！\n\n? 什么是股票投资的明智方法？\n1) 买完立刻卖出\n2) 耐心持有多年\n3) 只买非常便宜的股票\n= 2\n\n> 小强: 耐心和长期思考是关键。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "stock-chinese-013",
+    "language": "Chinese",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-chinese-013",
+      "title": "Stock故事 - 小华",
+      "description": "学习关于Stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "小华给了小丽200元做面包店生意。作为回报，小丽分享50%的利润。小华学到股票就是拥有公司的一小部分。随着时间的推移，面包店发展了，小华的200元变成了300元。耐心和研究让投资有价值。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-chinese-013-1",
+        "title": "Stock测验1 - 小华",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小华: 一起学习吧！\n\n? 是什么让小华的投资增长了？\n1) 生意变得更成功\n2) 只有运气\n3) 第一天就卖出\n= 1\n\n> 小华: 生意增长推动股票价值。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-chinese-013-2",
+        "title": "Stock测验2 - 小华",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小华: 一起学习吧！\n\n? 拥有股票意味着什么？\n1) 拥有公司的一小部分\n2) 借钱给公司\n3) 获得免费产品\n= 1\n\n> 小华: 股票让你成为小老板。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-chinese-013-3",
+        "title": "Stock测验3 - 小华",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小华: 一起学习吧！\n\n? 如果公司发展得好，你的股票价值通常会...\n1) 保持不变\n2) 上涨\n3) 下跌\n= 2\n\n> 小华: 成功的公司会增加你的股票价值。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "stock-chinese-014",
+    "language": "Chinese",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-chinese-014",
+      "title": "Stock故事 - 小丽",
+      "description": "学习关于Stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "小丽给了小华50元做手工艺品店生意。作为回报，小华分享30%的利润。小丽学到股票就是拥有公司的一小部分。随着时间的推移，手工艺品店发展了，小丽的50元变成了65元。耐心和研究让投资有价值。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-chinese-014-1",
+        "title": "Stock测验1 - 小丽",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小丽: 一起学习吧！\n\n? 什么是股票投资的明智方法？\n1) 买完立刻卖出\n2) 耐心持有多年\n3) 只买非常便宜的股票\n= 2\n\n> 小丽: 耐心和长期思考是关键。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-chinese-014-2",
+        "title": "Stock测验2 - 小丽",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小丽: 一起学习吧！\n\n? 是什么让小丽的投资增长了？\n1) 生意变得更成功\n2) 只有运气\n3) 第一天就卖出\n= 1\n\n> 小丽: 生意增长推动股票价值。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-chinese-014-3",
+        "title": "Stock测验3 - 小丽",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小丽: 一起学习吧！\n\n? 拥有股票意味着什么？\n1) 拥有公司的一小部分\n2) 借钱给公司\n3) 获得免费产品\n= 1\n\n> 小丽: 股票让你成为小老板。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "stock-chinese-015",
+    "language": "Chinese",
+    "topic": "Stock",
+    "story": {
+      "id": "stock-chinese-015",
+      "title": "Stock故事 - 小强",
+      "description": "学习关于Stock",
+      "category": "Financial Literacy",
+      "appType": "story",
+      "storyContent": "小强给了小丽50元做果汁店生意。作为回报，小丽分享20%的利润。小强学到股票就是拥有公司的一小部分。随着时间的推移，果汁店发展了，小强的50元变成了60元。耐心和研究让投资有价值。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "stock",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-stock-chinese-015-1",
+        "title": "Stock测验1 - 小强",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小强: 一起学习吧！\n\n? 拥有股票意味着什么？\n1) 拥有公司的一小部分\n2) 借钱给公司\n3) 获得免费产品\n= 1\n\n> 小强: 股票让你成为小老板。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-chinese-015-2",
+        "title": "Stock测验2 - 小强",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小强: 一起学习吧！\n\n? 股票中的'分散投资'是什么意思？\n1) 把所有钱投在一只股票上\n2) 把钱分散到不同公司\n3) 从不买股票\n= 2\n\n> 小强: 分散投资降低风险。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-stock-chinese-015-3",
+        "title": "Stock测验3 - 小强",
+        "description": "测试关于Stock的知识",
+        "category": "Financial Literacy",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小强: 一起学习吧！\n\n? 是什么让小强的投资增长了？\n1) 生意变得更成功\n2) 只有运气\n3) 第一天就卖出\n= 1\n\n> 小强: 生意增长推动股票价值。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-english-016",
+    "language": "English",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-english-016",
+      "title": "Fake Story - Mia",
+      "description": "Learn about fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "Mia saw an ad for a video game at half price. The website looked real but had a typo. Mia remembered: 'If it's too good to be true, it probably is.' Mia checked the official store and reported the fake site. Later, Ben bought the cheap video game and got a broken CD. Mia learned to always verify before buying.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-english-016-1",
+        "title": "Fake Quiz 1 - Mia",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? What did Mia do to stay safe?\n1) Bought the cheap item anyway\n2) Asked an adult and verified\n3) Kept it a secret\n= 2\n\n> Mia: Verification and communication keep you safe.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-english-016-2",
+        "title": "Fake Quiz 2 - Mia",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? If a deal seems 'too good to be true', you should...\n1) Buy it immediately\n2) Verify with official sources\n3) Tell all your friends\n= 2\n\n> Mia: Always check before buying.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-english-016-3",
+        "title": "Fake Quiz 3 - Mia",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? What is a sign of a fake website?\n1) Professional design\n2) URL typos or strange addresses\n3) High prices\n= 2\n\n> Mia: Typos in the URL are a big warning.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-english-017",
+    "language": "English",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-english-017",
+      "title": "Fake Story - Leo",
+      "description": "Learn about fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "Leo saw an ad for a smartwatch at half price. The website looked real but had a typo. Leo remembered: 'If it's too good to be true, it probably is.' Leo checked the official store and reported the fake site. Later, Lily bought the cheap smartwatch and got a brick. Leo learned to always verify before buying.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-english-017-1",
+        "title": "Fake Quiz 1 - Leo",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Leo: Let's learn!\n\n? What is a sign of a fake website?\n1) Professional design\n2) URL typos or strange addresses\n3) High prices\n= 2\n\n> Leo: Typos in the URL are a big warning.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-english-017-2",
+        "title": "Fake Quiz 2 - Leo",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Leo: Let's learn!\n\n? What can happen if you buy a fake product?\n1) It lasts forever\n2) It may break quickly or be unsafe\n3) It's always as good as the real one\n= 2\n\n> Leo: Fakes are often poor quality.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-english-017-3",
+        "title": "Fake Quiz 3 - Leo",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Leo: Let's learn!\n\n? What positive action can you take against fake products?\n1) Ignore it\n2) Report to a trusted adult\n3) Buy it and complain later\n= 2\n\n> Leo: Reporting helps protect others.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-english-018",
+    "language": "English",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-english-018",
+      "title": "Fake Story - Leo",
+      "description": "Learn about fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "Leo saw an ad for a video game at half price. The website looked real but had a typo. Leo remembered: 'If it's too good to be true, it probably is.' Leo checked the official store and reported the fake site. Later, Mia bought the cheap video game and got a broken CD. Leo learned to always verify before buying.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-english-018-1",
+        "title": "Fake Quiz 1 - Leo",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Leo: Let's learn!\n\n? What positive action can you take against fake products?\n1) Ignore it\n2) Report to a trusted adult\n3) Buy it and complain later\n= 2\n\n> Leo: Reporting helps protect others.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-english-018-2",
+        "title": "Fake Quiz 2 - Leo",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Leo: Let's learn!\n\n? If a deal seems 'too good to be true', you should...\n1) Buy it immediately\n2) Verify with official sources\n3) Tell all your friends\n= 2\n\n> Leo: Always check before buying.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-english-018-3",
+        "title": "Fake Quiz 3 - Leo",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Leo: Let's learn!\n\n? What is a sign of a fake website?\n1) Professional design\n2) URL typos or strange addresses\n3) High prices\n= 2\n\n> Leo: Typos in the URL are a big warning.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-english-019",
+    "language": "English",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-english-019",
+      "title": "Fake Story - Mia",
+      "description": "Learn about fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "Mia saw an ad for a smartwatch at half price. The website looked real but had a typo. Mia remembered: 'If it's too good to be true, it probably is.' Mia checked the official store and reported the fake site. Later, Leo bought the cheap smartwatch and got a fake copy. Mia learned to always verify before buying.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-english-019-1",
+        "title": "Fake Quiz 1 - Mia",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? If a deal seems 'too good to be true', you should...\n1) Buy it immediately\n2) Verify with official sources\n3) Tell all your friends\n= 2\n\n> Mia: Always check before buying.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-english-019-2",
+        "title": "Fake Quiz 2 - Mia",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? What positive action can you take against fake products?\n1) Ignore it\n2) Report to a trusted adult\n3) Buy it and complain later\n= 2\n\n> Mia: Reporting helps protect others.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-english-019-3",
+        "title": "Fake Quiz 3 - Mia",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Mia: Let's learn!\n\n? What can happen if you buy a fake product?\n1) It lasts forever\n2) It may break quickly or be unsafe\n3) It's always as good as the real one\n= 2\n\n> Mia: Fakes are often poor quality.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-english-020",
+    "language": "English",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-english-020",
+      "title": "Fake Story - Zoe",
+      "description": "Learn about fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "Zoe saw an ad for a sneakers at half price. The website looked real but had a typo. Zoe remembered: 'If it's too good to be true, it probably is.' Zoe checked the official store and reported the fake site. Later, Tom bought the cheap sneakers and got a fake copy. Zoe learned to always verify before buying.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-english-020-1",
+        "title": "Fake Quiz 1 - Zoe",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Zoe: Let's learn!\n\n? What can happen if you buy a fake product?\n1) It lasts forever\n2) It may break quickly or be unsafe\n3) It's always as good as the real one\n= 2\n\n> Zoe: Fakes are often poor quality.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-english-020-2",
+        "title": "Fake Quiz 2 - Zoe",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Zoe: Let's learn!\n\n? What did Zoe do to stay safe?\n1) Bought the cheap item anyway\n2) Asked an adult and verified\n3) Kept it a secret\n= 2\n\n> Zoe: Verification and communication keep you safe.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-english-020-3",
+        "title": "Fake Quiz 3 - Zoe",
+        "description": "Test your knowledge about fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Zoe: Let's learn!\n\n? What positive action can you take against fake products?\n1) Ignore it\n2) Report to a trusted adult\n3) Buy it and complain later\n= 2\n\n> Zoe: Reporting helps protect others.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-indonesian-021",
+    "language": "Indonesian",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-indonesian-021",
+      "title": "Cerita Fake - Budi",
+      "description": "Belajar tentang fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "Budi melihat iklan gim video setengah harga. Situsnya mirip asli tapi ada salah ketik. Budi ingat: 'Jika terlalu bagus untuk menjadi kenyataan, mungkin palsu.' Budi cek toko resmi dan melaporkan situs palsu. Kemudian Dewi membeli gim video murah dan mendapat tiruan jelek. Budi belajar selalu verifikasi sebelum beli.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-indonesian-021-1",
+        "title": "Kuis Fake 1 - Budi",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Budi: Ayo belajar!\n\n? Apa bisa terjadi jika beli produk palsu?\n1) Tahan lama\n2) Cepat rusak atau tidak aman\n3) Sama bagusnya dengan asli\n= 2\n\n> Budi: Barang palsu sering berkualitas rendah.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-indonesian-021-2",
+        "title": "Kuis Fake 2 - Budi",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Budi: Ayo belajar!\n\n? Tanda situs palsu?\n1) Desain profesional\n2) Salah ketik di URL\n3) Harga mahal\n= 2\n\n> Budi: Salah ketik di URL peringatan besar.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-indonesian-021-3",
+        "title": "Kuis Fake 3 - Budi",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Budi: Ayo belajar!\n\n? Apa yang Budi lakukan agar aman?\n1) Tetap beli yang murah\n2) Tanya orang dewasa dan verifikasi\n3) Rahasiakan\n= 2\n\n> Budi: Verifikasi dan komunikasi menjaga keamanan.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-indonesian-022",
+    "language": "Indonesian",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-indonesian-022",
+      "title": "Cerita Fake - Bayu",
+      "description": "Belajar tentang fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "Bayu melihat iklan gim video setengah harga. Situsnya mirip asli tapi ada salah ketik. Bayu ingat: 'Jika terlalu bagus untuk menjadi kenyataan, mungkin palsu.' Bayu cek toko resmi dan melaporkan situs palsu. Kemudian Dewi membeli gim video murah dan mendapat batu bata. Bayu belajar selalu verifikasi sebelum beli.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-indonesian-022-1",
+        "title": "Kuis Fake 1 - Bayu",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Bayu: Ayo belajar!\n\n? Jika tawaran 'terlalu bagus untuk menjadi kenyataan', Anda harus...\n1) Segera beli\n2) Verifikasi dengan sumber resmi\n3) Beri tahu semua teman\n= 2\n\n> Bayu: Selalu cek sebelum beli.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-indonesian-022-2",
+        "title": "Kuis Fake 2 - Bayu",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Bayu: Ayo belajar!\n\n? Apa yang Bayu lakukan agar aman?\n1) Tetap beli yang murah\n2) Tanya orang dewasa dan verifikasi\n3) Rahasiakan\n= 2\n\n> Bayu: Verifikasi dan komunikasi menjaga keamanan.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-indonesian-022-3",
+        "title": "Kuis Fake 3 - Bayu",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Bayu: Ayo belajar!\n\n? Apa bisa terjadi jika beli produk palsu?\n1) Tahan lama\n2) Cepat rusak atau tidak aman\n3) Sama bagusnya dengan asli\n= 2\n\n> Bayu: Barang palsu sering berkualitas rendah.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-indonesian-023",
+    "language": "Indonesian",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-indonesian-023",
+      "title": "Cerita Fake - Rina",
+      "description": "Belajar tentang fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "Rina melihat iklan headphone setengah harga. Situsnya mirip asli tapi ada salah ketik. Rina ingat: 'Jika terlalu bagus untuk menjadi kenyataan, mungkin palsu.' Rina cek toko resmi dan melaporkan situs palsu. Kemudian Lina membeli headphone murah dan mendapat kardus kosong. Rina belajar selalu verifikasi sebelum beli.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-indonesian-023-1",
+        "title": "Kuis Fake 1 - Rina",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Rina: Ayo belajar!\n\n? Tindakan positif melawan produk palsu?\n1) Abaikan\n2) Lapor ke orang dewasa terpercaya\n3) Beli dan komplain nanti\n= 2\n\n> Rina: Melapor melindungi orang lain.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-indonesian-023-2",
+        "title": "Kuis Fake 2 - Rina",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Rina: Ayo belajar!\n\n? Tanda situs palsu?\n1) Desain profesional\n2) Salah ketik di URL\n3) Harga mahal\n= 2\n\n> Rina: Salah ketik di URL peringatan besar.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-indonesian-023-3",
+        "title": "Kuis Fake 3 - Rina",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Rina: Ayo belajar!\n\n? Jika tawaran 'terlalu bagus untuk menjadi kenyataan', Anda harus...\n1) Segera beli\n2) Verifikasi dengan sumber resmi\n3) Beri tahu semua teman\n= 2\n\n> Rina: Selalu cek sebelum beli.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-indonesian-024",
+    "language": "Indonesian",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-indonesian-024",
+      "title": "Cerita Fake - Cinta",
+      "description": "Belajar tentang fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "Cinta melihat iklan sepatu setengah harga. Situsnya mirip asli tapi ada salah ketik. Cinta ingat: 'Jika terlalu bagus untuk menjadi kenyataan, mungkin palsu.' Cinta cek toko resmi dan melaporkan situs palsu. Kemudian Dewi membeli sepatu murah dan mendapat kardus kosong. Cinta belajar selalu verifikasi sebelum beli.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-indonesian-024-1",
+        "title": "Kuis Fake 1 - Cinta",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Cinta: Ayo belajar!\n\n? Jika tawaran 'terlalu bagus untuk menjadi kenyataan', Anda harus...\n1) Segera beli\n2) Verifikasi dengan sumber resmi\n3) Beri tahu semua teman\n= 2\n\n> Cinta: Selalu cek sebelum beli.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-indonesian-024-2",
+        "title": "Kuis Fake 2 - Cinta",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Cinta: Ayo belajar!\n\n? Apa yang Cinta lakukan agar aman?\n1) Tetap beli yang murah\n2) Tanya orang dewasa dan verifikasi\n3) Rahasiakan\n= 2\n\n> Cinta: Verifikasi dan komunikasi menjaga keamanan.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-indonesian-024-3",
+        "title": "Kuis Fake 3 - Cinta",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Cinta: Ayo belajar!\n\n? Tindakan positif melawan produk palsu?\n1) Abaikan\n2) Lapor ke orang dewasa terpercaya\n3) Beli dan komplain nanti\n= 2\n\n> Cinta: Melapor melindungi orang lain.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-indonesian-025",
+    "language": "Indonesian",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-indonesian-025",
+      "title": "Cerita Fake - Dewi",
+      "description": "Belajar tentang fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "Dewi melihat iklan sepatu setengah harga. Situsnya mirip asli tapi ada salah ketik. Dewi ingat: 'Jika terlalu bagus untuk menjadi kenyataan, mungkin palsu.' Dewi cek toko resmi dan melaporkan situs palsu. Kemudian Lina membeli sepatu murah dan mendapat tiruan jelek. Dewi belajar selalu verifikasi sebelum beli.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-indonesian-025-1",
+        "title": "Kuis Fake 1 - Dewi",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Dewi: Ayo belajar!\n\n? Tindakan positif melawan produk palsu?\n1) Abaikan\n2) Lapor ke orang dewasa terpercaya\n3) Beli dan komplain nanti\n= 2\n\n> Dewi: Melapor melindungi orang lain.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-indonesian-025-2",
+        "title": "Kuis Fake 2 - Dewi",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Dewi: Ayo belajar!\n\n? Apa yang Dewi lakukan agar aman?\n1) Tetap beli yang murah\n2) Tanya orang dewasa dan verifikasi\n3) Rahasiakan\n= 2\n\n> Dewi: Verifikasi dan komunikasi menjaga keamanan.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-indonesian-025-3",
+        "title": "Kuis Fake 3 - Dewi",
+        "description": "Uji pengetahuan tentang fake",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Dewi: Ayo belajar!\n\n? Tanda situs palsu?\n1) Desain profesional\n2) Salah ketik di URL\n3) Harga mahal\n= 2\n\n> Dewi: Salah ketik di URL peringatan besar.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-chinese-026",
+    "language": "Chinese",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-chinese-026",
+      "title": "Fake故事 - 小伟",
+      "description": "学习关于Fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "小伟看到广告说运动鞋半价。网站看起来是真的，但网址有拼写错误。小伟想起：'如果好得不像真的，那很可能就是假的。'小伟查了官方商店并举报了假网站。后来小芳买了便宜的运动鞋，结果收到了砖头。小伟学会了买之前一定要核实。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-chinese-026-1",
+        "title": "Fake测验1 - 小伟",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小伟: 一起学习吧！\n\n? 如果你买了假货可能会发生什么？\n1) 永远耐用\n2) 很快坏掉或不安全\n3) 和真品一样好\n= 2\n\n> 小伟: 假货通常质量差。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-chinese-026-2",
+        "title": "Fake测验2 - 小伟",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小伟: 一起学习吧！\n\n? 如果一个优惠'好得不像真的'，你应该...\n1) 立刻买\n2) 用官方渠道核实\n3) 告诉所有朋友\n= 2\n\n> 小伟: 买之前一定要核实。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-chinese-026-3",
+        "title": "Fake测验3 - 小伟",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小伟: 一起学习吧！\n\n? 你可以采取什么积极行动来对抗假货？\n1) 忽略它\n2) 报告给信任的成年人\n3) 买下来再抱怨\n= 2\n\n> 小伟: 举报有助于保护他人。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-chinese-027",
+    "language": "Chinese",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-chinese-027",
+      "title": "Fake故事 - 小刚",
+      "description": "学习关于Fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "小刚看到广告说运动鞋半价。网站看起来是真的，但网址有拼写错误。小刚想起：'如果好得不像真的，那很可能就是假的。'小刚查了官方商店并举报了假网站。后来小娜买了便宜的运动鞋，结果收到了坏光盘。小刚学会了买之前一定要核实。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-chinese-027-1",
+        "title": "Fake测验1 - 小刚",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小刚: 一起学习吧！\n\n? 如果你买了假货可能会发生什么？\n1) 永远耐用\n2) 很快坏掉或不安全\n3) 和真品一样好\n= 2\n\n> 小刚: 假货通常质量差。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-chinese-027-2",
+        "title": "Fake测验2 - 小刚",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小刚: 一起学习吧！\n\n? 小刚做了什么来保证安全？\n1) 还是买了便宜的\n2) 询问大人并核实\n3) 保密\n= 2\n\n> 小刚: 核实和沟通保护你的安全。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-chinese-027-3",
+        "title": "Fake测验3 - 小刚",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小刚: 一起学习吧！\n\n? 如果一个优惠'好得不像真的'，你应该...\n1) 立刻买\n2) 用官方渠道核实\n3) 告诉所有朋友\n= 2\n\n> 小刚: 买之前一定要核实。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-chinese-028",
+    "language": "Chinese",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-chinese-028",
+      "title": "Fake故事 - 小静",
+      "description": "学习关于Fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "小静看到广告说耳机半价。网站看起来是真的，但网址有拼写错误。小静想起：'如果好得不像真的，那很可能就是假的。'小静查了官方商店并举报了假网站。后来小华买了便宜的耳机，结果收到了砖头。小静学会了买之前一定要核实。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-chinese-028-1",
+        "title": "Fake测验1 - 小静",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小静: 一起学习吧！\n\n? 你可以采取什么积极行动来对抗假货？\n1) 忽略它\n2) 报告给信任的成年人\n3) 买下来再抱怨\n= 2\n\n> 小静: 举报有助于保护他人。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-chinese-028-2",
+        "title": "Fake测验2 - 小静",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小静: 一起学习吧！\n\n? 小静做了什么来保证安全？\n1) 还是买了便宜的\n2) 询问大人并核实\n3) 保密\n= 2\n\n> 小静: 核实和沟通保护你的安全。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-chinese-028-3",
+        "title": "Fake测验3 - 小静",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小静: 一起学习吧！\n\n? 如果你买了假货可能会发生什么？\n1) 永远耐用\n2) 很快坏掉或不安全\n3) 和真品一样好\n= 2\n\n> 小静: 假货通常质量差。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-chinese-029",
+    "language": "Chinese",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-chinese-029",
+      "title": "Fake故事 - 小刚",
+      "description": "学习关于Fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "小刚看到广告说运动鞋半价。网站看起来是真的，但网址有拼写错误。小刚想起：'如果好得不像真的，那很可能就是假的。'小刚查了官方商店并举报了假网站。后来小华买了便宜的运动鞋，结果收到了坏光盘。小刚学会了买之前一定要核实。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-chinese-029-1",
+        "title": "Fake测验1 - 小刚",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小刚: 一起学习吧！\n\n? 如果一个优惠'好得不像真的'，你应该...\n1) 立刻买\n2) 用官方渠道核实\n3) 告诉所有朋友\n= 2\n\n> 小刚: 买之前一定要核实。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-chinese-029-2",
+        "title": "Fake测验2 - 小刚",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小刚: 一起学习吧！\n\n? 小刚做了什么来保证安全？\n1) 还是买了便宜的\n2) 询问大人并核实\n3) 保密\n= 2\n\n> 小刚: 核实和沟通保护你的安全。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-chinese-029-3",
+        "title": "Fake测验3 - 小刚",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小刚: 一起学习吧！\n\n? 如果你买了假货可能会发生什么？\n1) 永远耐用\n2) 很快坏掉或不安全\n3) 和真品一样好\n= 2\n\n> 小刚: 假货通常质量差。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "fake-chinese-030",
+    "language": "Chinese",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-chinese-030",
+      "title": "Fake故事 - 小伟",
+      "description": "学习关于Fake",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "小伟看到广告说耳机半价。网站看起来是真的，但网址有拼写错误。小伟想起：'如果好得不像真的，那很可能就是假的。'小伟查了官方商店并举报了假网站。后来小静买了便宜的耳机，结果收到了劣质仿品。小伟学会了买之前一定要核实。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "fake",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-chinese-030-1",
+        "title": "Fake测验1 - 小伟",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小伟: 一起学习吧！\n\n? 如果一个优惠'好得不像真的'，你应该...\n1) 立刻买\n2) 用官方渠道核实\n3) 告诉所有朋友\n= 2\n\n> 小伟: 买之前一定要核实。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-chinese-030-2",
+        "title": "Fake测验2 - 小伟",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小伟: 一起学习吧！\n\n? 小伟做了什么来保证安全？\n1) 还是买了便宜的\n2) 询问大人并核实\n3) 保密\n= 2\n\n> 小伟: 核实和沟通保护你的安全。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-fake-chinese-030-3",
+        "title": "Fake测验3 - 小伟",
+        "description": "测试关于Fake的知识",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小伟: 一起学习吧！\n\n? 你可以采取什么积极行动来对抗假货？\n1) 忽略它\n2) 报告给信任的成年人\n3) 买下来再抱怨\n= 2\n\n> 小伟: 举报有助于保护他人。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-english-031",
+    "language": "English",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-english-031",
+      "title": "Suicide Prevention Story - Sam",
+      "description": "Learn about suicide prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "Sam noticed Leo seemed sad for weeks, stopped playing, and said 'nothing matters'. Sam remembered: 'If worried about a friend, tell a trusted adult.' Sam told mom. mom talked gently with Leo and got help. Leo started counseling and learned to feel better. Leo later said, 'Talking saved my life. I\\'m glad Sam spoke up.' Sam learned that asking for help is brave.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-english-031-1",
+        "title": "Suicide Prevention Quiz 1 - Sam",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Sam: Let's learn!\n\n? What can counseling or therapy provide?\n1) Instant happiness\n2) Tools to cope and hope for recovery\n3) Only medication\n= 2\n\n> Sam: Counseling teaches skills and provides support.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-english-031-2",
+        "title": "Suicide Prevention Quiz 2 - Sam",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Sam: Let's learn!\n\n? What positive message does seeking help send?\n1) You are weak\n2) You are brave and strong\n3) You should handle everything alone\n= 2\n\n> Sam: Asking for help is a sign of strength.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-english-031-3",
+        "title": "Suicide Prevention Quiz 3 - Sam",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Sam: Let's learn!\n\n? If a friend seems very sad for a long time, you should...\n1) Ignore it\n2) Tell a trusted adult\n3) Promise to keep it a secret\n= 2\n\n> Sam: Telling an adult is the best way to help.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-english-032",
+    "language": "English",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-english-032",
+      "title": "Suicide Prevention Story - Zoe",
+      "description": "Learn about suicide prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "Zoe noticed Mia seemed sad for weeks, stopped playing, and said 'nothing matters'. Zoe remembered: 'If worried about a friend, tell a trusted adult.' Zoe told dad. dad talked gently with Mia and got help. Mia started counseling and learned to feel better. Mia later said, 'Talking saved my life. I\\'m glad Zoe spoke up.' Zoe learned that asking for help is brave.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-english-032-1",
+        "title": "Suicide Prevention Quiz 1 - Zoe",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Zoe: Let's learn!\n\n? What positive message does seeking help send?\n1) You are weak\n2) You are brave and strong\n3) You should handle everything alone\n= 2\n\n> Zoe: Asking for help is a sign of strength.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-english-032-2",
+        "title": "Suicide Prevention Quiz 2 - Zoe",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Zoe: Let's learn!\n\n? If a friend seems very sad for a long time, you should...\n1) Ignore it\n2) Tell a trusted adult\n3) Promise to keep it a secret\n= 2\n\n> Zoe: Telling an adult is the best way to help.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-english-032-3",
+        "title": "Suicide Prevention Quiz 3 - Zoe",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Zoe: Let's learn!\n\n? Why did Mia say talking saved their life?\n1) Because talking fixed everything instantly\n2) Because sharing feelings with a professional gave hope\n3) Because they talked to strangers online\n= 2\n\n> Zoe: Professional support can be life-saving.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-english-033",
+    "language": "English",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-english-033",
+      "title": "Suicide Prevention Story - Zoe",
+      "description": "Learn about suicide prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "Zoe noticed Ben seemed sad for weeks, stopped playing, and said 'what's the point'. Zoe remembered: 'If worried about a friend, tell a trusted adult.' Zoe told mom. mom talked gently with Ben and got help. Ben started counseling and learned to feel better. Ben later said, 'Talking saved my life. I\\'m glad Zoe spoke up.' Zoe learned that asking for help is brave.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-english-033-1",
+        "title": "Suicide Prevention Quiz 1 - Zoe",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Zoe: Let's learn!\n\n? What should you NEVER promise a friend who is struggling?\n1) To listen\n2) To keep a suicide secret\n3) To be there for them\n= 2\n\n> Zoe: Safety comes first - never promise secrecy about suicide.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-english-033-2",
+        "title": "Suicide Prevention Quiz 2 - Zoe",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Zoe: Let's learn!\n\n? If a friend seems very sad for a long time, you should...\n1) Ignore it\n2) Tell a trusted adult\n3) Promise to keep it a secret\n= 2\n\n> Zoe: Telling an adult is the best way to help.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-english-033-3",
+        "title": "Suicide Prevention Quiz 3 - Zoe",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Zoe: Let's learn!\n\n? Why did Ben say talking saved their life?\n1) Because talking fixed everything instantly\n2) Because sharing feelings with a professional gave hope\n3) Because they talked to strangers online\n= 2\n\n> Zoe: Professional support can be life-saving.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-english-034",
+    "language": "English",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-english-034",
+      "title": "Suicide Prevention Story - Tom",
+      "description": "Learn about suicide prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "Tom noticed Mia seemed sad for weeks, stopped playing, and said 'I don't care anymore'. Tom remembered: 'If worried about a friend, tell a trusted adult.' Tom told mom. mom talked gently with Mia and got help. Mia started counseling and learned to feel better. Mia later said, 'Talking saved my life. I\\'m glad Tom spoke up.' Tom learned that asking for help is brave.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-english-034-1",
+        "title": "Suicide Prevention Quiz 1 - Tom",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Tom: Let's learn!\n\n? Why did Mia say talking saved their life?\n1) Because talking fixed everything instantly\n2) Because sharing feelings with a professional gave hope\n3) Because they talked to strangers online\n= 2\n\n> Tom: Professional support can be life-saving.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-english-034-2",
+        "title": "Suicide Prevention Quiz 2 - Tom",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Tom: Let's learn!\n\n? What positive message does seeking help send?\n1) You are weak\n2) You are brave and strong\n3) You should handle everything alone\n= 2\n\n> Tom: Asking for help is a sign of strength.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-english-034-3",
+        "title": "Suicide Prevention Quiz 3 - Tom",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Tom: Let's learn!\n\n? What should you NEVER promise a friend who is struggling?\n1) To listen\n2) To keep a suicide secret\n3) To be there for them\n= 2\n\n> Tom: Safety comes first - never promise secrecy about suicide.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-english-035",
+    "language": "English",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-english-035",
+      "title": "Suicide Prevention Story - Ava",
+      "description": "Learn about suicide prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "Ava noticed Max seemed sad for weeks, stopped playing, and said 'nothing matters'. Ava remembered: 'If worried about a friend, tell a trusted adult.' Ava told dad. dad talked gently with Max and got help. Max started counseling and learned to feel better. Max later said, 'Talking saved my life. I\\'m glad Ava spoke up.' Ava learned that asking for help is brave.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-english-035-1",
+        "title": "Suicide Prevention Quiz 1 - Ava",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Ava: Let's learn!\n\n? What positive message does seeking help send?\n1) You are weak\n2) You are brave and strong\n3) You should handle everything alone\n= 2\n\n> Ava: Asking for help is a sign of strength.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-english-035-2",
+        "title": "Suicide Prevention Quiz 2 - Ava",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Ava: Let's learn!\n\n? What should you NEVER promise a friend who is struggling?\n1) To listen\n2) To keep a suicide secret\n3) To be there for them\n= 2\n\n> Ava: Safety comes first - never promise secrecy about suicide.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-english-035-3",
+        "title": "Suicide Prevention Quiz 3 - Ava",
+        "description": "Test your knowledge about suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Ava: Let's learn!\n\n? If a friend seems very sad for a long time, you should...\n1) Ignore it\n2) Tell a trusted adult\n3) Promise to keep it a secret\n= 2\n\n> Ava: Telling an adult is the best way to help.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-indonesian-036",
+    "language": "Indonesian",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-indonesian-036",
+      "title": "Cerita Suicide Prevention - Sari",
+      "description": "Belajar tentang suicide prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "Sari melihat Eko tampak sedih berhari-hari, berhenti bermain, dan berkata 'aku tidak peduli lagi'. Sari ingat: 'Jika khawatir tentang teman, ceritakan pada orang dewasa terpercaya.' Sari memberi tahu Ibu. Ibu berbicara lembut dengan Eko dan mendapat bantuan. Eko mulai konseling dan belajar merasa lebih baik. Eko berkata, 'Berbicara menyelamatkan hidupku. Aku bersyukur Sari bicara.' Sari belajar bahwa meminta pertolongan itu berani.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-indonesian-036-1",
+        "title": "Kuis Suicide Prevention 1 - Sari",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Sari: Ayo belajar!\n\n? Apa yang tidak boleh dijanjikan ke teman yang sedang berjuang?\n1) Mendengarkan\n2) Merahasiakan keinginan bunuh diri\n3) Ada untuk mereka\n= 2\n\n> Sari: Keselamatan utama - jangan janji rahasia soal bunuh diri.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-indonesian-036-2",
+        "title": "Kuis Suicide Prevention 2 - Sari",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Sari: Ayo belajar!\n\n? Pesan positif dari mencari pertolongan?\n1) Kamu lemah\n2) Kamu berani dan kuat\n3) Kamu harus selesaikan sendiri\n= 2\n\n> Sari: Minta tolong tanda kekuatan.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-indonesian-036-3",
+        "title": "Kuis Suicide Prevention 3 - Sari",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Sari: Ayo belajar!\n\n? Jika sahabat tampak sangat sedih lama, Anda harus...\n1) Abaikan\n2) Beri tahu orang dewasa terpercaya\n3) Berjanji merahasiakan\n= 2\n\n> Sari: Memberi tahu orang dewasa cara terbaik menolong.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-indonesian-037",
+    "language": "Indonesian",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-indonesian-037",
+      "title": "Cerita Suicide Prevention - Lina",
+      "description": "Belajar tentang suicide prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "Lina melihat Rina tampak sedih berhari-hari, berhenti bermain, dan berkata 'tidak ada yang berarti'. Lina ingat: 'Jika khawatir tentang teman, ceritakan pada orang dewasa terpercaya.' Lina memberi tahu Ibu. Ibu berbicara lembut dengan Rina dan mendapat bantuan. Rina mulai konseling dan belajar merasa lebih baik. Rina berkata, 'Berbicara menyelamatkan hidupku. Aku bersyukur Lina bicara.' Lina belajar bahwa meminta pertolongan itu berani.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-indonesian-037-1",
+        "title": "Kuis Suicide Prevention 1 - Lina",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Lina: Ayo belajar!\n\n? Pesan positif dari mencari pertolongan?\n1) Kamu lemah\n2) Kamu berani dan kuat\n3) Kamu harus selesaikan sendiri\n= 2\n\n> Lina: Minta tolong tanda kekuatan.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-indonesian-037-2",
+        "title": "Kuis Suicide Prevention 2 - Lina",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Lina: Ayo belajar!\n\n? Apa yang bisa diberikan konseling?\n1) Kebahagiaan instan\n2) Alat untuk mengatasi dan harapan pemulihan\n3) Hanya obat\n= 2\n\n> Lina: Konseling mengajarkan keterampilan dan memberi dukungan.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-indonesian-037-3",
+        "title": "Kuis Suicide Prevention 3 - Lina",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Lina: Ayo belajar!\n\n? Apa yang tidak boleh dijanjikan ke teman yang sedang berjuang?\n1) Mendengarkan\n2) Merahasiakan keinginan bunuh diri\n3) Ada untuk mereka\n= 2\n\n> Lina: Keselamatan utama - jangan janji rahasia soal bunuh diri.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-indonesian-038",
+    "language": "Indonesian",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-indonesian-038",
+      "title": "Cerita Suicide Prevention - Bayu",
+      "description": "Belajar tentang suicide prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "Bayu melihat Budi tampak sedih berhari-hari, berhenti bermain, dan berkata 'apa gunanya'. Bayu ingat: 'Jika khawatir tentang teman, ceritakan pada orang dewasa terpercaya.' Bayu memberi tahu Ayah. Ayah berbicara lembut dengan Budi dan mendapat bantuan. Budi mulai konseling dan belajar merasa lebih baik. Budi berkata, 'Berbicara menyelamatkan hidupku. Aku bersyukur Bayu bicara.' Bayu belajar bahwa meminta pertolongan itu berani.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-indonesian-038-1",
+        "title": "Kuis Suicide Prevention 1 - Bayu",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Bayu: Ayo belajar!\n\n? Kenapa Budi bilang bicara menyelamatkan hidupnya?\n1) Karena bicara langsung selesaikan semua\n2) Karena berbagi perasaan dengan profesional memberi harapan\n3) Karena bicara dengan orang asing online\n= 2\n\n> Bayu: Dukungan profesional bisa selamatkan hidup.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-indonesian-038-2",
+        "title": "Kuis Suicide Prevention 2 - Bayu",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Bayu: Ayo belajar!\n\n? Jika sahabat tampak sangat sedih lama, Anda harus...\n1) Abaikan\n2) Beri tahu orang dewasa terpercaya\n3) Berjanji merahasiakan\n= 2\n\n> Bayu: Memberi tahu orang dewasa cara terbaik menolong.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-indonesian-038-3",
+        "title": "Kuis Suicide Prevention 3 - Bayu",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Bayu: Ayo belajar!\n\n? Pesan positif dari mencari pertolongan?\n1) Kamu lemah\n2) Kamu berani dan kuat\n3) Kamu harus selesaikan sendiri\n= 2\n\n> Bayu: Minta tolong tanda kekuatan.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-indonesian-039",
+    "language": "Indonesian",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-indonesian-039",
+      "title": "Cerita Suicide Prevention - Lina",
+      "description": "Belajar tentang suicide prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "Lina melihat Bayu tampak sedih berhari-hari, berhenti bermain, dan berkata 'tidak ada yang berarti'. Lina ingat: 'Jika khawatir tentang teman, ceritakan pada orang dewasa terpercaya.' Lina memberi tahu Ibu. Ibu berbicara lembut dengan Bayu dan mendapat bantuan. Bayu mulai konseling dan belajar merasa lebih baik. Bayu berkata, 'Berbicara menyelamatkan hidupku. Aku bersyukur Lina bicara.' Lina belajar bahwa meminta pertolongan itu berani.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-indonesian-039-1",
+        "title": "Kuis Suicide Prevention 1 - Lina",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Lina: Ayo belajar!\n\n? Apa yang bisa diberikan konseling?\n1) Kebahagiaan instan\n2) Alat untuk mengatasi dan harapan pemulihan\n3) Hanya obat\n= 2\n\n> Lina: Konseling mengajarkan keterampilan dan memberi dukungan.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-indonesian-039-2",
+        "title": "Kuis Suicide Prevention 2 - Lina",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Lina: Ayo belajar!\n\n? Pesan positif dari mencari pertolongan?\n1) Kamu lemah\n2) Kamu berani dan kuat\n3) Kamu harus selesaikan sendiri\n= 2\n\n> Lina: Minta tolong tanda kekuatan.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-indonesian-039-3",
+        "title": "Kuis Suicide Prevention 3 - Lina",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Lina: Ayo belajar!\n\n? Kenapa Bayu bilang bicara menyelamatkan hidupnya?\n1) Karena bicara langsung selesaikan semua\n2) Karena berbagi perasaan dengan profesional memberi harapan\n3) Karena bicara dengan orang asing online\n= 2\n\n> Lina: Dukungan profesional bisa selamatkan hidup.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-indonesian-040",
+    "language": "Indonesian",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-indonesian-040",
+      "title": "Cerita Suicide Prevention - Eko",
+      "description": "Belajar tentang suicide prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "Eko melihat Dewi tampak sedih berhari-hari, berhenti bermain, dan berkata 'apa gunanya'. Eko ingat: 'Jika khawatir tentang teman, ceritakan pada orang dewasa terpercaya.' Eko memberi tahu Ayah. Ayah berbicara lembut dengan Dewi dan mendapat bantuan. Dewi mulai konseling dan belajar merasa lebih baik. Dewi berkata, 'Berbicara menyelamatkan hidupku. Aku bersyukur Eko bicara.' Eko belajar bahwa meminta pertolongan itu berani.",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-indonesian-040-1",
+        "title": "Kuis Suicide Prevention 1 - Eko",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Eko: Ayo belajar!\n\n? Apa yang tidak boleh dijanjikan ke teman yang sedang berjuang?\n1) Mendengarkan\n2) Merahasiakan keinginan bunuh diri\n3) Ada untuk mereka\n= 2\n\n> Eko: Keselamatan utama - jangan janji rahasia soal bunuh diri.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-indonesian-040-2",
+        "title": "Kuis Suicide Prevention 2 - Eko",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Eko: Ayo belajar!\n\n? Jika sahabat tampak sangat sedih lama, Anda harus...\n1) Abaikan\n2) Beri tahu orang dewasa terpercaya\n3) Berjanji merahasiakan\n= 2\n\n> Eko: Memberi tahu orang dewasa cara terbaik menolong.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-indonesian-040-3",
+        "title": "Kuis Suicide Prevention 3 - Eko",
+        "description": "Uji pengetahuan tentang suicide prevention",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> Eko: Ayo belajar!\n\n? Kenapa Dewi bilang bicara menyelamatkan hidupnya?\n1) Karena bicara langsung selesaikan semua\n2) Karena berbagi perasaan dengan profesional memberi harapan\n3) Karena bicara dengan orang asing online\n= 2\n\n> Eko: Dukungan profesional bisa selamatkan hidup.",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-chinese-041",
+    "language": "Chinese",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-chinese-041",
+      "title": "Suicide Prevention故事 - 小静",
+      "description": "学习关于Suicide Prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "小静注意到小明几周来都很悲伤，不再玩耍，还说'我不在乎了'。小静想起：'如果担心朋友，要告诉信任的成年人。'小静告诉了爸爸。爸爸温和地与小明交谈并获得了帮助。小明开始心理咨询，学会了感觉更好。小明后来说：'说出来救了我的命。我很高兴小静开口了。'小静学到了寻求帮助是勇敢的。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-chinese-041-1",
+        "title": "Suicide Prevention测验1 - 小静",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小静: 一起学习吧！\n\n? 如果朋友长时间非常悲伤，你应该...\n1) 忽略它\n2) 告诉信任的成年人\n3) 承诺保密\n= 2\n\n> 小静: 告诉成年人是帮助的最佳方式。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-chinese-041-2",
+        "title": "Suicide Prevention测验2 - 小静",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小静: 一起学习吧！\n\n? 你永远不应该对正在挣扎的朋友承诺什么？\n1) 倾听\n2) 对自杀想法保密\n3) 陪伴他们\n= 2\n\n> 小静: 安全第一 - 永远不要承诺对自杀保密。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-chinese-041-3",
+        "title": "Suicide Prevention测验3 - 小静",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小静: 一起学习吧！\n\n? 寻求帮助传递了什么积极信息？\n1) 你很软弱\n2) 你勇敢且坚强\n3) 你应该独自处理一切\n= 2\n\n> 小静: 寻求帮助是力量的表现。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-chinese-042",
+    "language": "Chinese",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-chinese-042",
+      "title": "Suicide Prevention故事 - 小娜",
+      "description": "学习关于Suicide Prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "小娜注意到小美几周来都很悲伤，不再玩耍，还说'什么都不重要了'。小娜想起：'如果担心朋友，要告诉信任的成年人。'小娜告诉了辅导员。辅导员温和地与小美交谈并获得了帮助。小美开始心理咨询，学会了感觉更好。小美后来说：'说出来救了我的命。我很高兴小娜开口了。'小娜学到了寻求帮助是勇敢的。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-chinese-042-1",
+        "title": "Suicide Prevention测验1 - 小娜",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小娜: 一起学习吧！\n\n? 如果朋友长时间非常悲伤，你应该...\n1) 忽略它\n2) 告诉信任的成年人\n3) 承诺保密\n= 2\n\n> 小娜: 告诉成年人是帮助的最佳方式。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-chinese-042-2",
+        "title": "Suicide Prevention测验2 - 小娜",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小娜: 一起学习吧！\n\n? 为什么小美说说出来救了他们的命？\n1) 因为说话立刻解决了所有问题\n2) 因为向专业人士分享感受带来了希望\n3) 因为他们和网上陌生人聊天\n= 2\n\n> 小娜: 专业支持可以救命。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-chinese-042-3",
+        "title": "Suicide Prevention测验3 - 小娜",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小娜: 一起学习吧！\n\n? 寻求帮助传递了什么积极信息？\n1) 你很软弱\n2) 你勇敢且坚强\n3) 你应该独自处理一切\n= 2\n\n> 小娜: 寻求帮助是力量的表现。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-chinese-043",
+    "language": "Chinese",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-chinese-043",
+      "title": "Suicide Prevention故事 - 小静",
+      "description": "学习关于Suicide Prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "小静注意到小伟几周来都很悲伤，不再玩耍，还说'什么都不重要了'。小静想起：'如果担心朋友，要告诉信任的成年人。'小静告诉了老师。老师温和地与小伟交谈并获得了帮助。小伟开始心理咨询，学会了感觉更好。小伟后来说：'说出来救了我的命。我很高兴小静开口了。'小静学到了寻求帮助是勇敢的。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-chinese-043-1",
+        "title": "Suicide Prevention测验1 - 小静",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小静: 一起学习吧！\n\n? 如果朋友长时间非常悲伤，你应该...\n1) 忽略它\n2) 告诉信任的成年人\n3) 承诺保密\n= 2\n\n> 小静: 告诉成年人是帮助的最佳方式。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-chinese-043-2",
+        "title": "Suicide Prevention测验2 - 小静",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小静: 一起学习吧！\n\n? 为什么小伟说说出来救了他们的命？\n1) 因为说话立刻解决了所有问题\n2) 因为向专业人士分享感受带来了希望\n3) 因为他们和网上陌生人聊天\n= 2\n\n> 小静: 专业支持可以救命。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-chinese-043-3",
+        "title": "Suicide Prevention测验3 - 小静",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小静: 一起学习吧！\n\n? 你永远不应该对正在挣扎的朋友承诺什么？\n1) 倾听\n2) 对自杀想法保密\n3) 陪伴他们\n= 2\n\n> 小静: 安全第一 - 永远不要承诺对自杀保密。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-chinese-044",
+    "language": "Chinese",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-chinese-044",
+      "title": "Suicide Prevention故事 - 小明",
+      "description": "学习关于Suicide Prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "小明注意到小娜几周来都很悲伤，不再玩耍，还说'什么都不重要了'。小明想起：'如果担心朋友，要告诉信任的成年人。'小明告诉了妈妈。妈妈温和地与小娜交谈并获得了帮助。小娜开始心理咨询，学会了感觉更好。小娜后来说：'说出来救了我的命。我很高兴小明开口了。'小明学到了寻求帮助是勇敢的。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-chinese-044-1",
+        "title": "Suicide Prevention测验1 - 小明",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小明: 一起学习吧！\n\n? 寻求帮助传递了什么积极信息？\n1) 你很软弱\n2) 你勇敢且坚强\n3) 你应该独自处理一切\n= 2\n\n> 小明: 寻求帮助是力量的表现。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-chinese-044-2",
+        "title": "Suicide Prevention测验2 - 小明",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小明: 一起学习吧！\n\n? 你永远不应该对正在挣扎的朋友承诺什么？\n1) 倾听\n2) 对自杀想法保密\n3) 陪伴他们\n= 2\n\n> 小明: 安全第一 - 永远不要承诺对自杀保密。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-chinese-044-3",
+        "title": "Suicide Prevention测验3 - 小明",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小明: 一起学习吧！\n\n? 如果朋友长时间非常悲伤，你应该...\n1) 忽略它\n2) 告诉信任的成年人\n3) 承诺保密\n= 2\n\n> 小明: 告诉成年人是帮助的最佳方式。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  },
+  {
+    "id": "suicide-prevention-chinese-045",
+    "language": "Chinese",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-prevention-chinese-045",
+      "title": "Suicide Prevention故事 - 小娜",
+      "description": "学习关于Suicide Prevention",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "小娜注意到小芳几周来都很悲伤，不再玩耍，还说'我不在乎了'。小娜想起：'如果担心朋友，要告诉信任的成年人。'小娜告诉了老师。老师温和地与小芳交谈并获得了帮助。小芳开始心理咨询，学会了感觉更好。小芳后来说：'说出来救了我的命。我很高兴小娜开口了。'小娜学到了寻求帮助是勇敢的。",
+      "createdBy": "PositiveLearning",
+      "creatorAvatar": "🌟",
+      "tags": [
+        "suicide prevention",
+        "positive",
+        "education"
+      ]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-prevention-chinese-045-1",
+        "title": "Suicide Prevention测验1 - 小娜",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小娜: 一起学习吧！\n\n? 心理咨询能提供什么？\n1) 瞬间的快乐\n2) 应对的工具和康复的希望\n3) 只有药物\n= 2\n\n> 小娜: 心理咨询教授技能并提供支持。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-chinese-045-2",
+        "title": "Suicide Prevention测验2 - 小娜",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小娜: 一起学习吧！\n\n? 为什么小芳说说出来救了他们的命？\n1) 因为说话立刻解决了所有问题\n2) 因为向专业人士分享感受带来了希望\n3) 因为他们和网上陌生人聊天\n= 2\n\n> 小娜: 专业支持可以救命。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      },
+      {
+        "id": "quiz-suicide-prevention-chinese-045-3",
+        "title": "Suicide Prevention测验3 - 小娜",
+        "description": "测试关于Suicide Prevention的知识",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "t2qContent": "> 小娜: 一起学习吧！\n\n? 如果朋友长时间非常悲伤，你应该...\n1) 忽略它\n2) 告诉信任的成年人\n3) 承诺保密\n= 2\n\n> 小娜: 告诉成年人是帮助的最佳方式。",
+        "createdBy": "PositiveLearning",
+        "creatorAvatar": "🌟"
+      }
+    ]
+  }
+]

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "fake-eng-001",
+    "language": "English",
+    "topic": "Fake",
+    "story": {
+      "id": "fake-eng-001",
+      "title": "The Counterfeit Video Game",
+      "description": "Learning to spot fake products and scams",
+      "category": "Life Skills",
+      "appType": "story",
+      "storyContent": "Tom saw an ad for a popular video game at half price. The website looked real, but the URL had a typo. Tom remembered his dad's advice: 'If it's too good to be true, it probably is.' He checked the official store and found the game was full price. He reported the fake site to his teacher. Later, his friend Leo bought the cheap game and got a broken CD instead. Tom learned that being careful and asking adults can protect you from fakes and scams. He now always verifies before buying.",
+      "createdBy": "SmartChoice",
+      "creatorAvatar": "🔍",
+      "tags": ["fake", "scams", "critical thinking"]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-eng-001-1",
+        "title": "Spotting Fakes Quiz 1",
+        "description": "Learn to spot fake products",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "createdBy": "SmartChoice",
+        "creatorAvatar": "🔍",
+        "t2qContent": "> Tom: How can you spot a fake?\n\n? What clue made Tom suspicious of the game ad?\n1) The price was half of normal\n2) The website URL had a typo\n3) Both of the above\n= 3\n\n> Tom: Too good to be true AND a weird URL \u2013 both are red flags!\n\n? What happened to Leo when he bought the cheap game?\n1) He got the real game\n2) He received a broken CD\n3) He got a free bonus\n= 2\n\n> Tom: Scammers often send worthless items. Always verify first.\n\n? What is the positive action Tom took?\n1) He bought the game anyway\n2) He reported the fake site to his teacher\n3) He kept it a secret\n= 2\n\n> Tom: Telling a trusted adult helps stop scams and protects others."
+      },
+      {
+        "id": "quiz-fake-eng-001-2",
+        "title": "Spotting Fakes Quiz 2",
+        "description": "Learn to spot fake products",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "createdBy": "SmartChoice",
+        "creatorAvatar": "🔍",
+        "t2qContent": "> Tom: Test your knowledge!\n\n? What does 'too good to be true' mean?\n1) A wonderful deal that is probably fake\n2) A very expensive product\n3) A product that is free\n= 1\n\n> Tom: If it seems impossibly cheap, be suspicious.\n\n? What should you do before buying online?\n1) Trust any ad you see\n2) Check the official store or ask an adult\n3) Always buy the cheapest option\n= 2\n\n> Tom: Verifying with trusted sources keeps you safe.\n\n? Why did Tom report the fake site?\n1) To get a reward\n2) To help others avoid the same scam\n3) To buy the game later\n= 2\n\n> Tom: Reporting helps protect your friends and family too!"
+      },
+      {
+        "id": "quiz-fake-eng-001-3",
+        "title": "Spotting Fakes Quiz 3",
+        "description": "Learn to spot fake products",
+        "category": "Life Skills",
+        "appType": "t2q_quiz",
+        "createdBy": "SmartChoice",
+        "creatorAvatar": "🔍",
+        "t2qContent": "> Tom: One more round!\n\n? What is a 'fake product'?\n1) A real item sold at discount\n2) A counterfeit item pretending to be genuine\n3) An item that is free\n= 2\n\n> Tom: Fake products often break quickly and may be unsafe.\n\n? How can you verify if a website is real?\n1) Look for misspellings in the URL\n2) Compare with the official brand website\n3) Both of the above\n= 3\n\n> Tom: Small mistakes in the address are a big warning sign.\n\n? What positive habit did Tom learn?\n1) Always buy without asking\n2) Verify and ask adults before buying\n3) Never buy anything online\n= 2\n\n> Tom: Verifying and communicating with trusted adults is smart and safe."
+      }
+    ]
+  },
+  {
+    "id": "fake-ind-001",
+    "language": "Indonesian",
+    "topic": "Palsu",
+    "story": {
+      "id": "fake-ind-001",
+      "title": "Sepatu Palsu di Internet",
+      "description": "Belajar mengenali produk palsu dan penipuan",
+      "category": "Keterampilan Hidup",
+      "appType": "story",
+      "storyContent": "Ani melihat iklan sepatu terkenal dengan harga sangat murah. Toko online itu tampak meyakinkan, tapi alamat webnya aneh. Ani ingat pesan ibunya: 'Jika terlalu bagus untuk jadi kenyataan, biasanya itu palsu.' Ani mengecek toko resmi dan harganya jauh lebih mahal. Dia melaporkan situs palsu itu ke gurunya. Temannya, Budi, membeli sepatu murah itu dan mendapat kardus kosong. Ani belajar bahwa berhati-hati dan bertanya pada orang dewasa melindungi dari penipuan. Sekarang dia selalu memverifikasi sebelum membeli.",
+      "createdBy": "PintarBelanja",
+      "creatorAvatar": "🔍",
+      "tags": ["palsu", "penipuan", "berpikir kritis"]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-ind-001-1",
+        "title": "Kuis Mengenali Barang Palsu 1",
+        "description": "Belajar mengenali produk palsu",
+        "category": "Keterampilan Hidup",
+        "appType": "t2q_quiz",
+        "createdBy": "PintarBelanja",
+        "creatorAvatar": "🔍",
+        "t2qContent": "> Ani: Bagaimana cara mengenali barang palsu?\n\n? Apa yang membuat Ani curiga pada iklan sepatu?\n1) Harganya setengah dari normal\n2) Alamat webnya aneh\n3) Keduanya benar\n= 3\n\n> Ani: Terlalu murah DAN URL aneh \u2013 dua tanda bahaya!\n\n? Apa yang terjadi pada Budi saat membeli sepatu murah itu?\n1) Dia dapat sepatu asli\n2) Dia mendapat kardus kosong\n3) Dia dapat bonus\n= 2\n\n> Ani: Penipu sering kirim barang tak berguna. Selalu verifikasi dulu.\n\n? Tindakan positif yang dilakukan Ani?\n1) Dia tetap membeli sepatu itu\n2) Dia melapor ke gurunya\n3) Dia diam saja\n= 2\n\n> Ani: Melapor ke orang dewasa membantu menghentikan penipuan."
+      },
+      {
+        "id": "quiz-fake-ind-001-2",
+        "title": "Kuis Mengenali Barang Palsu 2",
+        "description": "Belajar mengenali produk palsu",
+        "category": "Keterampilan Hidup",
+        "appType": "t2q_quiz",
+        "createdBy": "PintarBelanja",
+        "creatorAvatar": "🔍",
+        "t2qContent": "> Ani: Uji pengetahuanmu!\n\n? Maksud 'terlalu bagus untuk menjadi kenyataan'?\n1) Tawaran murah yang kemungkinan palsu\n2) Barang yang sangat mahal\n3) Barang gratis\n= 1\n\n> Ani: Jika harganya sangat murah mencurigakan, waspadalah.\n\n? Apa yang harus dilakukan sebelum belanja online?\n1) Percaya semua iklan\n2) Cek toko resmi atau tanya orang dewasa\n3) Selalu pilih yang termurah\n= 2\n\n> Ani: Verifikasi dengan sumber terpercaya menjaga keamananmu.\n\n? Mengapa Ani melaporkan situs palsu?\n1) Untuk mendapat hadiah\n2) Agar orang lain tidak tertipu\n3) Untuk membeli sepatu nanti\n= 2\n\n> Ani: Melapor melindungi teman dan keluarga dari penipuan."
+      },
+      {
+        "id": "quiz-fake-ind-001-3",
+        "title": "Kuis Mengenali Barang Palsu 3",
+        "description": "Belajar mengenali produk palsu",
+        "category": "Keterampilan Hidup",
+        "appType": "t2q_quiz",
+        "createdBy": "PintarBelanja",
+        "creatorAvatar": "🔍",
+        "t2qContent": "> Ani: Satu putaran lagi!\n\n? Apa itu 'produk palsu'?\n1) Barang asli yang didiskon\n2) Barang tiruan yang mengaku asli\n3) Barang gratis\n= 2\n\n> Ani: Barang palsu cepat rusak dan bisa berbahaya.\n\n? Bagaimana memverifikasi situs web asli?\n1) Cek ejaan alamat web\n2) Bandingkan dengan situs resmi merek\n3) Keduanya\n= 3\n\n> Ani: Kesalahan kecil di alamat adalah tanda peringatan besar.\n\n? Kebiasaan positif yang dipelajari Ani?\n1) Beli tanpa bertanya\n2) Verifikasi dan tanya orang dewasa sebelum beli\n3) Tidak pernah belanja online\n= 2\n\n> Ani: Verifikasi dan komunikasi dengan orang dewasa itu cerdas dan aman."
+      }
+    ]
+  },
+  {
+    "id": "fake-cmn-001",
+    "language": "中文",
+    "topic": "假货",
+    "story": {
+      "id": "fake-cmn-001",
+      "title": "假冒的游戏机",
+      "description": "学习识别假货和骗局",
+      "category": "生活技能",
+      "appType": "story",
+      "storyContent": "小明看到广告说一款热门游戏机半价出售。网站看起来是真的，但网址拼写有错误。小明想起爸爸的话：\u201c如果好得不像真的，那很可能就是假的。\u201d他查了官方商店，发现价格是原价。他把假网站报告给了老师。后来他的朋友小刚买了便宜的游戏机，结果收到一块砖头。小明学会了：小心谨慎、询问大人可以保护你免受假货和骗局的伤害。他现在买东西前总会先核实。",
+      "createdBy": "聪明消费",
+      "creatorAvatar": "🔍",
+      "tags": ["假货", "骗局", "批判性思维"]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-fake-cmn-001-1",
+        "title": "识别假货测验1",
+        "description": "学习识别假货",
+        "category": "生活技能",
+        "appType": "t2q_quiz",
+        "createdBy": "聪明消费",
+        "creatorAvatar": "🔍",
+        "t2qContent": "> 小明：如何识别假货？\n\n? 什么线索让小明对游戏机广告起疑？\n1) 价格只有一半\n2) 网址有拼写错误\n3) 以上都是\n= 3\n\n> 小明：太便宜加上奇怪的网址 \u2013 都是危险信号！\n\n? 小刚买了便宜游戏机后发生了什么？\n1) 他得到了真品\n2) 他收到了一块砖头\n3) 他得到了免费赠品\n= 2\n\n> 小明：骗子经常寄送没用的东西。一定要先核实。\n\n? 小明采取的积极行动是什么？\n1) 他还是买了游戏机\n2) 他把假网站报告给了老师\n3) 他保密不说\n= 2\n\n> 小明：告诉可信的成年人有助于阻止骗局并保护他人。"
+      },
+      {
+        "id": "quiz-fake-cmn-001-2",
+        "title": "识别假货测验2",
+        "description": "学习识别假货",
+        "category": "生活技能",
+        "appType": "t2q_quiz",
+        "createdBy": "聪明消费",
+        "creatorAvatar": "🔍",
+        "t2qContent": "> 小明：测试你的知识！\n\n? \u201c好得不像真的\u201d是什么意思？\n1) 一个很可能是假的好得离谱的优惠\n2) 一个非常贵的产品\n3) 一个免费的产品\n= 1\n\n> 小明：如果便宜得可疑，就要警惕。\n\n? 在网上购物前应该做什么？\n1) 相信看到的任何广告\n2) 查看官方商店或询问大人\n3) 总是买最便宜的\n= 2\n\n> 小明：用可信来源核实能保护你的安全。\n\n? 小明为什么举报假网站？\n1) 为了得到奖励\n2) 为了帮助别人避免同样的骗局\n3) 为了以后买游戏机\n= 2\n\n> 小明：举报也能保护你的朋友和家人！"
+      },
+      {
+        "id": "quiz-fake-cmn-001-3",
+        "title": "识别假货测验3",
+        "description": "学习识别假货",
+        "category": "生活技能",
+        "appType": "t2q_quiz",
+        "createdBy": "聪明消费",
+        "creatorAvatar": "🔍",
+        "t2qContent": "> 小明：最后一轮！\n\n? 什么是\u201c假货\u201d？\n1) 打折的真品\n2) 伪装成正品的仿冒品\n3) 免费物品\n= 2\n\n> 小明：假货通常很快坏掉，而且可能不安全。\n\n? 如何核实一个网站是否是真的？\n1) 看网址有没有拼写错误\n2) 与官方品牌网站比较\n3) 以上都是\n= 3\n\n> 小明：网址里的微小错误是很大的警示。\n\n? 小明学到了什么积极的习惯？\n1) 不问就买\n2) 买之前核实并询问大人\n3) 从不在网上买东西\n= 2\n\n> 小明：核实并与可信的成年人沟通是聪明且安全的。"
+      }
+    ]
+  },
+  {
+    "id": "suicide-eng-001",
+    "language": "English",
+    "topic": "Suicide Prevention",
+    "story": {
+      "id": "suicide-eng-001",
+      "title": "A Friend in Need",
+      "description": "Learning to listen and seek help for emotional struggles",
+      "category": "Mental Health",
+      "appType": "story",
+      "storyContent": "Mia noticed her friend Zoe seemed sad for weeks. Zoe stopped playing and said 'nothing matters.' Mia felt worried but didn't know what to do. She remembered her school counselor saying: 'If you're worried about a friend, tell a trusted adult.' Mia told her mom. Mom talked gently with Zoe and her parents. Zoe started seeing a counselor and learned ways to feel better. Zoe later said, 'Talking saved my life. I'm glad Mia spoke up.' Mia learned that asking for help is brave and kind. You don't have to solve everything alone.",
+      "createdBy": "HopeHub",
+      "creatorAvatar": "💚",
+      "tags": ["mental health", "friendship", "help seeking"]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-eng-001-1",
+        "title": "Helping a Friend Quiz 1",
+        "description": "Learn how to help a friend in need",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "createdBy": "HopeHub",
+        "creatorAvatar": "💚",
+        "t2qContent": "> Mia: What should you do if a friend seems very sad for a long time?\n\n? What signs did Zoe show that worried Mia?\n1) She was always happy and playful\n2) She stopped playing and said 'nothing matters'\n3) She asked for help directly\n= 2\n\n> Mia: Withdrawal and hopeless talk are serious signs. Don't ignore them.\n\n? What positive action did Mia take?\n1) She kept Zoe's secret and did nothing\n2) She told her mom about her worries\n3) She told Zoe to just cheer up\n= 2\n\n> Mia: Telling a trusted adult is the best way to help a friend.\n\n? What happened after Zoe got help?\n1) Nothing changed\n2) She learned ways to feel better and said talking saved her life\n3) She got worse\n= 2\n\n> Mia: Getting help works. Hope and recovery are real."
+      },
+      {
+        "id": "quiz-suicide-eng-001-2",
+        "title": "Helping a Friend Quiz 2",
+        "description": "Learn how to help a friend in need",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "createdBy": "HopeHub",
+        "creatorAvatar": "💚",
+        "t2qContent": "> Mia: Let's learn more!\n\n? What should you NOT do if a friend talks about wanting to give up?\n1) Listen without judging\n2) Tell an adult immediately\n3) Promise to keep it a secret\n= 3\n\n> Mia: Never promise secrecy about suicide. Safety comes first.\n\n? Why did Zoe say 'Talking saved my life'?\n1) Because talking fixed all her problems instantly\n2) Because sharing her feelings with a counselor helped her find hope\n3) Because she talked to strangers online\n= 2\n\n> Mia: Speaking to a professional can provide tools and hope.\n\n? What is the brave thing Mia did?\n1) She tried to fix Zoe all by herself\n2) She asked for help from an adult\n3) She pretended nothing was wrong\n= 2\n\n> Mia: Asking for help is a sign of strength, not weakness."
+      },
+      {
+        "id": "quiz-suicide-eng-001-3",
+        "title": "Helping a Friend Quiz 3",
+        "description": "Learn how to help a friend in need",
+        "category": "Mental Health",
+        "appType": "t2q_quiz",
+        "createdBy": "HopeHub",
+        "creatorAvatar": "💚",
+        "t2qContent": "> Mia: One more!\n\n? If you feel very sad and hopeless, what is a good step?\n1) Keep it all inside\n2) Talk to a trusted adult or counselor\n3) Isolate yourself completely\n= 2\n\n> Mia: Reaching out is the strongest thing you can do.\n\n? What did the counselor help Zoe with?\n1) Making new friends only\n2) Learning ways to feel better and handle hard emotions\n3) Changing schools\n= 2\n\n> Mia: Counseling teaches coping skills and gives support.\n\n? What positive message does this story send?\n1) Suffering alone is the only way\n2) There is hope, and asking for help works\n3) Friends should never get involved\n= 2\n\n> Mia: You are never alone. Help exists, and recovery is possible."
+      }
+    ]
+  },
+  {
+    "id": "suicide-ind-001",
+    "language": "Indonesian",
+    "topic": "Pencegahan Bunuh Diri",
+    "story": {
+      "id": "suicide-ind-001",
+      "title": "Sahabat yang Merasa Putus Asa",
+      "description": "Belajar mendengarkan dan mencari pertolongan untuk masalah emosi",
+      "category": "Kesehatan Mental",
+      "appType": "story",
+      "storyContent": "Dewi melihat sahabatnya, Sari, tampak sedih berhari-hari. Sari berhenti bermain dan berkata, 'Aku tidak peduli lagi.' Dewi khawatir tapi bingung harus apa. Dia ingat nasihat guru BK: 'Jika kamu khawatir tentang teman, ceritakan pada orang dewasa yang terpercaya.' Dewi memberi tahu ibunya. Ibu berbicara dengan lembut kepada Sari dan orang tuanya. Sari mulai konseling dan belajar cara merasa lebih baik. Sari kemudian berkata, 'Berbicara menyelamatkan hidupku. Aku bersyukur Dewi mau bicara.' Dewi belajar bahwa meminta pertolongan itu berani dan baik. Kamu tidak harus menyelesaikan semuanya sendirian.",
+      "createdBy": "PusatHarapan",
+      "creatorAvatar": "💚",
+      "tags": ["kesehatan mental", "pertemanan", "mencari bantuan"]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-ind-001-1",
+        "title": "Kuis Menolong Sahabat 1",
+        "description": "Belajar menolong teman yang membutuhkan",
+        "category": "Kesehatan Mental",
+        "appType": "t2q_quiz",
+        "createdBy": "PusatHarapan",
+        "creatorAvatar": "💚",
+        "t2qContent": "> Dewi: Apa yang harus dilakukan jika sahabat tampak sangat sedih lama?\n\n? Tanda apa yang membuat Dewi khawatir pada Sari?\n1) Sari selalu ceria dan gembira\n2) Sari berhenti bermain dan berkata 'Aku tidak peduli lagi'\n3) Sari langsung minta tolong\n= 2\n\n> Dewi: Menarik diri dan bicara putus asa adalah tanda serius. Jangan diabaikan.\n\n? Tindakan positif yang dilakukan Dewi?\n1) Dia diam saja dan merahasiakan\n2) Dia cerita pada ibunya tentang kekhawatirannya\n3) Dia menyuruh Sari untuk ceria saja\n= 2\n\n> Dewi: Memberi tahu orang dewasa terpercaya adalah cara terbaik menolong teman.\n\n? Apa yang terjadi setelah Sari mendapat bantuan?\n1) Tidak ada perubahan\n2) Dia belajar cara merasa lebih baik dan berkata berbicara menyelamatkan hidupnya\n3) Dia semakin terpuruk\n= 2\n\n> Dewi: Mendapat bantuan itu manjur. Harapan dan pemulihan itu nyata."
+      },
+      {
+        "id": "quiz-suicide-ind-001-2",
+        "title": "Kuis Menolong Sahabat 2",
+        "description": "Belajar menolong teman yang membutuhkan",
+        "category": "Kesehatan Mental",
+        "appType": "t2q_quiz",
+        "createdBy": "PusatHarapan",
+        "creatorAvatar": "💚",
+        "t2qContent": "> Dewi: Mari belajar lagi!\n\n? Apa yang TIDAK boleh dilakukan jika teman bicara ingin menyerah?\n1) Mendengarkan tanpa menghakimi\n2) Segera memberi tahu orang dewasa\n3) Berjanji merahasiakan\n= 3\n\n> Dewi: Jangan pernah berjanji merahasiakan soal bunuh diri. Keselamatan lebih utama.\n\n? Kenapa Sari berkata 'Berbicara menyelamatkan hidupku'?\n1) Karena bicara langsung menyelesaikan semua masalahnya\n2) Karena berbagi perasaan dengan konselor membantunya menemukan harapan\n3) Karena dia bicara dengan orang asing di internet\n= 2\n\n> Dewi: Berbicara dengan profesional bisa memberi alat dan harapan.\n\n? Hal berani yang dilakukan Dewi?\n1) Dia mencoba menyelesaikan semua sendiri\n2) Dia meminta bantuan orang dewasa\n3) Dia pura-pura tidak ada yang salah\n= 2\n\n> Dewi: Meminta bantuan adalah tanda kekuatan, bukan kelemahan."
+      },
+      {
+        "id": "quiz-suicide-ind-001-3",
+        "title": "Kuis Menolong Sahabat 3",
+        "description": "Belajar menolong teman yang membutuhkan",
+        "category": "Kesehatan Mental",
+        "appType": "t2q_quiz",
+        "createdBy": "PusatHarapan",
+        "creatorAvatar": "💚",
+        "t2qContent": "> Dewi: Satu lagi!\n\n? Jika kamu merasa sangat sedih dan putus asa, langkah baik apa?\n1) Pendam sendiri\n2) Bicara pada orang dewasa atau konselor terpercaya\n3) Mengisolasi diri sepenuhnya\n= 2\n\n> Dewi: Menjangkau orang lain adalah hal terkuat yang bisa kamu lakukan.\n\n? Apa yang dibantu konselor pada Sari?\n1) Hanya mencari teman baru\n2) Belajar cara merasa lebih baik dan mengatasi emosi sulit\n3) Pindah sekolah\n= 2\n\n> Dewi: Konseling mengajarkan keterampilan mengatasi masalah dan memberi dukungan.\n\n? Pesan positif dari cerita ini?\n1) Menderita sendirian adalah satu-satunya jalan\n2) Ada harapan, dan meminta bantuan itu berhasil\n3) Teman sebaiknya tidak terlibat\n= 2\n\n> Dewi: Kamu tidak pernah sendirian. Pertolongan itu ada, dan pemulihan itu mungkin."
+      }
+    ]
+  },
+  {
+    "id": "suicide-cmn-001",
+    "language": "中文",
+    "topic": "自杀预防",
+    "story": {
+      "id": "suicide-cmn-001",
+      "title": "需要帮助的朋友",
+      "description": "学习倾听并为情绪困扰寻求帮助",
+      "category": "心理健康",
+      "appType": "story",
+      "storyContent": "小丽发现她的朋友小芳连续几周都很悲伤。小芳不再玩耍，还说\u201c什么都不重要了\u201d。小丽很担心但不知道该怎么做。她想起学校心理老师说：\u201c如果你担心一个朋友，要告诉一个你信任的成年人。\u201d小丽告诉了她妈妈。妈妈温和地与小芳和她的父母交谈。小芳开始接受心理咨询，学会了让自己感觉更好的方法。小芳后来说：\u201c说出来救了我的命。我很高兴小丽开口了。\u201d小丽学到：寻求帮助是勇敢和善良的。你不必一个人解决所有事。",
+      "createdBy": "希望之声",
+      "creatorAvatar": "💚",
+      "tags": ["心理健康", "友谊", "寻求帮助"]
+    },
+    "quizzes": [
+      {
+        "id": "quiz-suicide-cmn-001-1",
+        "title": "帮助朋友测验1",
+        "description": "学习帮助需要帮助的朋友",
+        "category": "心理健康",
+        "appType": "t2q_quiz",
+        "createdBy": "希望之声",
+        "creatorAvatar": "💚",
+        "t2qContent": "> 小丽：如果朋友长时间看起来非常悲伤，你应该怎么做？\n\n? 哪些迹象让小丽担心小芳？\n1) 她总是快乐和爱玩\n2) 她不再玩耍，说\u201c什么都不重要了\u201d\n3) 她直接求助\n= 2\n\n> 小丽：退缩和绝望的言论是严重迹象。不要忽视。\n\n? 小丽采取了什么积极行动？\n1) 她保守秘密，什么也不做\n2) 她把她的担心告诉了妈妈\n3) 她让小芳开心一点\n= 2\n\n> 小丽：告诉你信任的成年人是帮助朋友的最佳方式。\n\n? 小芳得到帮助后发生了什么？\n1) 没有改变\n2) 她学会了让自己感觉更好的方法，并说求助救了她的命\n3) 她变得更糟\n= 2\n\n> 小丽：获得帮助是有效的。希望和康复是真实的。"
+      },
+      {
+        "id": "quiz-suicide-cmn-001-2",
+        "title": "帮助朋友测验2",
+        "description": "学习帮助需要帮助的朋友",
+        "category": "心理健康",
+        "appType": "t2q_quiz",
+        "createdBy": "希望之声",
+        "creatorAvatar": "💚",
+        "t2qContent": "> 小丽：让我们学更多！\n\n? 如果朋友说想要放弃，你不应该做什么？\n1) 不带评判地倾听\n2) 立即告诉一个成年人\n3) 承诺保守秘密\n= 3\n\n> 小丽：永远不要承诺对自杀保密。安全第一。\n\n? 为什么小芳说\u201c说出来救了我的命\u201d？\n1) 因为说话立刻解决了她所有问题\n2) 因为向咨询师分享感受帮助她找到了希望\n3) 因为她和网上陌生人聊天\n= 2\n\n> 小丽：与专业人士交谈可以提供工具和希望。\n\n? 小丽做的勇敢的事是什么？\n1) 她试图独自解决小芳的问题\n2) 她向成年人寻求帮助\n3) 她假装什么都没发生\n= 2\n\n> 小丽：寻求帮助是力量的表现，不是软弱。"
+      },
+      {
+        "id": "quiz-suicide-cmn-001-3",
+        "title": "帮助朋友测验3",
+        "description": "学习帮助需要帮助的朋友",
+        "category": "心理健康",
+        "appType": "t2q_quiz",
+        "createdBy": "希望之声",
+        "creatorAvatar": "💚",
+        "t2qContent": "> 小丽：最后一轮！\n\n? 如果你感到非常悲伤和绝望，一个好步骤是什么？\n1) 全憋在心里\n2) 和信任的成年人或咨询师谈谈\n3) 完全孤立自己\n= 2\n\n> 小丽：向外求助是你能做的最强大的事。\n\n? 咨询师帮助小芳做了什么？\n1) 只交新朋友\n2) 学习让自己感觉更好的方法和处理困难情绪\n3) 转学\n= 2\n\n> 小丽：心理咨询教授应对技巧并提供支持。\n\n? 这个故事传递了什么积极信息？\n1) 独自受苦是唯一的方法\n2) 有希望，寻求帮助是有效的\n3) 朋友不应该插手\n= 2\n\n> 小丽：你从不孤单。帮助是存在的，康复是可能的。"
+      }
+    ]
+  }
+]
