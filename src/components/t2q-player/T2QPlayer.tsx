@@ -1,7 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useLanguage, tKey, tReplace, type Lang } from '../../i18n';
 import { useUIStore } from '../../store';
-import { fetchAppById } from '../../firebase/apps';
+import { fetchAppById, submitReview } from '../../firebase/apps';
+import { getCurrentUser } from '../../firebase/auth';
+import type { User } from 'firebase/auth';
 import { parseT2Q } from '../../lib/parseT2Q';
 import type { GameObject, Scene, ConversationScene, QuizScene } from '../../types/t2q';
 import './T2QPlayer.css';
@@ -14,7 +16,7 @@ interface T2QPlayerProps {
 
 export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
   const { lang } = useLanguage();
-  const { playApp, previewApp } = useUIStore();
+  const { playApp } = useUIStore();
   const [game, setGame] = useState<GameObject | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(!previewContent);
@@ -24,6 +26,14 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
   const [finished, setFinished] = useState(false);
   const [feedback, setFeedback] = useState<{ correct: boolean; correctAnswer?: string } | null>(null);
   const [convLineIdx, setConvLineIdx] = useState(0);
+  // Review state
+  const [reviewRating, setReviewRating] = useState(0);
+  const [reviewHover, setReviewHover] = useState(0);
+  const [reviewTitle, setReviewTitle] = useState('');
+  const [reviewBody, setReviewBody] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [reviewMsg, setReviewMsg] = useState('');
+  const user: User | null = getCurrentUser();
 
   // Load content
   useEffect(() => {
@@ -167,16 +177,84 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
             <button type="button" className="t2q-btn t2q-btn--primary" onClick={restart}>
               {tKey('player_play_again', lang)}
             </button>
-            <button type="button" className="t2q-btn t2q-btn--rate" onClick={() => {
-              playApp(null);
-              setTimeout(() => previewApp(appId, 't2q_quiz'), 300);
-            }}>
-              ⭐ {tKey('player_rate', lang)}
-            </button>
             <button type="button" className="t2q-btn t2q-btn--back" onClick={() => playApp(null)}>
               {tKey('player_back', lang)}
             </button>
           </div>
+        </div>
+
+        {/* Inline review form */}
+        <div className="story-review">
+          <div className="review-form__header">
+            <span className="review-form__header-icon">✍️</span>
+            <span className="review-form__header-title">{tKey('review_title', lang)}</span>
+          </div>
+
+          {reviewMsg && <p className="review-form__msg">{reviewMsg}</p>}
+
+          {!user ? (
+            <div className="review-form__sign-in-box">
+              <span className="review-form__sign-in-icon">🔒</span>
+              <p className="review-form__sign-in">{tKey('review_sign_in', lang)}</p>
+            </div>
+          ) : (
+            <form className="review-form__inner"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                if (reviewRating === 0) return;
+                setSubmitting(true);
+                setReviewMsg('');
+                try {
+                  await submitReview(appId, {
+                    author: user.displayName ?? user.email ?? 'Anonymous',
+                    rating: reviewRating,
+                    title: reviewTitle,
+                    content: reviewBody,
+                  });
+                  setReviewMsg(tKey('review_thanks', lang));
+                  setReviewRating(0);
+                  setReviewTitle('');
+                  setReviewBody('');
+                } catch {
+                  setReviewMsg('Error submitting review');
+                } finally {
+                  setSubmitting(false);
+                }
+              }}
+            >
+              <div className="review-form__rating-area">
+                <span className="review-form__rate-question">{tKey('review_rate', lang)}</span>
+                <div className="review-form__stars">
+                  {[1,2,3,4,5].map((s) => (
+                    <span key={s}
+                      className={`review-form__star ${s <= (reviewHover || reviewRating) ? 'review-form__star--fill' : 'review-form__star--empty'}`}
+                      onClick={() => setReviewRating(s)}
+                      onMouseEnter={() => setReviewHover(s)}
+                      onMouseLeave={() => setReviewHover(0)}
+                    >★</span>
+                  ))}
+                </div>
+                {reviewRating > 0 && (
+                  <div className="review-form__rating-label">
+                    {['', '😞 Terrible', '🙁 Bad', '🙂 Good', '😊 Great', '🤩 Excellent!'][reviewRating]}
+                  </div>
+                )}
+              </div>
+              <div className="review-form__fields">
+                <input className="review-form__input" type="text"
+                  placeholder={tKey('review_placeholder_title', lang)}
+                  value={reviewTitle}
+                  onChange={(e) => setReviewTitle(e.target.value)} required />
+                <textarea className="review-form__textarea"
+                  placeholder={tKey('review_placeholder_body', lang)}
+                  value={reviewBody}
+                  onChange={(e) => setReviewBody(e.target.value)} rows={3} />
+              </div>
+              <button className="review-form__submit" type="submit" disabled={submitting || reviewRating === 0}>
+                {submitting ? '⏳ Submitting…' : '📨 ' + tKey('review_submit', lang)}
+              </button>
+            </form>
+          )}
         </div>
       </div>
     );

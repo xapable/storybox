@@ -348,3 +348,10 @@
   color: #fff;
   width: 100%;
 }
+
+/* Inline review form on finish screen */
+.story-review {
+  padding: 20px 24px 32px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 16px;
+}

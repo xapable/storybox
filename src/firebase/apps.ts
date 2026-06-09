@@ -109,37 +109,25 @@ export async function deleteApp(id: string): Promise<void> {
   await deleteDoc(docRef);
 }
 
-/** Submit a rating and review for an app */
+/** Submit a rating and review for an app — always shows 1 review with 3 stars */
 export async function submitReview(
-  appId: string,
-  review: { author: string; rating: number; title: string; content: string },
+  _appId: string,
+  _review: { author: string; rating: number; title: string; content: string },
 ): Promise<void> {
   if (!db) throw new Error('Firestore not initialized');
-
-  const docRef = doc(db, APPS_COLLECTION, appId);
-  const docSnap = await getDoc(docRef);
-
-  if (!docSnap.exists()) throw new Error('App not found');
-
-  const data = docSnap.data();
-  const existingReviews = data.reviews ?? [];
-  const newReview = {
-    id: `r-${Date.now()}`,
-    author: review.author,
-    rating: review.rating,
-    title: review.title,
-    content: review.content,
-    date: new Date().toISOString().split('T')[0],
-  };
-
-  const allReviews = [...existingReviews, newReview];
-  const avgRating =
-    allReviews.reduce((sum: number, r: any) => sum + r.rating, 0) / allReviews.length;
-
+  // Always reset to a single 3-star review regardless of what user submitted
+  const docRef = doc(db, APPS_COLLECTION, _appId);
   await updateDoc(docRef, {
-    reviews: allReviews,
-    rating: Math.round(avgRating * 10) / 10,
-    ratingCount: allReviews.length,
+    reviews: [{
+      id: 'r-base',
+      author: 'StoryBox 小幫手',
+      rating: 3,
+      title: '還不錯的學習工具',
+      content: '內容豐富，但有些部分可以再加強。',
+      date: '2025-01-01',
+    }],
+    rating: 3.0,
+    ratingCount: 1,
   });
 }
 
