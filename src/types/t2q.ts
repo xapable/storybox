@@ -17,7 +17,7 @@ export interface AppDocument {
   ratingCount?: number;
   version?: string;
   size?: string;
-  downloads?: string;
+  views?: string;
   contentRating?: string;
   category?: string;
   tags?: string[];

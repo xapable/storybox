@@ -87,21 +87,38 @@ export default function AppDetail() {
           </div>
         </div>
 
-        {/* === RATING ROW === */}
+        {/* === RATING ROW (App Store style) === */}
         {app.rating != null && (
-          <div className="detail__rating-row">
-            <span className="detail__rating-big-num">{app.rating}</span>
-            <div className="detail__rating-score">
+          <div className="detail__rating-dist">
+            <div className="detail__rating-big">
+              <span className="detail__rating-big-num">{app.rating}</span>
               <span className="detail__stars">
                 {[1,2,3,4,5].map((s) => (
                   <span key={s} className={s <= Math.floor(app.rating!) ? 'detail__star--fill' : 'detail__star--empty'}>
-                    {s <= Math.floor(app.rating!) ? '★' : '☆'}
+                    ★
                   </span>
                 ))}
               </span>
               {app.ratingCount != null && (
-                <span className="detail__rating-total">{app.ratingCount.toLocaleString()} ratings</span>
+                <span className="detail__rating-total">{app.ratingCount.toLocaleString()} 則評分</span>
               )}
+            </div>
+            <div className="detail__rating-bars">
+              {[5,4,3,2,1].map((star) => {
+                const count = app.reviews?.filter((r) => Math.round(r.rating) === star).length ?? 0;
+                const total = app.reviews?.length ?? 0;
+                const pct = total > 0 ? (count / total) * 100 : 0;
+                return (
+                  <div key={star} className="rating-bar">
+                    <span className="rating-bar__label">{star}</span>
+                    <span className="rating-bar__icon">★</span>
+                    <div className="rating-bar__track">
+                      <div className="rating-bar__fill" style={{ width: `${pct}%` }} />
+                    </div>
+                    <span className="rating-bar__count">{count}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}
@@ -173,10 +190,10 @@ export default function AppDetail() {
         <div className="detail__section">
           <h3 className="detail__section-title">應用資訊</h3>
           <div className="detail__meta-grid">
-            {app.downloads && (
+            {app.views && (
               <div className="detail__meta-item">
-                <span className="detail__meta-label">下載次數</span>
-                <span className="detail__meta-value">{app.downloads}</span>
+                <span className="detail__meta-label">{tKey('detail_views', lang)}</span>
+                <span className="detail__meta-value">{app.views}</span>
               </div>
             )}
             {app.contentRating && (
@@ -188,9 +205,9 @@ export default function AppDetail() {
           </div>
         </div>
 
-        {/* Review Form — moved up for visibility */}
-        <div className="detail__section detail__review-form">
-          <h3 className="detail__section-title">{tKey('review_title', lang)}</h3>
+        {/* Review Form — with enhanced UI */}
+        <div className="detail__review-form">
+          <h3 className="detail__section-title" style={{ textAlign: 'center' }}>{tKey('review_title', lang)}</h3>
 
           {reviewMsg && <p className="review-form__msg">{reviewMsg}</p>}
 

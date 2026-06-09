@@ -44,7 +44,7 @@ const t: TranslationMap = {
   detail_ratings:       { 'zh-Hant': '評分與評論', 'zh-Hans': '评分与评论', en: 'Ratings & reviews' },
   detail_version:       { 'zh-Hant': '版本', 'zh-Hans': '版本', en: 'Version' },
   detail_size:          { 'zh-Hant': '大小', 'zh-Hans': '大小', en: 'Size' },
-  detail_downloads:     { 'zh-Hant': '下載次數', 'zh-Hans': '下载次数', en: 'Downloads' },
+  detail_views:     { 'zh-Hant': '瀏覽次數', 'zh-Hans': '浏览次数', en: 'Views' },
   detail_rating:        { 'zh-Hant': '內容分級', 'zh-Hans': '内容分级', en: 'Content rating' },
   detail_everyone:      { 'zh-Hant': '全年齡', 'zh-Hans': '全年龄', en: 'Everyone' },
   detail_ratings_count: { 'zh-Hant': '{count} 則評分', 'zh-Hans': '{count} 则评分', en: '{count} ratings' },

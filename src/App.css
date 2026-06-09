@@ -1090,7 +1090,7 @@
 .detail__rating-dist {
   display: flex;
   gap: 24px;
-  padding: 12px 0 8px;
+  padding: 12px 16px 8px;
   align-items: flex-start;
 }
 
@@ -1131,8 +1131,14 @@
 .rating-bar__label {
   font-size: 12px;
   color: var(--text-secondary);
-  width: 32px;
+  width: 12px;
   text-align: right;
+  flex-shrink: 0;
+}
+
+.rating-bar__icon {
+  font-size: 10px;
+  color: var(--play-yellow);
   flex-shrink: 0;
 }
 

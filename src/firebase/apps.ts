@@ -39,7 +39,7 @@ function docToApp(docSnap: QueryDocumentSnapshot<DocumentData>): AppDocument {
     ratingCount: data.ratingCount,
     version: data.version,
     size: data.size,
-    downloads: data.downloads,
+    views: data.views,
     contentRating: data.contentRating,
     category: data.category,
     tags: data.tags,
