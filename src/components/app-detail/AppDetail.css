@@ -60,6 +60,15 @@
   padding: 32px 16px;
   background: var(--bg-secondary);
   border-radius: 14px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.review-form__sign-in-box:hover {
+  background: var(--bg-tertiary);
 }
 
 .review-form__sign-in-icon {

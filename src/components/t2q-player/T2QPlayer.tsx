@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useLanguage, tKey, tReplace, type Lang } from '../../i18n';
 import { useUIStore } from '../../store';
 import { fetchAppById, submitReview } from '../../firebase/apps';
-import { getCurrentUser } from '../../firebase/auth';
+import { getCurrentUser, signInWithGoogle } from '../../firebase/auth';
 import type { User } from 'firebase/auth';
 import { parseT2Q } from '../../lib/parseT2Q';
 import type { GameObject, Scene, ConversationScene, QuizScene } from '../../types/t2q';
@@ -193,10 +193,10 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
           {reviewMsg && <p className="review-form__msg">{reviewMsg}</p>}
 
           {!user ? (
-            <div className="review-form__sign-in-box">
+            <button type="button" className="review-form__sign-in-box" onClick={() => signInWithGoogle().catch(() => {})}>
               <span className="review-form__sign-in-icon">🔒</span>
               <p className="review-form__sign-in">{tKey('review_sign_in', lang)}</p>
-            </div>
+            </button>
           ) : (
             <form className="review-form__inner"
               onSubmit={async (e) => {
