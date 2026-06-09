@@ -144,6 +144,22 @@ export default function AppDetail() {
           </button>
         </div>
 
+        {/* === RATE SHORTCUT === */}
+        <div className="detail__section">
+          <button
+            type="button"
+            className="detail__rate-btn"
+            onClick={() => {
+              const el = document.querySelector('.detail__review-form');
+              el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }}
+          >
+            <span className="detail__rate-btn-stars">⭐</span>
+            <span>{tKey(lang, 'review_title')}</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" fill="none" /></svg>
+          </button>
+        </div>
+
         {/* === SCREENSHOTS === */}
         <div className="detail__section">
           <div className="detail__screenshots">
@@ -178,64 +194,9 @@ export default function AppDetail() {
           </div>
         </div>
 
-        {/* === RATINGS & REVIEWS === */}
-        {totalReviews > 0 && (
-          <div className="detail__section">
-            <h3 className="detail__section-title">評分與評論</h3>
-
-            <div className="detail__rating-dist">
-              <div className="detail__rating-big">
-                <span className="detail__rating-big-num">{app.rating}</span>
-                <span className="detail__stars">
-                  {[1,2,3,4,5].map((s) => (
-                    <span key={s} className={s <= Math.floor(app.rating!) ? 'detail__star--fill' : 'detail__star--empty'}>
-                      {s <= Math.floor(app.rating!) ? '★' : '☆'}
-                    </span>
-                  ))}
-                </span>
-                <span className="detail__rating-total">{totalReviews} 則評論</span>
-              </div>
-              <div className="detail__rating-bars">
-                {starDist.map(({ star, count }) => (
-                  <div key={star} className="rating-bar">
-                    <span className="rating-bar__label">{star} ★</span>
-                    <div className="rating-bar__track">
-                      <div className="rating-bar__fill" style={{ width: `${totalReviews > 0 ? (count / totalReviews) * 100 : 0}%` }} />
-                    </div>
-                    <span className="rating-bar__count">{count}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {reviews.map((r) => (
-              <div key={r.id} className="review-card">
-                <div className="review-card__header">
-                  <div className="review-card__avatar">{r.author.charAt(0)}</div>
-                  <div className="review-card__meta">
-                    <span className="review-card__author">{r.author}</span>
-                    <span className="review-card__date">{r.date}</span>
-                  </div>
-                  <div className="review-card__rating">
-                    <span className="detail__stars">
-                      {[1,2,3,4,5].map((s) => (
-                        <span key={s} className={s <= r.rating ? 'detail__star--fill' : 'detail__star--empty'} style={{ fontSize: 12 }}>
-                          {s <= r.rating ? '★' : '☆'}
-                        </span>
-                      ))}
-                    </span>
-                  </div>
-                </div>
-                <h4 className="review-card__title">{r.title}</h4>
-                <p className="review-card__body">{r.content}</p>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* Review Form */}
+        {/* Review Form — moved up for visibility */}
         <div className="detail__section detail__review-form">
-          <h3 className="detail__subtitle">{tKey(lang, 'review_title')}</h3>
+          <h3 className="detail__section-title">{tKey(lang, 'review_title')}</h3>
 
           {reviewMsg && <p className="review-form__msg">{reviewMsg}</p>}
 

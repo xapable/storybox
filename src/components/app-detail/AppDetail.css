@@ -105,3 +105,30 @@
   opacity: 0.85;
 }
 
+/* ── Rate Shortcut Button ────────────────────────────────── */
+.detail__rate-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color, #ddd);
+  background: var(--bg-secondary, #f5f5f5);
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.detail__rate-btn:hover {
+  background: var(--accent, #4a90d9);
+  color: #fff;
+  border-color: var(--accent, #4a90d9);
+}
+
+.detail__rate-btn-stars {
+  font-size: 20px;
+}
+
