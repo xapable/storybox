@@ -65,6 +65,15 @@ const t: TranslationMap = {
   detail_play_quiz: { 'zh-Hant': '玩測驗', 'zh-Hans': '玩测验', en: 'Play Quiz' },
   detail_read_story: { 'zh-Hant': '閱讀故事', 'zh-Hans': '阅读故事', en: 'Read Story' },
 
+  // T2Q Player
+  player_correct:    { 'zh-Hant': '答對了！', 'zh-Hans': '答对了！', en: 'Correct!' },
+  player_wrong:      { 'zh-Hant': '答錯了！正確答案：', 'zh-Hans': '答错了！正确答案：', en: 'Wrong! Correct answer: ' },
+  player_continue:   { 'zh-Hant': '繼續', 'zh-Hans': '继续', en: 'Continue' },
+  player_finish_title: { 'zh-Hant': '測驗完成！', 'zh-Hans': '测验完成！', en: 'Quiz Complete!' },
+  player_score:      { 'zh-Hant': '你答對了 {score} 題，共 {total} 題', 'zh-Hans': '你答对了 {score} 题，共 {total} 题', en: 'You got {score} out of {total} correct' },
+  player_play_again: { 'zh-Hant': '再玩一次', 'zh-Hans': '再玩一次', en: 'Play Again' },
+  player_back:       { 'zh-Hant': '← 返回', 'zh-Hans': '← 返回', en: '← Back' },
+
   // App
   app_name: { 'zh-Hant': 'StoryBox 知識盒子', 'zh-Hans': 'StoryBox 知识盒子', en: 'StoryBox Knowledge Box' },
 

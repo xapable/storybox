@@ -1,4 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
+import { useLanguage, tKey, tReplace } from '../../i18n';
+import type { Lang } from '../../i18n';
 import { useUIStore } from '../../store';
 import { fetchAppById } from '../../firebase/apps';
 import { parseT2Q } from '../../lib/parseT2Q';
@@ -12,6 +14,7 @@ interface T2QPlayerProps {
 }
 
 export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
+  const { lang } = useLanguage();
   const { playApp } = useUIStore();
   const [game, setGame] = useState<GameObject | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -145,16 +148,16 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
       <div className="t2q-player t2q-player--finished">
         <div className="t2q-finish-card">
           <div className="t2q-finish__emoji">{score === total && total > 0 ? '🎉' : score >= total / 2 ? '👍' : '📚'}</div>
-          <h2 className="t2q-finish__title">Quiz Complete!</h2>
+          <h2 className="t2q-finish__title">{tKey('player_finish_title', lang)}</h2>
           <p className="t2q-finish__score">
-            You got <strong>{score}</strong> out of <strong>{total}</strong> correct
+            {tReplace('player_score', lang, { score, total })}
           </p>
           <div className="t2q-finish__actions">
             <button type="button" className="t2q-btn t2q-btn--primary" onClick={restart}>
-              Play Again
+              {tKey('player_play_again', lang)}
             </button>
             <button type="button" className="t2q-btn t2q-btn--back" onClick={() => playApp(null)}>
-              ← Back
+              {tKey('player_back', lang)}
             </button>
           </div>
         </div>
@@ -203,6 +206,7 @@ export default function T2QPlayer({ appId, previewContent }: T2QPlayerProps) {
             feedback={feedback}
             onAnswer={handleAnswer}
             onContinue={continueAfterFeedback}
+            lang={lang}
           />
         )}
       </div>
@@ -253,11 +257,13 @@ function QuizView({
   feedback,
   onAnswer,
   onContinue,
+  lang,
 }: {
   scene: QuizScene;
   feedback: { correct: boolean; correctAnswer?: string } | null;
   onAnswer: (idx: number) => void;
   onContinue: () => void;
+  lang: Lang;
 }) {
   return (
     <div className="t2q-quiz">
@@ -287,8 +293,8 @@ function QuizView({
             </div>
             <p className="t2q-feedback__text">
               {feedback.correct
-                ? 'Correct!'
-                : `Wrong! Correct answer: ${feedback.correctAnswer}`}
+                ? tKey('player_correct', lang)
+                : `${tKey('player_wrong', lang)}${feedback.correctAnswer}`}
             </p>
             <button
               type="button"
@@ -296,7 +302,7 @@ function QuizView({
               onClick={onContinue}
               style={{ touchAction: 'manipulation' }}
             >
-              Continue
+              {tKey('player_continue', lang)}
             </button>
           </div>
         </div>
