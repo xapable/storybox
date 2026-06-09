@@ -10,7 +10,7 @@ function icon(name: string): string {
 
 export default function MyAppsScreen() {
   const { lang } = useLanguage();
-  const { state, setMyApps, createApp } = useUIStore();
+  const { state, createApp, setTab } = useUIStore();
   const [showForm, setShowForm] = useState(false);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -107,7 +107,7 @@ export default function MyAppsScreen() {
         <button
           type="button"
           className="screen-header__back"
-          onClick={() => setMyApps(false)}
+          onClick={() => setTab('setting')}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--play-blue)" strokeWidth="2">
             <path d="M15 18l-6-6 6-6" />

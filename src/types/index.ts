@@ -72,6 +72,17 @@ export interface Category {
   items: Content[];
 }
 
+// User-created app (local / my-apps screen)
+export interface UserApp {
+  id: string;
+  title: string;
+  description: string;
+  t2q: string;
+  iconUrl: string;
+  category: string;
+  createdAt: string;
+}
+
 // UI State
 export interface UIState {
   activeTab: TabType;
@@ -85,6 +96,7 @@ export interface UIState {
   previewAppType: 'story' | 't2q_quiz' | null;
   showCreator: boolean;
   appFilter: string | null; // category filter for Apps tab
+  createdApps: UserApp[]; // user-created apps (local)
 }
 
 export type TabType = 'home' | 'search' | 'explore' | 'apps' | 'setting';
