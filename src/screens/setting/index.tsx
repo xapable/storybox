@@ -8,6 +8,45 @@ import type { Lang } from '../../i18n';
 import type { AppDocument } from '../../types/t2q';
 import type { User } from 'firebase/auth';
 
+// ── Dev-only: seed Firestore button ──
+function SeedButton() {
+  const [status, setStatus] = useState<'idle' | 'seeding' | 'done' | 'error'>('idle');
+  const [msg, setMsg] = useState('');
+
+  const handleSeed = useCallback(async () => {
+    setStatus('seeding');
+    try {
+      const { seedFirestore } = await import('../../scripts/seedFirestore');
+      const result = await seedFirestore();
+      setMsg(result);
+      setStatus('done');
+    } catch (e: any) {
+      setMsg(e?.message ?? 'Seed failed');
+      setStatus('error');
+    }
+  }, []);
+
+  return (
+    <div style={{ marginTop: 24, padding: '0 18px' }}>
+      <button
+        type="button"
+        className="setting-create-btn"
+        onClick={handleSeed}
+        disabled={status === 'seeding'}
+        style={{ opacity: status === 'seeding' ? 0.6 : 1 }}
+      >
+        {status === 'idle' && '📦 Seed Firestore'}
+        {status === 'seeding' && '⏳ Seeding…'}
+        {status === 'done' && '✅ Seeded!'}
+        {status === 'error' && '❌ Failed'}
+      </button>
+      {msg && (
+        <p style={{ fontSize: 12, color: 'var(--text-tertiary)', margin: '6px 0 0' }}>{msg}</p>
+      )}
+    </div>
+  );
+}
+
 export default function SettingScreen() {
   const { lang, setLang } = useLanguage();
   const { toggleCreator, previewApp, state } = useUIStore();
@@ -263,6 +302,11 @@ export default function SettingScreen() {
             <span className="setting-item__value">1.0.0</span>
           </button>
         </div>
+
+        {/* Dev: seed Firestore */}
+        {import.meta.env.DEV && (
+          <SeedButton />
+        )}
       </div>
 
       <div className="screen-spacer" />
