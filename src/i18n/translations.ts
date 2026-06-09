@@ -148,6 +148,14 @@ const t: TranslationMap = {
   tag_other:        { 'zh-Hant': '其他', 'zh-Hans': '其他', en: 'Other' },
 
   creator_think_first:  { 'zh-Hant': '請先自己寫一些想法再使用 AI！', 'zh-Hans': '请先自己写一些想法再使用 AI！', en: 'Please type your own quiz ideas first before using AI!' },
+  review_title:       { 'zh-Hant': '發表評論', 'zh-Hans': '发表评论', en: 'Write a Review' },
+  review_rate:        { 'zh-Hant': '評分', 'zh-Hans': '评分', en: 'Your Rating' },
+  review_placeholder_title: { 'zh-Hant': '評論標題', 'zh-Hans': '评论标题', en: 'Review title' },
+  review_placeholder_body: { 'zh-Hant': '分享你的想法⋯', 'zh-Hans': '分享你的想法⋯', en: 'Share your thoughts…' },
+  review_submit:      { 'zh-Hant': '送出評論', 'zh-Hans': '送出评论', en: 'Submit Review' },
+  review_sign_in:     { 'zh-Hant': '登入即可評論', 'zh-Hans': '登录即可评论', en: 'Sign in to review' },
+  review_thanks:      { 'zh-Hant': '感謝你的評論！', 'zh-Hans': '感谢你的评论！', en: 'Thanks for your review!' },
+
   setting_payment:     { 'zh-Hant': '付款方式', 'zh-Hans': '付款方式', en: 'Payment methods' },
   setting_account:     { 'zh-Hant': '帳戶', 'zh-Hans': '账户', en: 'Account' },
   setting_about:       { 'zh-Hant': '關於', 'zh-Hans': '关于', en: 'About' },

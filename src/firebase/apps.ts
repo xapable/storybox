@@ -142,6 +142,40 @@ export async function deleteApp(id: string): Promise<void> {
   await deleteDoc(docRef);
 }
 
+/** Submit a rating and review for an app */
+export async function submitReview(
+  appId: string,
+  review: { author: string; rating: number; title: string; content: string },
+): Promise<void> {
+  if (!db) throw new Error('Firestore not initialized');
+
+  const docRef = doc(db, APPS_COLLECTION, appId);
+  const docSnap = await getDoc(docRef);
+
+  if (!docSnap.exists()) throw new Error('App not found');
+
+  const data = docSnap.data();
+  const existingReviews = data.reviews ?? [];
+  const newReview = {
+    id: `r-${Date.now()}`,
+    author: review.author,
+    rating: review.rating,
+    title: review.title,
+    content: review.content,
+    date: new Date().toISOString().split('T')[0],
+  };
+
+  const allReviews = [...existingReviews, newReview];
+  const avgRating =
+    allReviews.reduce((sum: number, r: any) => sum + r.rating, 0) / allReviews.length;
+
+  await updateDoc(docRef, {
+    reviews: allReviews,
+    rating: Math.round(avgRating * 10) / 10,
+    ratingCount: allReviews.length,
+  });
+}
+
 /** Fetch apps created by a specific user */
 export async function fetchUserApps(userId: string): Promise<AppDocument[]> {
   if (!db) return [];

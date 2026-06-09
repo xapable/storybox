@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useUIStore } from '../../store';
 import { useLanguage, tKey } from '../../i18n';
-import { fetchAppById } from '../../firebase/apps';
+import { fetchAppById, submitReview } from '../../firebase/apps';
+import { getCurrentUser } from '../../firebase/auth';
 import type { AppDocument } from '../../types/t2q';
 
 export default function AppDetail() {
@@ -9,8 +10,15 @@ export default function AppDetail() {
   const { state, closePreview, playApp, toggleFavorite } = useUIStore();
   const [app, setApp] = useState<AppDocument | null>(null);
   const [loading, setLoading] = useState(true);
+  const [reviewRating, setReviewRating] = useState(0);
+  const [reviewHover, setReviewHover] = useState(0);
+  const [reviewTitle, setReviewTitle] = useState('');
+  const [reviewBody, setReviewBody] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [reviewMsg, setReviewMsg] = useState('');
 
   const { previewAppId, previewAppType } = state;
+  const user = getCurrentUser();
 
   useEffect(() => {
     if (!previewAppId) return;
@@ -224,6 +232,84 @@ export default function AppDetail() {
             ))}
           </div>
         )}
+
+        {/* Review Form */}
+        <div className="detail__section detail__review-form">
+          <h3 className="detail__subtitle">{tKey(lang, 'review_title')}</h3>
+
+          {reviewMsg && <p className="review-form__msg">{reviewMsg}</p>}
+
+          {!user ? (
+            <p className="review-form__sign-in">{tKey(lang, 'review_sign_in')}</p>
+          ) : (
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                if (reviewRating === 0) return;
+                setSubmitting(true);
+                setReviewMsg('');
+                try {
+                  await submitReview(previewAppId!, {
+                    author: user.displayName ?? user.email ?? 'Anonymous',
+                    rating: reviewRating,
+                    title: reviewTitle,
+                    content: reviewBody,
+                  });
+                  setReviewMsg(tKey(lang, 'review_thanks'));
+                  setReviewRating(0);
+                  setReviewTitle('');
+                  setReviewBody('');
+                  // refresh app data
+                  const updated = await fetchAppById(previewAppId!);
+                  if (updated) setApp(updated);
+                } catch (err) {
+                  setReviewMsg('Error submitting review');
+                } finally {
+                  setSubmitting(false);
+                }
+              }}
+            >
+              {/* Star rating input */}
+              <label className="review-form__label">{tKey(lang, 'review_rate')}</label>
+              <div className="review-form__stars">
+                {[1,2,3,4,5].map((s) => (
+                  <span
+                    key={s}
+                    className={`review-form__star ${s <= (reviewHover || reviewRating) ? 'review-form__star--fill' : 'review-form__star--empty'}`}
+                    onClick={() => setReviewRating(s)}
+                    onMouseEnter={() => setReviewHover(s)}
+                    onMouseLeave={() => setReviewHover(0)}
+                  >
+                    ★
+                  </span>
+                ))}
+              </div>
+
+              <input
+                className="review-form__input"
+                type="text"
+                placeholder={tKey(lang, 'review_placeholder_title')}
+                value={reviewTitle}
+                onChange={(e) => setReviewTitle(e.target.value)}
+                required
+              />
+              <textarea
+                className="review-form__textarea"
+                placeholder={tKey(lang, 'review_placeholder_body')}
+                value={reviewBody}
+                onChange={(e) => setReviewBody(e.target.value)}
+                rows={3}
+              />
+              <button
+                className="review-form__submit"
+                type="submit"
+                disabled={submitting || reviewRating === 0}
+              >
+                {tKey(lang, 'review_submit')}
+              </button>
+            </form>
+          )}
+        </div>
 
         <div className="detail__spacer" />
       </div>

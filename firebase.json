@@ -5,7 +5,7 @@
         "enabled": true,
         "oAuthBrandDisplayName": "StoryBox 知識盒子",
         "supportEmail": "xapableteam@gmail.com",
-        "authorizedRedirectUris": ["https://storybox-af3b7.web.app", "http://localhost"]
+        "authorizedRedirectUris": ["https://storybox-af3b7.web.app", "https://storybox.work", "http://localhost"]
       }
     }
   },
