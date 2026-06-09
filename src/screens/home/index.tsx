@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
 import { useUIStore } from '../../store';
 import { useLanguage, tKey } from '../../i18n';
 import { stories } from '../../data/content';
@@ -81,6 +81,17 @@ export default function HomeScreen() {
   const { setTab } = useUIStore();
   const heroStories = stories.filter((s) => s.hero);
   const circleStories = stories.filter((s) => !s.hero);
+
+  // Auto-play hero carousel
+  const nextHero = useCallback(() => {
+    setHeroIdx((i) => (i + 1) % heroStories.length);
+  }, [heroStories.length]);
+
+  useEffect(() => {
+    if (heroStories.length <= 1) return;
+    const timer = setInterval(nextHero, 4000);
+    return () => clearInterval(timer);
+  }, [heroStories.length, nextHero]);
 
   const climateApps = useMemo(() => playableApps.filter((a) => a.id.startsWith('play-c')), []);
   const techApps = useMemo(() => playableApps.filter((a) => a.id.startsWith('play-t')), []);
