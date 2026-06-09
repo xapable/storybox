@@ -17,7 +17,7 @@ import {
 import { db } from './config';
 import { playableApps, stories as localStories, collections as localCollections } from '../data/playableApps';
 import type { AppDocument } from '../types/t2q';
-import type { Collection, Story } from '../types';
+import type { Collection, Story, Content } from '../types';
 
 const APPS_COLLECTION = 'apps';
 const STORIES_COLLECTION = 'stories';
@@ -99,7 +99,7 @@ export async function fetchStories(): Promise<Story[]> {
   } catch {
     // Firestore unavailable
   }
-  return localStories;
+  return localStories as Story[];
 }
 
 /** Fetch all collections from Firestore, fallback to local */
@@ -114,7 +114,7 @@ export async function fetchCollections(): Promise<Collection[]> {
   } catch {
     // Firestore unavailable
   }
-  return localCollections;
+  return localCollections as unknown as Collection[];
 }
 
 /** Save a new app to Firestore */
