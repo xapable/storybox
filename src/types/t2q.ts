@@ -11,6 +11,7 @@ export interface AppDocument {
   storyContent?: string;
   createdAt: Date;
   createdBy: string;
+  creatorAvatar?: string;
   isPublic: boolean;
   // App store details
   rating?: number;

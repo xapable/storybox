@@ -29,7 +29,6 @@ export async function seedFirestore(): Promise<string> {
       ...data,
       createdAt: app.createdAt,
       isPublic: true,
-      createdBy: 'system',
       reviews: reviews ?? [],
     });
     appCount++;

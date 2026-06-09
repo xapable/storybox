@@ -3,6 +3,7 @@ import { useUIStore } from '../../store';
 import { useLanguage, tKey } from '../../i18n';
 import { fetchAppById, submitReview } from '../../firebase/apps';
 import { getCurrentUser } from '../../firebase/auth';
+import './AppDetail.css';
 import type { AppDocument } from '../../types/t2q';
 
 export default function AppDetail() {
@@ -92,6 +93,17 @@ export default function AppDetail() {
               </span>
               {app.category && <span className="detail__chip detail__chip--sm">{app.category}</span>}
             </div>
+          </div>
+        </div>
+
+        {/* === CREATOR === */}
+        <div className="detail__creator">
+          <div className="detail__creator-avatar">
+            {app.creatorAvatar || '📦'}
+          </div>
+          <div className="detail__creator-info">
+            <span className="detail__creator-label">{tKey('detail_creator', lang)}</span>
+            <span className="detail__creator-name">{app.createdBy}</span>
           </div>
         </div>
 
@@ -222,7 +234,10 @@ export default function AppDetail() {
 
         {/* Review Form */}
         <div className="detail__review-form">
-          <h3 className="detail__section-title" style={{ textAlign: 'center', fontSize: 18, marginBottom: 16 }}>✍️ {tKey('review_title', lang)}</h3>
+          <div className="review-form__header">
+            <span className="review-form__header-icon">✍️</span>
+            <span className="review-form__header-title">{tKey('review_title', lang)}</span>
+          </div>
 
           {reviewMsg && <p className="review-form__msg">{reviewMsg}</p>}
 
@@ -232,7 +247,7 @@ export default function AppDetail() {
               <p className="review-form__sign-in">{tKey('review_sign_in', lang)}</p>
             </div>
           ) : (
-            <form
+            <form className="review-form__inner"
               onSubmit={async (e) => {
                 e.preventDefault();
                 if (reviewRating === 0) return;
@@ -249,7 +264,6 @@ export default function AppDetail() {
                   setReviewRating(0);
                   setReviewTitle('');
                   setReviewBody('');
-                  // refresh app data
                   const updated = await fetchAppById(previewAppId!);
                   if (updated) setApp(updated);
                 } catch (err) {
@@ -259,44 +273,48 @@ export default function AppDetail() {
                 }}
               }
             >
-              <label className="review-form__label">{tKey('review_rate', lang)}</label>
-              <div className="review-form__stars">
-                {[1,2,3,4,5].map((s) => (
-                  <span
-                    key={s}
-                    className={`review-form__star ${s <= (reviewHover || reviewRating) ? 'review-form__star--fill' : 'review-form__star--empty'}`}
-                    onClick={() => setReviewRating(s)}
-                    onMouseEnter={() => setReviewHover(s)}
-                    onMouseLeave={() => setReviewHover(0)}
-                  >★</span>
-                ))}
-              </div>
-              {reviewRating > 0 && (
-                <div className="review-form__rating-label">
-                  {['', '😞 很差', '🙁 較差', '🙂 不錯', '😊 很好', '🤩 超讚!'][reviewRating]}
+              <div className="review-form__rating-area">
+                <span className="review-form__rate-question">{tKey('review_rate', lang)}</span>
+                <div className="review-form__stars">
+                  {[1,2,3,4,5].map((s) => (
+                    <span
+                      key={s}
+                      className={`review-form__star ${s <= (reviewHover || reviewRating) ? 'review-form__star--fill' : 'review-form__star--empty'}`}
+                      onClick={() => setReviewRating(s)}
+                      onMouseEnter={() => setReviewHover(s)}
+                      onMouseLeave={() => setReviewHover(0)}
+                    >★</span>
+                  ))}
                 </div>
-              )}
-              <input
-                className="review-form__input"
-                type="text"
-                placeholder={tKey('review_placeholder_title', lang)}
-                value={reviewTitle}
-                onChange={(e) => setReviewTitle(e.target.value)}
-                required
-              />
-              <textarea
-                className="review-form__textarea"
-                placeholder={tKey('review_placeholder_body', lang)}
-                value={reviewBody}
-                onChange={(e) => setReviewBody(e.target.value)}
-                rows={3}
-              />
+                {reviewRating > 0 && (
+                  <div className="review-form__rating-label">
+                    {['', '😞 Terrible', '🙁 Bad', '🙂 Good', '😊 Great', '🤩 Excellent!'][reviewRating]}
+                  </div>
+                )}
+              </div>
+              <div className="review-form__fields">
+                <input
+                  className="review-form__input"
+                  type="text"
+                  placeholder={tKey('review_placeholder_title', lang)}
+                  value={reviewTitle}
+                  onChange={(e) => setReviewTitle(e.target.value)}
+                  required
+                />
+                <textarea
+                  className="review-form__textarea"
+                  placeholder={tKey('review_placeholder_body', lang)}
+                  value={reviewBody}
+                  onChange={(e) => setReviewBody(e.target.value)}
+                  rows={3}
+                />
+              </div>
               <button
                 className="review-form__submit"
                 type="submit"
                 disabled={submitting || reviewRating === 0}
               >
-                {submitting ? '⏳ 提交中…' : '📨 ' + tKey('review_submit', lang)}
+                {submitting ? '⏳ Submitting…' : '📨 ' + tKey('review_submit', lang)}
               </button>
             </form>
           )}

@@ -34,6 +34,7 @@ function docToApp(docSnap: QueryDocumentSnapshot<DocumentData>): AppDocument {
     storyContent: data.storyContent,
     createdAt: data.createdAt?.toDate() ?? new Date(),
     createdBy: data.createdBy ?? '',
+    creatorAvatar: data.creatorAvatar ?? '',
     isPublic: data.isPublic ?? false,
     rating: data.rating,
     ratingCount: data.ratingCount,
